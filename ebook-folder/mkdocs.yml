@@ -1,0 +1,136 @@
+# TODO replace name with name of ebook: 101: Intro to Web, 411: Front-Ends with React...etc
+site_name: ebook-name
+
+# TODO inside `ebook-folder/`
+# TODO run `git clone https://github.com/squidfunk/mkdocs-material.git`
+# TODO run `pip install -r requirements.txt` (see inside mkdocs-material/)
+# TODO run `mkdocs build` to build the static files into "/site"
+# TODO run `mkdocs serve` to serve those files to http://127.0.0.1:8000
+# TODO replace all CAPITALIZED words with appropriate titles
+# ! Use the files in workspace/resources to quickly generate class and lesson templates, see `cp ...` script at bottom of each file
+# ! Use the folder workspace/developmentDocumentation to record thoughts and future improvements
+
+# defines where the markdown to build from
+# docs_dir: 'test-node-book'
+
+# defines where to put the generated static files
+# site_dir: 'docs'
+
+# "pages" has been deprecated
+# use this to create the nav bar on the left-side of the window view
+# TODO replace all CAPITALIZED words with appropriate titles
+
+nav:
+    - Home: 'index.md'
+    - 'Module One: TITLE':
+      - 'Pre-Class 1 Lessons': 
+        - Intro to Material-Mkdocs: module-1/lessonOutlineTemplate.md
+        - Class 1 TITLE: module-1/classOutlineTemplate.md
+      - 'Pre-Class 2 Lesson': 
+        - LESSON TITLE: module-1/lessonOutlineTemplate.md
+        - Class 2 TITLE: module-1/classOutlineTemplate.md
+      # - 'Pre-Class 3 Lesson': 
+      # - 'Pre-Class 4 Lesson': 
+    # - 'Module Two: TITLE': 
+      # - 'Pre-Class 5 Lessons': 
+        # - Class 5 TITLE: module-2/classOutlineTemplate.md
+        # - 'Pre-Class 6 Lesson': 
+        # - 'Pre-Class 7 Lesson': 
+        # - 'Pre-Class 8 Lesson': 
+      # - 'Module Three: TITLE': 
+        # - 'Pre-Class 9 Lesson': 
+        # - 'Pre-Class 10 Lesson': 
+        # - 'Pre-Class 11 Lesson': 
+        # - 'Pre-Class 12 Lesson': 
+      # - 'Module Four: TITLE':
+        # - 'Pre-Class 13 Lesson': 
+        # - 'Pre-Class 14 Lesson': 
+        # - 'Pre-Class 15 Lesson': 
+        # - 'Pre-Class 16 Lesson':  
+    - 'Additional Resources':
+      - Interview Training: additionalResources/interviewChallenges.md
+      - Student Presentations: additionalResources/studentPresentations.md
+      - Develop Series Collection: additionalResources/developSeries.md
+      - 'Questions for Discussion Collections':
+        - Day 1 QFD: additionalResources/questionsForDiscussion/qfd-class-1.md
+        - Day 2 QFD: additionalResources/questionsForDiscussion/qfd-class-2.md
+      - Blog Prompts: additionalResources/blogPrompts.md
+      - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
+      - Git & CLI Commands: additionalResources/gitCommands.md
+      - Graduation Prerequisites: additionalResources/graduationPrerequisites.md
+      - Presentations Qualifications: additionalResources/presentationsQualifications.md
+      # - 'Bonus Materials':
+
+
+# defines the styles, usually just a single name but `custom_dir` overrides this behavior
+theme:
+  name: material
+  # was null
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep orange
+    # Defines the logo in the top-left, file must be in the /doc directory
+  logo: CE_WhiteBlue_Icon.png
+  
+  # ? Not rendering as expected??
+  extra:
+    copyright: Copyright &copy; 2013 - 2021 Austin Coding Academy
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/AustinCodingAcademy
+      - icon: fontawesome/brands/medium
+        link: https://medium.com/@austincoding
+      - icon: fontawesome/brands/linkedin
+        link: https://www.linkedin.com/school/austincodingacademy/
+      - icon: fontawesome/brands/instagram
+        link: https://www.instagram.com/austincodingacademy
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/austincoding
+      - icon: fontawesome/brands/facebook
+        link: https://www.facebook.com/AustinCodingAcademy/
+
+
+  
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Necessary for search to work properly
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - attr_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+  - def_list
+  - pymdownx.tabbed
+
+
+ 
+
+# Can add icons throughout the ebook https://materialdesignicons.com/
+#  - pymdownx.inlinehilite
+  # - pymdownx.keys
