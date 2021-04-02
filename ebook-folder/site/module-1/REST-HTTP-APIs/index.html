@@ -1,0 +1,1176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Intro to APIs - JS311 - Node Servers + SQL Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro-to-restful-apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
+      
+  <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JS311 - Node Servers + SQL Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
+      
+  <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
+
+    </a>
+    JS311 - Node Servers + SQL Databases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Module One: TITLE
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Module One: TITLE" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Module One: TITLE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Pre-Class 1 Lessons
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 1 Lessons" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 1 Lessons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prepareYourMachine/" class="md-nav__link">
+        Prepare Your Machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codeSandboxes/" class="md-nav__link">
+        Code Sandboxes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../succeedInThisCourse/" class="md-nav__link">
+        How to Succeed
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatIsNodeJS/" class="md-nav__link">
+        Working in Node
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intro to APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Intro to APIs
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-api" class="md-nav__link">
+    What's an API?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's an API?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-one-native-api" class="md-nav__link">
+    Example One - Native API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-two-web-api" class="md-nav__link">
+    Example Two - Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-three-rest-api" class="md-nav__link">
+    Example Three - REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-are-we-building" class="md-nav__link">
+    Which Are We Building?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-it-whats-an-api" class="md-nav__link">
+    See It - What's An API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-explore-the-star-wars-api" class="md-nav__link">
+    Practice - Explore the Star Wars API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-rest" class="md-nav__link">
+    What is REST
+  </a>
+  
+    <nav class="md-nav" aria-label="What is REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-resource" class="md-nav__link">
+    What is a Resource?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Resource?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-uri-part" class="md-nav__link">
+    The URI Part
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-server" class="md-nav__link">
+    Client-Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httphttps" class="md-nav__link">
+    HTTP/HTTPS
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP/HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interacting-with-a-rest-api" class="md-nav__link">
+    Interacting with a REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-get-http-verbs" class="md-nav__link">
+    Beyond GET: HTTP Verbs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodeRecap/" class="md-nav__link">
+        Node & NPM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preClassOneChecklist/" class="md-nav__link">
+        Pre-Class Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classOutlineTemplate/" class="md-nav__link">
+        Class 1 TITLE
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Pre-Class 2 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 2 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 2 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessonOutlineTemplate/" class="md-nav__link">
+        LESSON TITLE
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classOutlineTemplate/" class="md-nav__link">
+        Class 2 TITLE
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Additional Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Additional Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Additional Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/interviewChallenges/" class="md-nav__link">
+        Interview Training
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/studentPresentations/" class="md-nav__link">
+        Student Presentations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/developSeries/" class="md-nav__link">
+        Develop Series Collection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Questions for Discussion Collections
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Questions for Discussion Collections" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Questions for Discussion Collections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-1/" class="md-nav__link">
+        Day 1 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-2/" class="md-nav__link">
+        Day 2 QFD
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/blogPrompts/" class="md-nav__link">
+        Blog Prompts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/keyboardShortcuts/" class="md-nav__link">
+        Keyboard Shortcuts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/gitCommands/" class="md-nav__link">
+        Git & CLI Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/learnYourCLI/" class="md-nav__link">
+        Learn Your CLI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/graduationPrerequisites/" class="md-nav__link">
+        Graduation Prerequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/presentationsQualifications/" class="md-nav__link">
+        Presentation Qualifications
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-api" class="md-nav__link">
+    What's an API?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's an API?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-one-native-api" class="md-nav__link">
+    Example One - Native API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-two-web-api" class="md-nav__link">
+    Example Two - Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-three-rest-api" class="md-nav__link">
+    Example Three - REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-are-we-building" class="md-nav__link">
+    Which Are We Building?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-it-whats-an-api" class="md-nav__link">
+    See It - What's An API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-explore-the-star-wars-api" class="md-nav__link">
+    Practice - Explore the Star Wars API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-rest" class="md-nav__link">
+    What is REST
+  </a>
+  
+    <nav class="md-nav" aria-label="What is REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-resource" class="md-nav__link">
+    What is a Resource?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Resource?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-uri-part" class="md-nav__link">
+    The URI Part
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-server" class="md-nav__link">
+    Client-Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httphttps" class="md-nav__link">
+    HTTP/HTTPS
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP/HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interacting-with-a-rest-api" class="md-nav__link">
+    Interacting with a REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-get-http-verbs" class="md-nav__link">
+    Beyond GET: HTTP Verbs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="intro-to-restful-apis">Intro to RESTful APIs</h1>
+<p><em>Take calculated risks. That is quite different from being rash. —George S. Patton</em></p>
+<h2 id="overview">Overview</h2>
+<p>In this course, we're going to learn how to build an <code>API</code> using <code>Node.js</code> and <code>Express</code>. If you don't know exactly what an "API" is, why you'd want to build one, or how <code>Express</code> fits in, don't worry! That's why we're here.</p>
+<h2 id="whats-an-api">What's an API?</h2>
+<p>A traditional software application has a user interface(<strong>UI</strong>): a mechanism that allows a person to interact with the software. It may be a graphical user interface, a web-based user interface, a text-based user interface, or a voice interface. Whatever form it takes, the user interface is a way for a person to tell the software what they want to do. But what if we want to let other software interact with our application, rather than a person? A user interface built for human interaction isn't well-suited for programmatic interaction. That's where APIs come in.</p>
+<p><strong>API</strong> is an acronym that stands for <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. In its most general sense, an API is a well-defined way for one computer program to interact with another program. More technically, an API is a set of functions and data structures that allow other application developers to leverage the functionality and/or data of your software within their own applications.</p>
+<p>There are many different ways to implement an API, so the term can be somewhat ambiguous. There are high-level APIs and low-level APIs, internal APIs and public APIs, and so on, but in all cases they help different programs interact. Let's look at two examples.</p>
+<h3 id="example-one-native-api">Example One - Native API</h3>
+<p>If you are building a desktop application that runs on macOS or Windows, you will likely want your app to have menus and buttons and windows and other familiar user interface elements. You could build these things from scratch, drawing each pixel and handling every keystroke and mouse click in your code in order to make it look and act like other software, but that's a <em>LOT of work</em>! Fortunately, the creators of macOS and Windows provided APIs that make your life as an application developer much easier. These APIs provide many functions (methods) that can help you create menus and buttons, respond to mouse clicks, etc. Other functions might help you interact with the file system or determine who is currently logged in. These APIs are building blocks that make it easier for application developers to create new software by giving your application well-defined ways to interact with the features of the operating system.</p>
+<h3 id="example-two-web-api">Example Two - Web API</h3>
+<p>The HTML APIs you learned in Web 101 like Canvas, Geolocation and Drag and Drop. These are also APIs because they provide the developer(you) with functionality that can be accessed through property names like <code>.getContext()</code> or <code>isdraggable=</code>. These are built into the HTML language but not implicitly used or required, yet are available by simply knowing their property names. Pretty cool, right?</p>
+<h3 id="example-three-rest-api">Example Three - REST API</h3>
+<p>Let's say you're building a tourism mobile app with detailed information about the historical sites in your city. You'd also like to provide the traveler with a list of highly-rated restaurants that are near each site. You could gather this information yourself and include it in your app, but restaurants come and go, ratings change, and it's somewhat outside of the main scope of your app. Besides, other apps like Yelp already have this pretty well covered. Fortunately, Yelp provides an API that you can use to leverage their business data and ratings. Using their API, your app can search for nearby restaurants that are rated 4 stars or higher and conveniently display them alongside the site the traveler is currently viewing.</p>
+<h3 id="which-are-we-building">Which Are We Building?</h3>
+<p>There's a subtle difference between the examples we just covered. In the first, your desktop app is running on a computer right alongside the operating system. Your app and the operating system can interact directly. In the second, you are accessing objects built-into the language itself. In the third example, your app is running on a smart phone. Does the person using your app need to have the Yelp app installed? Is your tourism app talking directly to the Yelp mobile app? No, it's not. Your app is using a <strong>remote API</strong>. It communicates with a remote server located somewhere in "the cloud". More precisely, your app communicates over the internet with server software made by Yelp, which is running on a computer in some data center, and that software was specifically designed to allow other programs to interact with it in a well-defined way.</p>
+<p>Each of these examples can be termed APIs, but it is APIs in the third example, a remote <strong>RESTful APIs</strong>, that we will be building in this course, using a specific architectural style known as a REST API. We'll get into the details of <strong>REST</strong> APIs later. For now, just be aware that when many people say "API" they often mean this specific kind of remote API known as a <strong>RESTful API</strong>. But APIs come in many forms and you'll undoubtedly become familiar with many different types in your career.</p>
+<p>Following is a short video that explains the concept of APIs and how they enable the connectivity that we have become accustomed to in modern applications.</p>
+<h3 id="see-it-whats-an-api">See It - What's An API?</h3>
+<!-- !Video Content: MuleSoft Videos - What is an API? -->
+<iframe width="655" height="368" src="https://www.youtube.com/embed/s7wmiS2mSXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="practice-explore-the-star-wars-api">Practice - Explore the Star Wars API</h3>
+<p>Go to the <a href="https://swapi.dev/">Star Wars API</a> site and experiment with it. The site gives you a simple UI and hints so you can try different API requests. Be sure to use the hints and see what the return values are. Visit the documentation page for a full explanation of what it offers and will allow you to do.</p>
+<p>Here are a few things to try:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Try retrieving a few different people by changing the id value.</li>
+<li class="task-list-item"><input type="checkbox"/> What happens if you put in an invalid id value, such as 9999?</li>
+<li class="task-list-item"><input type="checkbox"/> Can you retrieve a list of all people?</li>
+<li class="task-list-item"><input type="checkbox"/> Discover other types of information you can access, besides people.</li>
+<li class="task-list-item"><input type="checkbox"/> Do you notice any common pattern for how you use the API?</li>
+</ul>
+<p><em>You can <a href="https://codepen.io/austincoding/pen/RzNaOw">fork this CodePen</a> or create your own repo to play with.</em></p>
+<h2 id="what-is-rest">What is REST</h2>
+<p><strong>REST</strong> stands for <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer. It is an architectural style—a set of guiding principles—for building distributed systems. <a href="https://restfulapi.net/">This site</a> provides an overview of these principles and the history of REST. Systems that adhere to these principles are commonly said to be <strong>RESTful</strong>.</p>
+<p>We're not going to focus too much on the theory behind REST. Instead, we'll focus on the practical application of REST to APIs, using common industry patterns. Still, there are a few terms and concepts that we must review.</p>
+<h3 id="what-is-a-resource">What is a Resource?</h3>
+<p>A <strong>resource</strong> is key concept in REST. It's a general term that represents any information that can be named. Resources are often the basic data entities that our APIs work with, but they can also be more abstract concepts or processes. In the Star Wars API, the resources are things like "people", "starships", and "planets".</p>
+<p>Resources are commonly named using plural nouns. For example, to access information about the people in Star Wars, we use "people" rather than the singular "person".</p>
+<p>By convention, resource names are usually expressed as nouns rather than verbs or actions. E.g., planets rather than <code>getPlanet</code>, or <code>StudentEnrollment</code> rather than <code>EnrollStudent</code>.</p>
+<p>Occasionally, resources can also be more abstract concepts or processes. For example, a "StudentEnrollment" resource might be a multi-step process that updates Student and Class resources, while also enforcing rules about which classes a student can enroll in, sending notifications, and so on.</p>
+<h4 id="the-uri-part">The URI Part</h4>
+<p>Resources are accessed using <strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifiers, or <strong>URI</strong>s. URIs are very similar to the familiar URL(UR Locator)) that we use on the web. There are <a href="https://danielmiessler.com/study/url-uri/">subtle theoretical differences between URIs and URLs that we will not concern ourselves with, but you can read more about</a> if you're interested.</p>
+<p>Let's revisit the URI that we used to access information about Luke Skywalker:</p>
+<p><a href="https://swapi.dev/api/people/1?format=json"><code>https://swapi.dev/api/people/1</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://swapi.dev/api</code></td>
+<td>The base URL for accessing the API. This includes the protocol that will be used (https), the location of the API (swapi.dev), and a base path (/api).</td>
+</tr>
+<tr>
+<td><code>/people</code></td>
+<td>The resource we're accessing, "people"</td>
+</tr>
+<tr>
+<td><code>/1</code></td>
+<td>An identifier that tells the API which person we're interested in</td>
+</tr>
+</tbody>
+</table>
+<p>Here's another example.</p>
+<blockquote>
+<p>Note that we don't specify an ID for any particular person. Instead, we're accessing all people.</p>
+</blockquote>
+<p><a href="https://swapi.dev/api/people?format=json">https://swapi.dev/api/people</a></p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://swapi.dev/api</code></td>
+<td>The base URL for accessing the API</td>
+</tr>
+<tr>
+<td><code>/people</code></td>
+<td>The resource we're accessing, "people"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="client-server">Client-Server</h3>
+<p>You're going to hear the terms <code>client</code> and <code>server</code> a lot, so let's make sure we understand what they mean.</p>
+<p>The client-server model is a way of distributing work among multiple parts of a software system, with the parts often (but not necessarily) running on separate computers and communicating over a network.</p>
+<p>For example, when we click the <a href="https://swapi.dev/api/people/1?format=json">https://swapi.dev/api/people/1</a> link, our web browser is the <strong>client</strong>. The computer at swapi.dev that sends back the data about Luke Skywalker is the <strong>server</strong>.</p>
+<p>In general, software making a request is a <strong>client</strong>. Software that listens for requests and sends back a response is a <strong>server</strong>. <strong>Request</strong> and <strong>response</strong> are important concepts that we'll be working with as we build APIs.</p>
+<h3 id="httphttps">HTTP/HTTPS</h3>
+<p><strong>HTTP</strong> is the protocol that clients and servers use to communicate on the web. HTTPS is a more secure version of HTTP in which the information being exchanged is encrypted. The first part of a URI (e.g., HTTP:) indicates which protocol is being used so the client and server know how to talk to each other—<em>it sets the rules for the conversation</em>. Technically, a REST API can use any protocol to communicate, but in practice they usually use HTTP or HTTPS.</p>
+<p>HTTP has two types of messages: <strong>requests</strong> and <strong>responses</strong>. We won't necessarily be creating request and response messages from scratch—we have frameworks and other tools to help with that—but we will be working with some of their parts and it is good to have a mental picture of what these messages look like.</p>
+<p>A <strong>request</strong> message/object is made up of the following parts:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request Method</td>
+<td>Also commonly called the verb, the request method indicates what type of action we're requesting. Some commonly used methods are GET, PUT, DELETE, and POST.</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>The path to the resource that we're working with.</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>A collection of colon-separated key-value pairs that can be used to provide additional context about the request, e.g. Content-Type: application/json (which indicates that the content of the body will be in JSON format.)</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>A payload that can be sent with the request.</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>response</strong> message/object has these parts:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status Code / Message</td>
+<td>A numeric code and short message that indicate whether the request was successful.</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>A collection of colon-separated key-value pairs that can be used to provide additional context about the response, e.g., Content-Type: application/json indicates that the content of the body is in JSON format.</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>A payload that can be sent with the response.</td>
+</tr>
+</tbody>
+</table>
+<p>You can find more detailed <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests">information about HTTP here</a>.</p>
+<h4 id="interacting-with-a-rest-api">Interacting with a REST API</h4>
+<p>Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, known as a <strong>GET</strong> request, which is used (unsurprisingly) to get a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called <a href="https://www.postman.com/">Postman</a> that we can use to more fully interact with REST APIs.</p>
+<h4 id="beyond-get-http-verbs">Beyond GET: HTTP Verbs</h4>
+<p>The Star Wars API was a useful starting place, but it only allows us to retrieve information. In the following video, we'll look <a href="https://reqres.in/">at another API</a>, provided by Ben Howdle, and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the interface provided by the website and then we'll use Postman to interact with the API.</p>
+<!-- !Video Content: 321: Using Postman -->
+<iframe src="https://player.vimeo.com/video/344941801?byline=0&portrait=0" width="655" height="368" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <a href="https://restfulapi.net/">Article, RestfulAPI - What is REST?</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://danielmiessler.com/study/url-uri/">Article, Daniel Miessler - What’s the Difference Between a URI and a URL?</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://reqres.in/">Req/Res API</a></li>
+</ul>
+<h2 id="know-your-docs">Know Your Docs</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests">MDN Docs - HTTP(S) Request Object</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../whatIsNodeJS/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Working in Node
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../nodeRecap/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Node & NPM
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

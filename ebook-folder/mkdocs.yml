@@ -24,7 +24,13 @@ nav:
     - Home: 'index.md'
     - 'Module One: TITLE':
       - 'Pre-Class 1 Lessons': 
-        - Intro to Material-Mkdocs: module-1/lessonOutlineTemplate.md
+        - Prepare Your Machine: module-1/prepareYourMachine.md
+        - Code Sandboxes: module-1/codeSandboxes.md
+        - How to Succeed: module-1/succeedInThisCourse.md
+        - Working in Node: module-1/whatIsNodeJS.md
+        - Intro to APIs: module-1/REST-HTTP-APIs.md
+        - Node & NPM: module-1/nodeRecap.md
+        - Pre-Class Checklist: module-1/preClassOneChecklist.md
         - Class 1 TITLE: module-1/classOutlineTemplate.md
       - 'Pre-Class 2 Lesson': 
         - LESSON TITLE: module-1/lessonOutlineTemplate.md
