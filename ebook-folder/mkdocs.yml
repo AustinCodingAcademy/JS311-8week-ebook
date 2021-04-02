@@ -1,5 +1,5 @@
 # TODO replace name with name of ebook: 101: Intro to Web, 411: Front-Ends with React...etc
-site_name: ebook-name
+site_name: JS311 - Node Servers + SQL Databases
 
 # TODO inside `ebook-folder/`
 # TODO run `git clone https://github.com/squidfunk/mkdocs-material.git`
@@ -57,8 +57,9 @@ nav:
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md
+      - Learn Your CLI: additionalResources/learnYourCLI.md
       - Graduation Prerequisites: additionalResources/graduationPrerequisites.md
-      - Presentations Qualifications: additionalResources/presentationsQualifications.md
+      - Presentation Qualifications: additionalResources/presentationsQualifications.md
       # - 'Bonus Materials':
 
 
