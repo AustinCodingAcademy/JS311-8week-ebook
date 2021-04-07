@@ -1,4 +1,4 @@
-# Class 3 - Questions for Discussion
+# Class Three - Questions for Discussion
 
 ## Express Server (Servers built with Express.js)
 

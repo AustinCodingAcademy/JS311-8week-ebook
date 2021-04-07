@@ -33,13 +33,20 @@ nav:
         - Pre-Class Checklist: module-1/preClassOneChecklist.md
         - Class 1 Node, NPM, & Postman: module-1/class-1.md
       - 'Pre-Class 2 Lesson': 
+        # TODO - Develop TITLE: module-1/developSeries-.md
         - Axios + Status Codes: module-1/axios-HTTPstatusCodes.md
         - Class 2 Axios Practice: module-1/class-2.md
       - 'Pre-Class 3 Lesson':
+        # TODO - Develop TITLE: module-1/developSeries-.md
         - Intro To Express: module-1/introToExpress.md
-        - Class 3: module-1/class-3.md
-      # - 'Pre-Class 4 Lesson': 
-    # - 'Module Two: TITLE': 
+        - Class 3 First Server: module-1/class-3.md
+      - 'Pre-Class 4 Lesson':
+        # TODO - Develop TITLE: module-1/developSeries-.md
+        - Routers: module-1/expressRouters.md
+        - Controllers: module-1/expressControllers.md
+        - Static Files: module-1/expressStaticFiles.md
+        - Class 4 Serving Static Files: module-1/class-4.md
+    # - 'Module Two: SQL Databases': 
       # - 'Pre-Class 5 Lessons': 
         # - Class 5 TITLE: module-2/classOutlineTemplate.md
         # - 'Pre-Class 6 Lesson': 
@@ -63,6 +70,7 @@ nav:
         - Day 1 QFD: additionalResources/questionsForDiscussion/qfd-class-1.md
         - Day 2 QFD: additionalResources/questionsForDiscussion/qfd-class-2.md
         - Day 3 QFD: additionalResources/questionsForDiscussion/qfd-class-3.md
+        - Day 4 QFD: additionalResources/questionsForDiscussion/qfd-class-4.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md

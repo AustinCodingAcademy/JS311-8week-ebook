@@ -14,7 +14,7 @@
     
     
       
-        <title>Axios + Status Codes - JS311 - Node Servers + SQL Databases</title>
+        <title>Static Files - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#axios-and-https-status-codes" class="md-skip">
+        <a href="#serving-static-files-in-expressjs" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Axios + Status Codes
+              Static Files
             
           </span>
         </div>
@@ -334,14 +334,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         Pre-Class 2 Lesson
@@ -357,151 +355,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Axios + Status Codes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../axios-HTTPstatusCodes/" class="md-nav__link">
         Axios + Status Codes
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#axios" class="md-nav__link">
-    Axios
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http-requests" class="md-nav__link">
-    HTTP Requests
-  </a>
-  
-    <nav class="md-nav" aria-label="HTTP Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get" class="md-nav__link">
-    GET
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post" class="md-nav__link">
-    POST
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#put" class="md-nav__link">
-    PUT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    DELETE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http-status-codes" class="md-nav__link">
-    HTTP Status Codes
-  </a>
-  
-    <nav class="md-nav" aria-label="HTTP Status Codes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#status-code-summary" class="md-nav__link">
-    Status Code Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practice-it" class="md-nav__link">
-    Practice It
-  </a>
-  
-    <nav class="md-nav" aria-label="Practice It">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#know-your-docs" class="md-nav__link">
-    Know Your Docs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -578,12 +436,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       <label class="md-nav__link" for="__nav_2_4">
         Pre-Class 4 Lesson
@@ -623,11 +483,77 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../expressStaticFiles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Static Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Static Files
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-serve-static-files" class="md-nav__link">
+    How to Serve Static Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-it" class="md-nav__link">
+    Practice It
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -901,70 +827,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#axios" class="md-nav__link">
-    Axios
+  <a href="#how-to-serve-static-files" class="md-nav__link">
+    How to Serve Static Files
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http-requests" class="md-nav__link">
-    HTTP Requests
-  </a>
-  
-    <nav class="md-nav" aria-label="HTTP Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get" class="md-nav__link">
-    GET
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#post" class="md-nav__link">
-    POST
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#put" class="md-nav__link">
-    PUT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    DELETE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http-status-codes" class="md-nav__link">
-    HTTP Status Codes
-  </a>
-  
-    <nav class="md-nav" aria-label="HTTP Status Codes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#status-code-summary" class="md-nav__link">
-    Status Code Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -972,19 +837,6 @@
   <a href="#practice-it" class="md-nav__link">
     Practice It
   </a>
-  
-    <nav class="md-nav" aria-label="Practice It">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1015,160 +867,125 @@
               
                 
                 
-                <h1 id="axios-and-https-status-codes">Axios and HTTP(S) Status Codes</h1>
-<p><em>The only way of finding the limits of the possible is by going beyond them into the impossible. —Arthur C. Clarke</em></p>
+                <h1 id="serving-static-files-in-expressjs">Serving Static Files in Express.js</h1>
 <h2 id="overview">Overview</h2>
-<p>In the last lesson we refreshed our knowledge of Node and NPM. Now we are going to add another npm package to our repertoire: <a href="https://www.npmjs.com/package/axios">axios</a>. We are also going to get familiar with the common HTTP protocols and status codes.</p>
-<h2 id="axios">Axios</h2>
-<p>Axios works just like <code>fetch()</code> but is a more robust. It's also a replacement because <code>fetch()</code> is only available in the browser. When we're working in Node, we're on the server so we have a need for an HTTP client, therefore we use a package like Axios. In the past, fetch has served our needs just fine and it may continue to do so for many people, but our goal here is to introduce a popular alternative.</p>
-<p>Some notable differences:</p>
-<ul>
-<li>No more <code>response.json()</code></li>
-<li>More configurable</li>
-<li>Custom error handling</li>
-</ul>
-<p>Axios can be installed via NPM (<code>npm i axios</code>) and called just like fetch: <code>axios('https://someurl')</code>.</p>
-<p>No matter which HTTP client you use, you will always have to deal with the same web standards/protocols for APIs:</p>
-<p><em>Before you continue, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#HTTP_Requests">read about HTTP requests</a>. We need to understand the methods, headers and body.</em></p>
-<h2 id="http-requests">HTTP Requests</h2>
-<p>Each API request (using <code>fetch()</code> or <code>axios()</code>) will contain a method. These methods help computers (and humans) determine how the request is intended to function. There are four main methods:</p>
-<h3 id="get">GET</h3>
-<p>A <code>GET</code> request tells an application that we are requesting some sort of information. This could include reading data from a database or a text file. It could also include returning a random number. It depends on what is applicable for the system. A key differentiator for this type of request is that a GET request contains no body.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/user?ID=12345&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// handle success</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-    <span class="p">})</span>
+<p><strong>Static files</strong> are plain files. While there are a few definitions of the term <strong>"static"</strong> in programming, we won't get into that here. We simply need to know that it's a collection of files/folders. The files could be JavaScript, HTML, CSS, etc. What's the point?</p>
+<p>Well . . . you might want to show a specific HTML page when the user navigates to the main route <code>"/"</code>. In a more complex example, we may create a front-end with <a href="https://reactjs.org/docs/create-a-new-react-app.html">create-react-app</a> and when we are ready for production we can compile the app into a collection of files and have the server display those to the user.</p>
+<h2 id="how-to-serve-static-files">How to Serve Static Files</h2>
+<p>In order to use static files we use the built in <code>.static</code> method of express as middleware. For example:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="s1">&#39;public&#39;</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="post">POST</h3>
-<p>A POST request tells an application that it needs to create something. A POST request sends along some sort of payload in the HTTP request body and the application can read that to determine what needs to be inserted into a database, saved to a file, etc.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/user&#39;</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Fred&#39;</span><span class="p">,</span>
-      <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Flintstone&#39;</span>
-    <span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="put">PUT</h3>
-<p>A PUT request is an update. This method tells the application/server that something needs to be changed or updated. PUT requests will also send along a body to help the application decide what needs to be altered.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;/user?ID=12345&#39;</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Fred&#39;</span><span class="p">,</span>
-      <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Flintstone&#39;</span>
-    <span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="delete">DELETE</h3>
-<p>A DELETE request may or may not have a body but its purpose is to remove something from an application, hence the keyword "delete".1</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s1">&#39;/user?ID=12345&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// handle success</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-    <span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
-<p>When you build an app for graduation and to get a job with these 4 methods you will have built a CRUD app: Create, Read, Update, Delete.</p>
-<ul>
-<li><a href="https://youtu.be/guYMSP7JVTA">YT, Telusko - HTTP Requests</a></li>
-</ul>
-<h2 id="http-status-codes">HTTP Status Codes</h2>
-<p>Each time we send a request we will get a response back and that response will include a status code. The objective of the status code is to tell us the results of the request. For instance, a request could have been successful, failed to find information or couldn't find the desired resource/server. These codes tell us what went right and what went wrong.</p>
-<ul>
-<li><em>200</em> - There are multiple variations of the 200 status code including 201 and 204, but generally anything in the 200 range indicates a successful response. Things went according to plan.</li>
-<li><em>300</em> - Status codes in the 300s are used for caching, proxy or SEO purposes. The main one is a 301 redirect which means a resource was "moved permanently". We won't run into these codes much in this class. In fact, you won't run into them that often in your career unless you do a lot of networking related tasks.</li>
-<li>
-<p><em>400</em> - 400 status codes mean something went wrong with the request. There are lots of variations of these so we will cover a few. The main ones are:</p>
-</li>
-<li>
-<p><em>400</em> - Bad Request_: This is a generic "something is wrong" status code. You will need to change your request and try again.</p>
-</li>
-<li>
-<p><em>401</em> - Unauthorized_: You've likely forgotten an API key or some other Authorization header required to complete the request. This is usually temporary.</p>
-</li>
-<li>
-<p><em>403</em> - Forbidden_: Similar to a 401, this indicates that the server understands the request but is going to block it anyway. This is more permanent. For example: incorrect access rights.</p>
-</li>
-<li>
-<p><em>404</em> - Not Found_: You may have seen this one before! This means that the requested resource could not be found.</p>
-</li>
-<li>
-<p><em>500</em> - Status codes in the 500s mean something is really wrong. A 500 (Internal Server Error) could be an uncaught exception in your code. A 502 (Bad Gateway) or a 503 (Service Unavailable) may indicate an infrastructure problem. Perhaps your server is down.</p>
-</li>
-</ul>
-<h3 id="status-code-summary">Status Code Summary</h3>
-<p>A lot to take in? Don't worry, you'll learn these as you go. Like most things repetition helps. For this course, the two things we should take away from status codes are:</p>
-<p>We are generally looking for a 200 (OK)
-Typically the higher the number, the worse of an issue it is</p>
-<h2 id="practice-it">Practice It</h2>
-<iframe width="900" height="600" src="https://austincodingacademy.com/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<p>This tells express to show the contents of the "public" folder when a user navigates to the web server. In a more complete example, our <code>index.js</code> file looks like this:</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">index.js</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
 
-<h3 id="instructions">Instructions</h3>
+  <span class="kd">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mf">4000</span>
+
+  <span class="c1">// tell our Express server to serve the files in the public folder</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="s1">&#39;public&#39;</span><span class="p">))</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`App is listening on port: </span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">!`</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Folder Structure</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">src/</span>
+<span class="go">  - index.js</span>
+<span class="go">  - controllers/</span>
+<span class="go">    - users.js</span>
+<span class="go">  - routers/</span>
+<span class="go">    - users.js</span>
+<span class="go">    - customers.js</span>
+<span class="go">    - merchants.js</span>
+<span class="go">    - admins.js</span>
+<span class="go">  - public/</span>
+<span class="go">    - index.html</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">public/index.html Code</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Home Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to the home page!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This page can be used for many purposes, such as login.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Rendered at <code>http://localhost:4000/</code></label><div class="tabbed-content">
+<p><img alt="express-static-files-simple-html-example" src="../../images/express-static-files-simple-html-example.png" /></p>
+</div>
+</div>
+<h2 id="practice-it">Practice It</h2>
+<div id="i4c-draggable-container" style="position: fixed; z-index: 1499; width: 0px; height: 0px;">
+<div data-reactroot="" class="resolved" style="all: initial;"></div>
+</div>
+<p><iframe height="600px" width="100%" src="https://repl.it/@MattViteri/StarkCanineCrypto?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p></p>
+<div id="i4c-dialogs-container"></div>
+<div></div>
+<div id="i4c-dialogs-container"></div>
+<div id="i4c-dialogs-container"></div>
+<div id="i4c-dialogs-container"></div>
+
+<p>Use the sandbox above to get familiar with routes and controllers</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> On your computer, create a new folder called <code>sampleHTTP</code> and navigate to it: <code>cd sampleHTTP</code>.</li>
-<li class="task-list-item"><input type="checkbox"/> Run the command <code>npm init</code> to initialize your project. <strong>READ THE WORDS PRINTED ON YOUR SCREEN!!</strong></li>
-<li class="task-list-item"><input type="checkbox"/> Accept all the default options by hitting <span class="keys"><kbd class="key-enter">Enter</kbd></span> over and over all the way through the last step: "Is this OK? (yes)".</li>
-<li class="task-list-item"><input type="checkbox"/> <code>cd sampleHTTP</code>: into the <code>sampleHTTP</code> folder</li>
-<li class="task-list-item"><input type="checkbox"/> <code>npm i axios</code>. Axios is the HTTP client we'll be using for this little project.</li>
-<li class="task-list-item"><input type="checkbox"/> Create a file called <code>index.js</code> in your project folder: <code>touch index.js</code>.</li>
-<li class="task-list-item"><input type="checkbox"/> Open this new directory in your text editor: <code>code .</code></li>
-<li class="task-list-item"><input type="checkbox"/> Import axios on the first line: <code>const axios = require('axios')</code>.</li>
-<li class="task-list-item"><input type="checkbox"/> On the third line make a call to axios with the URL of ACA: <code>axios('https://austincodingacademy.com/')</code>.</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> Use <code>.then()</code> to get the <code>response</code> and <code>console.log</code> it.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">(</span><span class="s1">&#39;https://austincodingacademy.com/&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
-    <span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
-- [ ] Run the program (<code>node index.js</code>)
-- [ ] What is the status code? What is the response?</p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> Click the start button and run the server</li>
+<li class="task-list-item"><input type="checkbox"/> Interact with the routes via Postman. You will find the <a href="https://starkcaninecrypto--mattviteri.repl.co/">URL</a> on the right side of your screen after you open the Repl.it (top-right).</li>
+<li class="task-list-item"><input type="checkbox"/> Verify that all the routes work as intended</li>
+<li class="task-list-item"><input type="checkbox"/> Test <code>/users</code>, <code>/users/2</code></li>
+<li class="task-list-item"><input type="checkbox"/> Move the routes in <code>index.js</code> over to the <code>routes/users.js</code> folder and import/<code>require()</code> them back into <code>index.js</code> using <code>const users = require('./routers/users.js')</code> &amp; <code>app.use()</code></li>
+<li class="task-list-item"><input type="checkbox"/> Move the <code>(req, res) =&gt; {}</code> functions out of the routes and into the <code>controllers/</code> folder. Then import these back into the <code>routes/</code> folder as you did before and use as expected: <code>app.get('/users', usersController.list)</code></li>
+<li class="task-list-item"><input type="checkbox"/> If everything was done correctly the app will function exactly as it was in the beginning.</li>
+<li class="task-list-item"><input type="checkbox"/> Test with Postman as you do each small step. <strong>TEST</strong>! <strong>TEST</strong>!! <strong>TEST</strong>!!</li>
+<li class="task-list-item"><input type="checkbox"/> Once you've move your routes and built your controllers practice building the routes to create a user!!</li>
+<li class="task-list-item"><input type="checkbox"/> Remember to reference your docs!!</li>
 </ul>
-<blockquote>
-<p>NOTE: You're going to get a very long response, and you might not be able to scroll all the way to the top to see the status code. Try the following to get ONLY the response headers:</p>
-</blockquote>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>```javascript
-  axios.head(&#39;https://austincodingacademy.com/&#39;)
-    .then(function (response) {
-      console.log(response)
-    })
-```
-</code></pre></div>
-</td></tr></table>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.youtube.com/watch?v=x3yiq4bDoV4">YT, Duomly - Fetch vs Axios</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.youtube.com/watch?v=6LyagkoRWYA">YT, Traversy Media - Axios Crash Course</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/">Article, LogRocket - How to Make HTTP Requests with Axios.js</a></li>
-<li class="task-list-item"><input type="checkbox"/> Look ahead to the <a href="../../additionalResources/questionsForDiscussion/qfd-class-2/">Questions for Student Led Discussion</a></li>
-<li>To be a successful developer you need to have the curiosity and passion to problem solve. Start practicing each night with the puzzles given to you in the <a href="../../additionalResources/interviewChallenges/">Interview Challenges</a> and start looking for others at places like <a href="https://www.hackerrank.com/">HackerRank</a>, <a href="https://www.geeksforgeeks.org/">GeeksForGeeks</a>, <a href="https://www.codewars.com/">CodeWars</a>, and <a href="https://leetcode.com/">LeetCode</a>.</li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/7UErZ43jzrU">YT, Codedamn - ExpressJS 15: Serving Static Files</a></li>
 </ul>
 <h2 id="know-your-docs">Know Your Docs</h2>
-<p>Be sure to reference the Axios documentation on <a href="https://www.npmjs.com/package/axios">NPM</a>.</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://github.com/axios/axios">GitHub Repo - Axios.js</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://expressjs.com/en/starter/static-files.html">Express Docs - Static</a></li>
 </ul>
                 
               
@@ -1187,7 +1004,7 @@ Typically the higher the number, the worse of an issue it is</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../class-1/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../expressControllers/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1196,19 +1013,19 @@ Typically the higher the number, the worse of an issue it is</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Class 1 Node, NPM, & Postman
+              Controllers
             </div>
           </div>
         </a>
       
       
-        <a href="../class-2/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../class-4/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Class 2 Axios Practice
+              Class 4 Serving Static Files
             </div>
           </div>
           <div class="md-footer__button md-icon">

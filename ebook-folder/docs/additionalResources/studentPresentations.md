@@ -24,11 +24,11 @@ There will be no student presentation for the first class.
 
 ## Class 3
 
-- [ ] *50% of the class: Pitch your graduation app to the class. What’s the problem? How does this app solve it?*
+- [ ] *50% of the class: Pitch your graduation app to the class. What’s the problem? How does this app solve it? What do you envision for its future? Followed by a class Q&A.*
 
 ## Class 4
 
-- [ ] *50% of the class: Pitch your graduation app to the class. What’s the problem? How does this app solve it?*
+- [ ] *50% of the class: Pitch your graduation app to the class. What’s the problem? How does this app solve it? What do you envision for its future? Followed by a class Q&A.*
 
 ## Class 5
 

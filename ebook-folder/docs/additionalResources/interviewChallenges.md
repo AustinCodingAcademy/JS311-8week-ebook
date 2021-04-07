@@ -84,7 +84,15 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 4
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **Prompt 1: getNArray** - *Write a JavaScript function to get the first element of an array. BUT passing a parameter 'n' will return the first 'n' elements of the array.*
+
+```javascript
+    getNArray([7, 9, 0, -2]); // --> 7
+    getNArray([],3); // --> []
+    getNArray([7, 9, 0, -2],3); // --> [7, 9, 0]
+    getNArray([7, 9, 0, -2],6); // --> [7, 9, 0, -2]
+    getNArray([7, 9, 0, -2],-3); // --> []
+```
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 5

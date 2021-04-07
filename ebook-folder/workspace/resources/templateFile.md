@@ -2,7 +2,7 @@
 
 **
 
-cp workspace/resources/templateFile.md docs/module- 
+cp workspace/resources/templateFile.md docs/module-
 
 ## Overview
 <!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
