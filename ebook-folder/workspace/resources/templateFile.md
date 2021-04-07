@@ -2,6 +2,8 @@
 
 **
 
+cp workspace/resources/templateFile.md docs/module- 
+
 ## Overview
 <!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
 
@@ -13,6 +15,8 @@
 ## Additional Resources
 
 - [ ] [YT, tuber - title]()
+- [ ] Look ahead to the [Questions for Student Led Discussion](./../additionalResources/questionsForDiscussion/qfd-class-0.md)
+- To be a successful developer you need to have the curiosity and passion to problem solve. Start practicing each night with the puzzles given to you in the [Interview Challenges](./../additionalResources/interviewChallenges.md) and start looking for others at places like [HackerRank](https://www.hackerrank.com/), [GeeksForGeeks](https://www.geeksforgeeks.org/), [CodeWars](https://www.codewars.com/), and [LeetCode](https://leetcode.com/).
 
 ## Know Your Docs
 

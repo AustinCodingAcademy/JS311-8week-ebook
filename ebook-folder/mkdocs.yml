@@ -22,7 +22,7 @@ site_name: JS311 - Node Servers + SQL Databases
 
 nav:
     - Home: 'index.md'
-    - 'Module One: TITLE':
+    - 'Module One: Express Servers':
       - 'Pre-Class 1 Lessons': 
         - Prepare Your Machine: module-1/prepareYourMachine.md
         - Code Sandboxes: module-1/codeSandboxes.md
@@ -31,11 +31,13 @@ nav:
         - Intro to APIs: module-1/REST-HTTP-APIs.md
         - Node & NPM: module-1/nodeRecap.md
         - Pre-Class Checklist: module-1/preClassOneChecklist.md
-        - Class 1 TITLE: module-1/classOutlineTemplate.md
+        - Class 1 Node, NPM, & Postman: module-1/class-1.md
       - 'Pre-Class 2 Lesson': 
-        - LESSON TITLE: module-1/lessonOutlineTemplate.md
-        - Class 2 TITLE: module-1/classOutlineTemplate.md
-      # - 'Pre-Class 3 Lesson': 
+        - Axios + Status Codes: module-1/axios-HTTPstatusCodes.md
+        - Class 2 Axios Practice: module-1/class-2.md
+      - 'Pre-Class 3 Lesson':
+        - Intro To Express: module-1/introToExpress.md
+        - Class 3: module-1/class-3.md
       # - 'Pre-Class 4 Lesson': 
     # - 'Module Two: TITLE': 
       # - 'Pre-Class 5 Lessons': 
@@ -60,6 +62,7 @@ nav:
       - 'Questions for Discussion Collections':
         - Day 1 QFD: additionalResources/questionsForDiscussion/qfd-class-1.md
         - Day 2 QFD: additionalResources/questionsForDiscussion/qfd-class-2.md
+        - Day 3 QFD: additionalResources/questionsForDiscussion/qfd-class-3.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md

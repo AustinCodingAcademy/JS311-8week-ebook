@@ -54,7 +54,7 @@ It's important to note the difference in the environment. If you built a web pag
 
 NPM stands for *Node Package Manager*. It also stands for *Not Pancake Mix* or any other assortment of clever acronyms developers can think of, and it's become something of a running joke on their website. The purpose of this tool is to allow you to integrate third-party code into your application. Third-party code means code another developer has written and published to NPM. Many developers in the open-source community work on projects that will benefit the masses and these projects can be downloaded via NPM and used in your project. A *package.json* file keeps track of all the packages you are currently using in your current project.
 
-  > If you were building with Python and `pip`(the Python equivalent of `npm`) you would see all of your code packages in a `requirements.txt` file.
+  > Likewise, if you were building with Python and `pip`(the Python equivalent of `npm`) you would see all of your code packages in a `requirements.txt` file.
 
 ### See It - NPM
 

@@ -6,6 +6,10 @@ Interviewing for development jobs is tough! To prepare you for the challenges ah
 
 ## How to Solve Your Challenge
 
+**Restate**, **rewrite**, and **clarify** the question. Write the **expected return** given the input. Make a code plan and speak aloud **with** your interviewers/team. **Test** and come up with edge cases. **Revise** if you can for efficiency.
+
+**Restate, Rewrite, Clarify, Return, Plan, Collaborate, Code, Test, Revise**
+
 - [ ] Restate the question aloud.
 - [ ] Write the question out at the top of the whiteboard.
 - [ ] Ask any clarifying questions you need.
@@ -26,17 +30,56 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 1
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: Using HTTP and APIs** - *All together at the same time. We'll hear thoughts and discussion afterward.*
+
+    - [ ] Write out the URI to get an individual character from the Star Wars API. Highlight the pieces of the URI and explain what they mean.
+    - [ ] Explain what is included in an HTTP request message. Write it out and explain the parts.
+    - [ ] Explain what is included in an HTTP response message. Write it out and explain the parts.
+    - [ ] Diagram what happens when a client makes a GET request. What is included in the request? - [ ] What is included in the response?
+    - [ ] Diagram a POST request to create a resource. What is included in the request? What is included in the response?
 
 ### Class 2
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: sumOneForOne** - *There are two arrays with individual values. Write a JavaScript program to compute the sum of each individual index value from the given arrays.*
+
+```javascript
+    let array1 = [1, 0, 2, 3, 4]; 
+    let array2 = [3, 5, 6, 7, 8, 13];
+
+    const sumOneForOne = () => { /*your code here*/}
+
+    sumOneForOne(array1, array2) // => [4, 5, 8, 10, 12, 13]
+```
+
+- [ ] **Prompt 2: RESTful Design** - *Design a REST API for a photo album site.*
+
+    * [ ] *What resources would the API support?*
+    * [ ] *What operations can be done on those resources, and what HTTP verb would be used for each?*
+    * [ ] *What would the body of a request and response look like for each operation?*
+    * [ ] *For this first whiteboarding challenge, the instructor will lead the discovery.*
+
+    > The Instructor will lead this discussion with input from the class.
 
 ### Class 3
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **Prompt 1: Title** - *Your customer has sa list of volume, which you have neatly stored into an array. One of the properties of each volume is a protection policy. The customer wants their users to be able to apply a protection policy to new volumes globally, if all of the existing volumes have the same policy. You need to write a function that returns a boolean. `true`, meaning all the policies in the array are the same, or `false`, meaning at least one policy in the array is different from another.*
+
+*The caveat here is, new volumes are also in this array, and their policy is denoted as a special string `'--:--'`. This means there is no policy on the volume and thus, the volume is new. If all the policies in the array are the same, we can apply that policy globally TO the new volumes, else, we cannot, and will have to go new-volume by new-volume, applying policies individually.*
+
+*Policies are denoted with characters 'A' 'B' 'C' or 'D'. New volume policies are denoted with the special string `'--:--'`.*
+
+```console
+    INPUT: [ {policy: 'A'}, {policy: 'A'}, {policy: '--:--'}, {policy: '--:--'}, {policy: 'A'}, {policy: 'A'},]
+
+    OUTPUT: true, set global policy
+
+    INPUT: [ {policy: 'A'}, {policy: 'B'}, {policy: '--:--'}, {policy: '--:--'}, {policy: 'A'}, {policy: 'C'},]
+
+    OUTPUT: false, prevent global policy
+```
+
+*With this data, build a function that determines if setting a global policy is possible or not.*
+
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 4

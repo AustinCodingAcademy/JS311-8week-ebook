@@ -1,12 +1,11 @@
-# Class #: Title
+# Class 2: HTTP Request with Axios
 
 <!-- ! HIDE FROM STUDENT; INSTRUCTOR ONLY CONTENT -->
 <!-- ## Instructor Only Content - HIDE FROM STUDENTS -->
-cp workspace/resources/classOutlineTemplate.md docs/module-
 
 <!-- ! END INSTRUCTOR ONLY CONTENT -->
 
-*quote*
+*The best way out is always through. —Robert Frost*
 
 ## Greet, Outline, and Objectify
 
@@ -15,7 +14,10 @@ cp workspace/resources/classOutlineTemplate.md docs/module-
 
 Today we're going to:
   
-*OBJECTIVE - 
+*OBJECTIVE - Today the student will learn and practice to understand:*
+
+* *Practice passing Jest Tests*
+* *Using Axios as an HTTP Client*
 
 *****
 
@@ -23,15 +25,15 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    * [ ] ...
+    * [ ] Fork and Clone the [Axios Practice Repo](https://github.com/AustinCodingAcademy/311_wk1_day2_axios)
 - [ ] Push Yourself Further
-<!-- - [ ] Interview Questions: Blog to Show You Know -->
+- [ ] Blog to Show You Know
 - [ ] Exit Recap, Attendance, and Reminders
 
 ### Questions for Student Led Discussion, 15 mins
 <!-- This section should be structured with the 5E model: https://lesley.edu/article/empowering-students-the-5e-model-explained -->
 
-[Questions to prompt discussion](./../additionalResources/questionsForDiscussion/qfd-class-0.md)
+[Questions to prompt discussion](./../additionalResources/questionsForDiscussion/qfd-class-2.md)
 
 ### Interview Challenge, 15 mins
 <!-- The last two E happen here: elaborate and evaluate  -->
@@ -46,24 +48,29 @@ Today we're going to:
 
 ## Creation Time, 60-90 mins
 
-- [ ]
+Today we are going to be making API calls with Axios. The goal of this exercise is to get comfortable using axios (like fetch) in a Node.js environment and familiarizing ourselves with the types of responses and status codes we receive from APIs.
 
-<!-- ! Video Content:  (width="655" height="368", ratio 1.77) -->
+![day2-axios-practice-repo-screenshot](./../images/day2-axios-practice-repo-screenshot.png)
+
+- [ ] Fork and clone the following repository: [Axios Practice](https://github.com/AustinCodingAcademy/311_wk1_day2_axios).
+- [ ] Follow the `README` to complete the functions and make all the tests pass.
+
+### Follow Up Video
+
+- [ ] [YT, Mahtab Alam - Making HTTP Calls in Node with Axios.js](https://youtu.be/vNYZQ2Bqg_0)
 
 ### Push Yourself Further
 
-- [ ]
+- [ ] [Medium Tutorial, Sebastian Eschweiler - Getting Started with Axios.js](https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237)
 
-<!-- 
 ## Blogs to Show You Know
 
-[Blog Prompts](./../additionalResources/blogPrompts.md) 
--->
+[Blog Prompts](./../additionalResources/blogPrompts.md)
 
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
-- [ ] Create *** Assignment
-<!-- - [ ] Create *** Blog Assignment -->
+- [ ] Create Axios Practice Assignment
+- [ ] Create Class 2 Blog To Show You Know Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
 - [ ] Complete the feedback survey(if applicable)
 

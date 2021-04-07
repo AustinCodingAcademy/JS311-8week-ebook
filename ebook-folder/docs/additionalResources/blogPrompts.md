@@ -4,34 +4,39 @@
   > - Remember, you will be graded for the completion of your blog but also this will be a place you can return to when preparing for interviews in a few months!
   > - **When publishing your blogs, make sure you "@AustinCodingAcademy" and tag "Coding" and "Web Development" in your story.**
 
-## Class 2 - Prompt 101
+## Class 2
+
+- [ ] How do you organize your code? What are some suggestions you find on the web?
+- [ ] Can you describe your workflow when you create a web page or web app?
+- [ ] You can’t work out how to solve a coding problem, where do you find the answer? Why? How do you know?
+- [ ] What problems have you solved that didn’t involve you coding?
+- [ ] Talk about your preferred development environment. (What IDE or text editor you enjoy, and why?)
+- [ ] How are you keeping up with the latest developments in web development?
+
+## Class 4
 
 - [ ]
 
-## Class 4 - Prompt 102
+## Class 6
 
 - [ ]
 
-## Class 6 - Prompt 103
+## Class 8
 
 - [ ]
 
-## Class 8 - Prompt 104
+## Class 10
 
 - [ ]
 
-## Class 10 - Prompt 105
+## Class 12
 
 - [ ]
 
-## Class 12 - Prompt 106
+## Class 14
 
 - [ ]
 
-## Class 14 - Prompt 107
-
-- [ ]
-
-## Class 16 - Prompt 108
+## Class 16
 
 - [ ]

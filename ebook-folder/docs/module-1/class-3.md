@@ -1,12 +1,11 @@
-# Class #: Title
+# Class 3: 1st Express Server
 
 <!-- ! HIDE FROM STUDENT; INSTRUCTOR ONLY CONTENT -->
 <!-- ## Instructor Only Content - HIDE FROM STUDENTS -->
-cp workspace/resources/classOutlineTemplate.md docs/module-
 
 <!-- ! END INSTRUCTOR ONLY CONTENT -->
 
-*quote*
+*The surest way not to fail is to determine to succeed. —Richard Brinsley Sheridan*
 
 ## Greet, Outline, and Objectify
 
@@ -15,7 +14,10 @@ cp workspace/resources/classOutlineTemplate.md docs/module-
 
 Today we're going to:
   
-*OBJECTIVE -
+*OBJECTIVE - Today the student will learn and practice to understand:*
+
+* *Using Express.js to build JavaScript servers*
+* *Using Postman as a testing software*
 
 *****
 
@@ -23,15 +25,16 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    * [ ] ...
+    * [ ] [311_wk2_day1_express repo](https://github.com/AustinCodingAcademy/311_wk2_day1_express.git)
+    * [ ] Complete the Express server
+    * [ ] Test with Postman
 - [ ] Push Yourself Further
-<!-- - [ ] Blog to Show You Know -->
 - [ ] Exit Recap, Attendance, and Reminders
 
 ### Questions for Student Led Discussion, 15 mins
 <!-- This section should be structured with the 5E model: https://lesley.edu/article/empowering-students-the-5e-model-explained -->
 
-[Questions to prompt discussion](./../additionalResources/questionsForDiscussion/qfd-class-0.md)
+[Questions to prompt discussion](./../additionalResources/questionsForDiscussion/qfd-class-3.md)
 
 ### Interview Challenge, 15 mins
 <!-- The last two E happen here: elaborate and evaluate  -->
@@ -46,23 +49,29 @@ Today we're going to:
 
 ## Creation Time, 60-90 mins
 
-- [ ]
+Today we are going to set up a basic Express server and add a few routes. We will practice creating/altering routes and seeing the results in Postman.
 
-<!-- ! Video Content:  (width="655" height="368", ratio 1.77) -->
+![first-express-server-code-screenshot](./../images/first-express-server-code-screenshot.png)
+![first-express-server-postman-screenshot](./../images/first-express-server-postman-screenshot.png)
+
+- [ ] Fork and clone the following repository: [Express Intro Practice](https://github.com/AustinCodingAcademy/311_wk2_day1_express)
+`cd` into the new directory and `npm i`
+- [ ] Follow the `README` to:
+    * [ ] get started
+    * [ ] build routes and
+    * [ ] test them with Postman
+- [ ] Remember to use the homework for this class to build your first routes.
+
+- [ ] [YT, Traversy Media - JS Crash Course](https://youtu.be/L72fhGm1tfE)
+
+    > This video is an hour and fourteen minutes long but it covers all the topics we learned today. It uses Express and Postman. You might try listening at 1.5x speed but you should definitely follow along.
 
 ### Push Yourself Further
 
-- [ ]
-
-<!-- 
-## Blogs to Show You Know
-
-[Blog Prompts](./../additionalResources/blogPrompts.md) 
--->
+Follow along with this [tutorial on installing and setting up express](https://www.robinwieruch.de/node-js-express-tutorial/). This article includes concepts like "middleware" which we practiced with body-parser but haven't talked about in depth yet.
 
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
-- [ ] Create ** Assignment
 <!-- - [ ] Create Class ** Blog To Show You Know Assignment -->
 - [ ] Prepare for next class by completing all of your pre-class lessons
 - [ ] Complete the feedback survey(if applicable)
