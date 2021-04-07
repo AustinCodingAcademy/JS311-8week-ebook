@@ -97,8 +97,12 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 5
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: ArrayClone** - *Write a JavaScript function to clone an array.*
+
+```javascript
+    console.log(cloneArray([1, 2, 4, 0]));  // => [1, 2, 4, 0]
+    console.log(cloneArray([1, 2, [4, 0]])); // => [1, 2, [4, 0]]
+```
 
 ### Class 6
 

@@ -46,9 +46,14 @@ nav:
         - Controllers: module-1/expressControllers.md
         - Static Files: module-1/expressStaticFiles.md
         - Class 4 Serving Static Files: module-1/class-4.md
-    # - 'Module Two: SQL Databases': 
-      # - 'Pre-Class 5 Lessons': 
-        # - Class 5 TITLE: module-2/classOutlineTemplate.md
+    - 'Module Two: MySQL Database': 
+      - 'Pre-Class 5 Lessons': 
+        - Database Intro: module-2/databaseIntro.md
+        - MySQL Workbench: module-2/mySql-WorkbenchSetup.md
+        - DB on GCP: module-2/setupDatabaseOnGCP.md
+        - SELECT Statements: module-2/writingSELECTstatements.md
+        # https://studio.zollege.com/course/course-v1:ACA+JS311+08172020_JS311_C6?show=block-v1%3AACA%2BJS311%2B08172020_JS311_C6%2Btype%40sequential%2Bblock%403f8633c1642543358d1afd7a9f1c324f
+        - Class 5 SELECT: module-2/class-5.md
         # - 'Pre-Class 6 Lesson': 
         # - 'Pre-Class 7 Lesson': 
         # - 'Pre-Class 8 Lesson': 
@@ -71,6 +76,7 @@ nav:
         - Day 2 QFD: additionalResources/questionsForDiscussion/qfd-class-2.md
         - Day 3 QFD: additionalResources/questionsForDiscussion/qfd-class-3.md
         - Day 4 QFD: additionalResources/questionsForDiscussion/qfd-class-4.md
+        - Day 5 QFD: additionalResources/questionsForDiscussion/qfd-class-5.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md

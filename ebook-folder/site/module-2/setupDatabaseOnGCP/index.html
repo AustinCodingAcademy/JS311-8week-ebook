@@ -14,7 +14,7 @@
     
     
       
-        <title>Develop Series Collection - JS311 - Node Servers + SQL Databases</title>
+        <title>DB on GCP - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#develop-series" class="md-skip">
+        <a href="#hosting-a-database-on-google-cloud-platform" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Develop Series Collection
+              DB on GCP
             
           </span>
         </div>
@@ -518,12 +518,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Module Two: MySQL Database
@@ -539,12 +541,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       <label class="md-nav__link" for="__nav_3_1">
         Pre-Class 5 Lessons
@@ -562,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/databaseIntro/" class="md-nav__link">
+      <a href="../databaseIntro/" class="md-nav__link">
         Database Intro
       </a>
     </li>
@@ -574,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/mySql-WorkbenchSetup/" class="md-nav__link">
+      <a href="../mySql-WorkbenchSetup/" class="md-nav__link">
         MySQL Workbench
       </a>
     </li>
@@ -584,11 +588,63 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../module-2/setupDatabaseOnGCP/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DB on GCP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         DB on GCP
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-big-picture" class="md-nav__link">
+    The Big Picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-up-and-setup-a-database-on-gcp" class="md-nav__link">
+    Sign-up and Setup a Database on GCP
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -598,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/writingSELECTstatements/" class="md-nav__link">
+      <a href="../writingSELECTstatements/" class="md-nav__link">
         SELECT Statements
       </a>
     </li>
@@ -610,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/class-5/" class="md-nav__link">
+      <a href="../class-5/" class="md-nav__link">
         Class 5 SELECT
       </a>
     </li>
@@ -635,14 +691,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Additional Resources
@@ -660,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewChallenges/" class="md-nav__link">
+      <a href="../../additionalResources/interviewChallenges/" class="md-nav__link">
         Interview Training
       </a>
     </li>
@@ -672,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../studentPresentations/" class="md-nav__link">
+      <a href="../../additionalResources/studentPresentations/" class="md-nav__link">
         Student Presentations
       </a>
     </li>
@@ -682,20 +736,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../additionalResources/developSeries/" class="md-nav__link">
         Develop Series Collection
       </a>
-      
     </li>
   
 
@@ -726,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-1/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-1/" class="md-nav__link">
         Day 1 QFD
       </a>
     </li>
@@ -738,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-2/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-2/" class="md-nav__link">
         Day 2 QFD
       </a>
     </li>
@@ -750,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-3/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-3/" class="md-nav__link">
         Day 3 QFD
       </a>
     </li>
@@ -762,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-4/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-4/" class="md-nav__link">
         Day 4 QFD
       </a>
     </li>
@@ -774,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-5/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-5/" class="md-nav__link">
         Day 5 QFD
       </a>
     </li>
@@ -792,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blogPrompts/" class="md-nav__link">
+      <a href="../../additionalResources/blogPrompts/" class="md-nav__link">
         Blog Prompts
       </a>
     </li>
@@ -804,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keyboardShortcuts/" class="md-nav__link">
+      <a href="../../additionalResources/keyboardShortcuts/" class="md-nav__link">
         Keyboard Shortcuts
       </a>
     </li>
@@ -816,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitCommands/" class="md-nav__link">
+      <a href="../../additionalResources/gitCommands/" class="md-nav__link">
         Git & CLI Commands
       </a>
     </li>
@@ -828,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../learnYourCLI/" class="md-nav__link">
+      <a href="../../additionalResources/learnYourCLI/" class="md-nav__link">
         Learn Your CLI
       </a>
     </li>
@@ -840,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graduationPrerequisites/" class="md-nav__link">
+      <a href="../../additionalResources/graduationPrerequisites/" class="md-nav__link">
         Graduation Prerequisites
       </a>
     </li>
@@ -852,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../presentationsQualifications/" class="md-nav__link">
+      <a href="../../additionalResources/presentationsQualifications/" class="md-nav__link">
         Presentation Qualifications
       </a>
     </li>
@@ -883,6 +928,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-big-picture" class="md-nav__link">
+    The Big Picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-up-and-setup-a-database-on-gcp" class="md-nav__link">
+    Sign-up and Setup a Database on GCP
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -894,12 +968,20 @@
               
                 
                 
-                <h1 id="develop-series">Develop Series</h1>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/M1CHPnZfFmU">Class 1 - Growth Mindset vs Fixed Mindset</a></li>
-</ul>
-<!-- ! video height/width ratio = 1.777 ---- width="655" height="368" -->
-<!-- TODO Add Intriguing Follow-up Questions -->
+                <h1 id="hosting-a-database-on-google-cloud-platform">Hosting a Database on Google Cloud Platform</h1>
+<h2 id="overview">Overview</h2>
+<p>While we could run a database on our local computer the same way we've been running our server app on our computer this isn't a good idea simple because we'll soon be running a front-end app on our computer while developing. THAT WOULD BE 3 APPS running on our computer while we're still coding....not a good idea.</p>
+<p>In addition, we want our data to persist on a computer that's available globally, literally globally to all those with an internet connection. To do this we need to put our data in a database that is hosted on a service like Azure, AWS, or Google Cloud (GCP). The video below shows you how to sign-up and use GCP to host a MySQL database but before you jump into that let's first get a big picture of what we're doing.</p>
+<h2 id="the-big-picture">The Big Picture</h2>
+<p>We're learning how to build servers using Express.js. These servers will serve data to our front-end app we build in 411, thus a full-stack application. But we need to have a database to keep up with our data. Today you're going to sign-up for a GCP account and get free credit to run what's called a <strong>virtual machine</strong>(VM). This is going to be called an <strong>instance</strong> in the video below.</p>
+<p>The instance will work just like your personal computer. It will be a computer running on a very large computer somewhere in the world. This credit will go toward paying for that computer to run and accept requests.</p>
+<p>Once your server is build you'll host it on GCP, AWS, Heroku, or where ever. This too will be on a computer/virtual machine that is running and accepting requests and sending requests to your database.</p>
+<p>Then you'll build your front-end app using React. This will also be its own app and will need to run on a virtual machine somewhere like AWS, Azure, etc.</p>
+<p>All of this costs money! Hosting apps and websites is not free. It costs money. We introduce you to GCP because it's an industry standard like Azure and AWS. As you move through this program you will likely run our of credit. Don't agree to pay for more and you <strong>won't</strong> be charged more!</p>
+<p>However, as you approach graduation you might need to move your DB, Server App, and Front-end(Client) app from GCP to Heroku or AWS to save money. This is totally fine and we have instructions for both. Please talk to your instructors and mentors to make sure you're not paying too much money.</p>
+<h2 id="sign-up-and-setup-a-database-on-gcp">Sign-up and Setup a Database on GCP</h2>
+<!-- ! Video Contents:  YT, Jon@ACA - Sign-up and Setup GCP -->
+<iframe width="655" height="368" src="https://www.youtube.com/embed/ypQaSyICc3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
               
               
@@ -917,7 +999,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../studentPresentations/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../mySql-WorkbenchSetup/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -926,19 +1008,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Student Presentations
+              MySQL Workbench
             </div>
           </div>
         </a>
       
       
-        <a href="../questionsForDiscussion/qfd-class-1/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../writingSELECTstatements/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Day 1 QFD
+              SELECT Statements
             </div>
           </div>
           <div class="md-footer__button md-icon">
