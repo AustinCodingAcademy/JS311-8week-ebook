@@ -1,0 +1,1423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>SQL CRUD - JS311 - Node Servers + SQL Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-sql-crud-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
+      
+  <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JS311 - Node Servers + SQL Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL CRUD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
+      
+  <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
+
+    </a>
+    JS311 - Node Servers + SQL Databases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Module One: Express Servers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Module One: Express Servers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Module One: Express Servers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Pre-Class 1 Lessons
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 1 Lessons" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 1 Lessons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/prepareYourMachine/" class="md-nav__link">
+        Prepare Your Machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/codeSandboxes/" class="md-nav__link">
+        Code Sandboxes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/succeedInThisCourse/" class="md-nav__link">
+        How to Succeed
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/whatIsNodeJS/" class="md-nav__link">
+        Working in Node
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/REST-HTTP-APIs/" class="md-nav__link">
+        Intro to APIs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/nodeRecap/" class="md-nav__link">
+        Node & NPM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/preClassOneChecklist/" class="md-nav__link">
+        Pre-Class Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/class-1/" class="md-nav__link">
+        Class 1 Node, NPM, & Postman
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Pre-Class 2 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 2 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 2 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/axios-HTTPstatusCodes/" class="md-nav__link">
+        Axios + Status Codes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/class-2/" class="md-nav__link">
+        Class 2 Axios Practice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Pre-Class 3 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 3 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 3 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/introToExpress/" class="md-nav__link">
+        Intro To Express
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/class-3/" class="md-nav__link">
+        Class 3 First Server
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Pre-Class 4 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 4 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 4 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/expressRouters/" class="md-nav__link">
+        Routers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/expressControllers/" class="md-nav__link">
+        Controllers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/expressStaticFiles/" class="md-nav__link">
+        Static Files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/class-4/" class="md-nav__link">
+        Class 4 Serving Static Files
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Module Two: MySQL Database
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Module Two: MySQL Database" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Module Two: MySQL Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Pre-Class 5 Lessons
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 5 Lessons" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 5 Lessons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databaseIntro/" class="md-nav__link">
+        Database Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mySql-WorkbenchSetup/" class="md-nav__link">
+        MySQL Workbench
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setupDatabaseOnGCP/" class="md-nav__link">
+        DB on GCP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writingSELECTstatements/" class="md-nav__link">
+        SELECT Statements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class-5/" class="md-nav__link">
+        Class 5 SELECT
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Pre-Class 6 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 6 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 6 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advancedSELECTstatments/" class="md-nav__link">
+        Advanced SELECT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class-6/" class="md-nav__link">
+        Class 6 Advanced SELECT
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Pre-Class 7 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 7 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 7 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL CRUD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SQL CRUD
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    INSERT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    DELETE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-it-sql-crud" class="md-nav__link">
+    Practice It - SQL CRUD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class-7/" class="md-nav__link">
+        Class 7 SQL CRUD
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Additional Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Additional Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Additional Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/interviewChallenges/" class="md-nav__link">
+        Interview Training
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/studentPresentations/" class="md-nav__link">
+        Student Presentations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/developSeries/" class="md-nav__link">
+        Develop Series Collection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Questions for Discussion Collections
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Questions for Discussion Collections" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Questions for Discussion Collections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-1/" class="md-nav__link">
+        Day 1 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-2/" class="md-nav__link">
+        Day 2 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-3/" class="md-nav__link">
+        Day 3 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-4/" class="md-nav__link">
+        Day 4 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-5/" class="md-nav__link">
+        Day 5 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-6/" class="md-nav__link">
+        Day 6 QFD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-7/" class="md-nav__link">
+        Day 7 QFD
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/blogPrompts/" class="md-nav__link">
+        Blog Prompts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/keyboardShortcuts/" class="md-nav__link">
+        Keyboard Shortcuts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/gitCommands/" class="md-nav__link">
+        Git & CLI Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/learnYourCLI/" class="md-nav__link">
+        Learn Your CLI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/graduationPrerequisites/" class="md-nav__link">
+        Graduation Prerequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additionalResources/presentationsQualifications/" class="md-nav__link">
+        Presentation Qualifications
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    INSERT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    DELETE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-it-sql-crud" class="md-nav__link">
+    Practice It - SQL CRUD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="the-sql-crud-commands">The SQL CRUD Commands</h1>
+<p><em>Nothing contributes so much to tranquilize the mind as a steady purpose—a point on which the soul may fix its intellectual eye. —Mary Shelley</em></p>
+<h2 id="overview">Overview</h2>
+<p>Last week we learned a lot about databases and SQL. We used SELECT to query data in a lot of different ways and we understand how tables provide relationships to our data. Today we are going to learn about the rest of the CRUD operations in SQL.</p>
+<!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
+
+<p>Reminder: CRUD is an acronym that stands for:</p>
+<p><strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, <strong>D</strong>elete</p>
+<p>These are the basic operations we use to obtain and mutate (change) data. You'll hear this acronym used to reference APIs and, most frequently, database operations. You'll hear often that at the end of your course and by graduation you will have built a full-stack CRUD app.</p>
+<p>In terms of CRUD, we've already learned the "R" (read/<code>SELECT</code>). Now we will learn about <code>INSERT</code>/Create, <code>UPDATE</code> and <code>DELETE</code>. These operations will give us full control of our datasets.</p>
+<h3 id="insert">INSERT</h3>
+<p>The <code>INSERT</code> command inserts an item (or a group of items) into the specified table. You can see bulk inserts in the <code>initialize.sql</code> file of your previous two homework assignments. An <code>INSERT</code> statement looks like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">users</span>
+      <span class="p">(</span><span class="n">firstName</span><span class="p">,</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+  <span class="k">VALUES</span>
+      <span class="p">(</span><span class="s1">&#39;matt&#39;</span><span class="p">,</span> <span class="s1">&#39;miller&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p>Notice how the values match up (in order) with the names of the fields.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>firstName</th>
+<th>lastName</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>bob</td>
+<td>brandy</td>
+<td>55</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sarah</td>
+<td>sassafrass</td>
+<td>75</td>
+</tr>
+<tr>
+<td>3</td>
+<td>emily</td>
+<td>erlanger</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p>Question: There's an "id" field on this table that we don't see in the <code>INSERT</code> command. Why doesn't the "id" field need to be written in the <code>INSERT</code> statement?</p>
+<blockquote>
+<p>Check out/Google the <a href="https://www.w3schools.com/sql/sql_autoincrement.asp">AUTO_INCREMENT keyword</a> for the answer to this question.</p>
+</blockquote>
+<h3 id="update">UPDATE</h3>
+<p>The <code>UPDATE</code> command updates a row or set of rows that match a certain criteria. You can change one or more fields in the dataset as long as they aren't <code>PRIMARY KEYS</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">UPDATE</span>
+      <span class="n">users</span>
+  <span class="k">SET</span>
+      <span class="n">first_name</span> <span class="o">=</span> <span class="s1">&#39;Artie&#39;</span>
+  <span class="k">WHERE</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>The statement above changes (SETs) the first name of user 3 to "Artie": <code>Artie erlanger</code>.</p>
+<h3 id="delete">DELETE</h3>
+<p>The <code>DELETE</code> command removes a row or group of rows that match a certain condition. It's important to be careful with the <code>DELETE</code> command because you could inadvertently remove too many rows if you aren't specific with your <code>WHERE</code> clause. When that happens there's no getting that data back, short of a DB backup, and that can be time consuming and also assumes that you backed up your database in the first place. That being said, a <code>DELETE</code> command looks like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">DELETE</span> <span class="k">FROM</span>
+    <span class="n">users</span>
+  <span class="k">WHERE</span>
+    <span class="n">id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>The statement above <code>DELETE</code>s the user from the users table whose (<code>WHERE</code>) <code>id</code> is equal to <code>3</code>.</p>
+<p>What if you wanted to <code>DELETE</code> multiple users by <code>id</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">DELETE</span> <span class="k">FROM</span>
+    <span class="n">users</span>
+  <span class="k">WHERE</span>
+    <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>That's great! Users 3, 4 and 5 have been deleted. Notice how the <code>IN()</code> looks like a function? You can pass multiple parameters to it.</p>
+<p>But our deletions are not limited to removing records by their <code>id</code>s. Everything we can do with the <code>WHERE</code> clause in <code>SELECT</code> applies to <code>DELETE</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">DELETE</span> <span class="k">FROM</span>
+    <span class="n">users</span>
+  <span class="k">WHERE</span>
+    <span class="n">firstName</span> <span class="k">LIKE</span> <span class="s1">&#39;a%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>The above query deletes <strong>all</strong> users from the database whose first name starts with the letter 'a'. Hopefully we are starting to see how this can become dangerous. <strong>Don't attempt to run queries like this in a production environment. Instead, we would look to see if there is more specific criteria we could use.</strong></p>
+<h2 id="practice-it-sql-crud">Practice It - SQL CRUD</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Follow the link to <a href="https://www.db-fiddle.com/f/8U1SS2zVjsz9VmjciqJ2Hx/0">open this fiddle</a></li>
+<li class="task-list-item"><input type="checkbox"/> Work through the <code>INSERT</code>, <code>UPDATE</code> &amp; <code>DELETE</code> statements provided</li>
+<li class="task-list-item"><input type="checkbox"/> Run each statement one at a time, leaving the others commented out</li>
+<li class="task-list-item"><input type="checkbox"/> Observe the results</li>
+<li class="task-list-item"><input type="checkbox"/> Get creative and try some SQL CRUD of your own, altering the statements to your liking</li>
+<li class="task-list-item"><input type="checkbox"/> Be sure to <code>INSERT</code> new data so that you can play longer.</li>
+</ul>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/Tet3Z7Yb2gg">YT, the Bad Tutorials - SQL Tutorial 12: Inserting Data into Tables</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/lyqeLvtlQiA">YT, the Bad Tutorials - SQL Tutorial 11: UPDATE</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/iHfDrczm0cU">YT, the Bad Tutorials - SQL Tutorial 22: DELETE</a></li>
+</ul>
+<!-- - [ ] [YT, tuber - title]() -->
+
+<h2 id="know-your-docs">Know Your Docs</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <a href="https://dev.mysql.com/doc/refman/8.0/en/insert.html">MySQL Docs - INSERT</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://dev.mysql.com/doc/refman/8.0/en/update.html">MySQL Docs - UPDATE</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://dev.mysql.com/doc/refman/8.0/en/delete.html">MySQL Docs - DELETE</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.w3schools.com/sql/sql_autoincrement.asp">W3S Docs - AUTO INCREMENT</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.w3schools.com/sql/">W3S Docs - SQL</a></li>
+</ul>
+<!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
+<!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->
+<!-- * (VIDEO 101.2.4.3 - "CSS Selectors") === 101 Course, Module 2, Lesson 4, Video 3 - "CSS Selectors" -->
+
+<!-- 
+
+cp workspace/resources/templateFile.md docs/module- 
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</td></tr></table>
+
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | Fetch resource                       |
+| `PUT`       | Update resource |
+| `DELETE`    | Delete resource |
+
+
+    `line numbers`
+:do you like 'em?
+
+
+++slash++
+https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+
+=== "Javascript"
+
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</td></tr></table>
+
+=== "Python"
+
+  <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</td></tr></table>
+
+=== "Example"
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">  .</span>
+</code></pre></div>
+</td></tr></table>
+
+=== "Instructions"
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  .
+</code></pre></div>
+</td></tr></table>
+
+=== "Result"
+    ![PIC](./../images/pic.png)
+-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../class-6/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Class 6 Advanced SELECT
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../class-7/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Class 7 SQL CRUD
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

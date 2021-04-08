@@ -47,15 +47,18 @@ nav:
         - Static Files: module-1/expressStaticFiles.md
         - Class 4 Serving Static Files: module-1/class-4.md
     - 'Module Two: MySQL Database': 
-      - 'Pre-Class 5 Lessons': 
+      - 'Pre-Class 5 Lessons':
         - Database Intro: module-2/databaseIntro.md
         - MySQL Workbench: module-2/mySql-WorkbenchSetup.md
         - DB on GCP: module-2/setupDatabaseOnGCP.md
         - SELECT Statements: module-2/writingSELECTstatements.md
-        # https://studio.zollege.com/course/course-v1:ACA+JS311+08172020_JS311_C6?show=block-v1%3AACA%2BJS311%2B08172020_JS311_C6%2Btype%40sequential%2Bblock%403f8633c1642543358d1afd7a9f1c324f
         - Class 5 SELECT: module-2/class-5.md
-        # - 'Pre-Class 6 Lesson': 
-        # - 'Pre-Class 7 Lesson': 
+      - 'Pre-Class 6 Lesson': 
+        - Advanced SELECT: module-2/advancedSELECTstatments.md
+        - Class 6 Advanced SELECT: module-2/class-6.md
+      - 'Pre-Class 7 Lesson':
+        - SQL CRUD : module-2/sqlCRUD.md
+        - Class 7 SQL CRUD : module-2/class-7.md
         # - 'Pre-Class 8 Lesson': 
       # - 'Module Three: TITLE': 
         # - 'Pre-Class 9 Lesson': 
@@ -67,6 +70,9 @@ nav:
         # - 'Pre-Class 14 Lesson': 
         # - 'Pre-Class 15 Lesson': 
         # - 'Pre-Class 16 Lesson':  
+
+        # cp workspace/resources/templateFile.md docs/module-
+        # cp workspace/resources/classOutlineTemplate.md docs/module-
     - 'Additional Resources':
       - Interview Training: additionalResources/interviewChallenges.md
       - Student Presentations: additionalResources/studentPresentations.md
@@ -77,6 +83,8 @@ nav:
         - Day 3 QFD: additionalResources/questionsForDiscussion/qfd-class-3.md
         - Day 4 QFD: additionalResources/questionsForDiscussion/qfd-class-4.md
         - Day 5 QFD: additionalResources/questionsForDiscussion/qfd-class-5.md
+        - Day 6 QFD: additionalResources/questionsForDiscussion/qfd-class-6.md
+        - Day 7 QFD: additionalResources/questionsForDiscussion/qfd-class-7.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md

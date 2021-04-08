@@ -106,13 +106,44 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 6
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **Prompt 1: Binary Search** - *Write a JavaScript program to perform a binary search.*
+
+    > Note: A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.*
+
+    ```javascript
+        // Sample array :
+        const items = [1, 2, 3, 4, 5, 7, 8, 9];
+        // Expected Output :
+        console.log(binary_Search(items, 1)); // --> 0
+        console.log(binary_Search(items, 5)); // --> 4
+    ```
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 7
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: deDup** - *Given a sorted array of numbers, remove the duplicates in-place such that each unique element appears only once and return the new length.*
+
+```javascript
+    function deDup(array){
+        // ...your code here...
+    }
+
+    let test1 = [1,1,2];
+    console.log(deDup(test1)) // 2
+    console.log(test1) //[1,2,null]
+
+    let test2 = [1,2,3,3,3,4,4,4,5];
+    console.log(deDup(test2)) // 5
+    console.log(test2); // [1,2,3,4,5,null,null,null,null]
+
+    let test3 = [1,1,1,1,2,3,3,3,4,4,4,5]; 
+    console.log(deDup(test3))  // 5
+    console.log(test3) // [1,2,3,4,5]
+
+    let test4 =[1,2,3,4,5,6,7,8,9];
+    console.log(deDup(test4)) // 9
+    console.log(test4) //[1,2,3,4,5,6,7,8,9]
+```
 
 ### Class 8
 

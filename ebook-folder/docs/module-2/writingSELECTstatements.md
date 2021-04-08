@@ -1,6 +1,6 @@
 # Writing Basic SELECT Statements
 
-Don't worry about doing everything in the following video. For now, just watch how SELECT statements work.
+Don't worry about doing *everything* in the following video. For now, just watch how SELECT statements work.
 
 <!-- ! Video Contents: YT, ericM100 - MySQL Query Data - Lesson 1, part 1 SELECT -->
 <iframe width="655" height="368" src="https://www.youtube.com/embed/Y0Yc6HHhajo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -13,8 +13,9 @@ Follow the link to [open this fiddle](https://www.db-fiddle.com/f/YNwuafzTKCqhFo
 <div id="i4c-dialogs-container"></div>
 <div id="i4c-dialogs-container"></div>
 
+We are going to attempt three different `SELECT` statements on the data.
 
-We are going to attempt three different SELECT statements on the data. IMPORTANT: delete each statement after running it successfully as the sandbox can only run one SQL statement at a time.
+  > IMPORTANT: delete each statement after running it successfully as the sandbox can only run one SQL statement at a time.
 
 - [ ] Select all of the users from the users table. This should return 8 users and you will see the id increment from 1-8
 - [ ] Select only the users where their age is greater than 25. This should return 6 users. (Matt & Amber excluded)

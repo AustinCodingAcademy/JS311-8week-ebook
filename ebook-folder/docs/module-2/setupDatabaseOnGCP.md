@@ -12,9 +12,11 @@ We're learning how to build servers using Express.js. These servers will serve d
 
 The instance will work just like your personal computer. It will be a computer running on a very large computer somewhere in the world. This credit will go toward paying for that computer to run and accept requests.
 
-Once your server is build you'll host it on GCP, AWS, Heroku, or where ever. This too will be on a computer/virtual machine that is running and accepting requests and sending requests to your database.
+Once your server is built you'll host it on GCP, AWS, Heroku, or where ever. This too will be on a computer/virtual machine that is running and accepting requests and sending requests to your database.
 
 Then you'll build your front-end app using React. This will also be its own app and will need to run on a virtual machine somewhere like AWS, Azure, etc.
+
+### The Costs of Hosting
 
 All of this costs money! Hosting apps and websites is not free. It costs money. We introduce you to GCP because it's an industry standard like Azure and AWS. As you move through this program you will likely run our of credit. Don't agree to pay for more and you **won't** be charged more!
 

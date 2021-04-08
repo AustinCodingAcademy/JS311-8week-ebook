@@ -43,7 +43,7 @@ There will be no student presentation for the first class.
 ## Class 7
 
 - [ ] *How do you keep yourself updated about the new trends in the industry? Teach the class why, where and how to find the latest tech updates.*
-- [ ] *How would you prevent a bot from scraping your publicly accessible API?*
+- [ ] *How would you prevent a bot from scraping your publicly accessible API? Demo.*
 
 ## Class 8
 
