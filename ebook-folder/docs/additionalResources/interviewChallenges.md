@@ -147,21 +147,14 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 8
 
-- [ ] **Prompt 1: Title** - **
-
-    ```javascript
-        // Sample array :
-        array1 = [1,0,2,3,4];
-        array2 = [3,5,6,7,8,13];
-        // Expected Output :
-        [4, 5, 8, 10, 12, 13]
-    ```
+- [ ] **Prompt 1: Technical Question** - *What are the security threats full stack developers must be aware of?*
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 9
 
-- [ ] **Prompt 1: Technical Question** - *What are the security threats full stack developers must be aware of?*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 2: Two Digits Only** - *How would you format a string to always show two significant digits after the decimal? For Example: 1 => 1.00 or 4.5 => 4.50, 7.888888=> 7.88.*
+
+    > NOTE: Can’t use `.toFixed`
 
 ### Class 10
 

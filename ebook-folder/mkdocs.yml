@@ -62,8 +62,11 @@ nav:
       - 'Pre-Class 8 Lesson': 
         - Adding SQL to Express: module-2/sqlAndExpressjs.md
         - Class 8 MySQL + Express: module-2/class-8.md
-      # - 'Module Three: TITLE': 
-        # - 'Pre-Class 9 Lesson': 
+    - 'Module Three: TITLE': 
+      - 'Pre-Class 9 Lesson':
+        - Hackathon Prep: module-3/hackathonPrep.md
+        - Class 9 Hackathon: module-3/class-9.md
+
         # - 'Pre-Class 10 Lesson': 
         # - 'Pre-Class 11 Lesson': 
         # - 'Pre-Class 12 Lesson': 
@@ -88,6 +91,7 @@ nav:
         - Day 6 QFD: additionalResources/questionsForDiscussion/qfd-class-6.md
         - Day 7 QFD: additionalResources/questionsForDiscussion/qfd-class-7.md
         - Day 8 QFD: additionalResources/questionsForDiscussion/qfd-class-8.md
+        - Day 9 QFD: additionalResources/questionsForDiscussion/qfd-class-9.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md
