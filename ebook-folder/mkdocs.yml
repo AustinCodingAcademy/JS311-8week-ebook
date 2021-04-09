@@ -65,10 +65,12 @@ nav:
     - 'Module Three: TITLE': 
       - 'Pre-Class 9 Lesson':
         - Hackathon Prep: module-3/hackathonPrep.md
-        - Class 9 Hackathon: module-3/class-9.md
-
-        # - 'Pre-Class 10 Lesson': 
-        # - 'Pre-Class 11 Lesson': 
+        - Class 9 Hackathon pt. 1: module-3/class-9.md
+      - 'Pre-Class 10 Lesson':
+        - Hackathon API Review: module-3/hackathon-APIreview.md
+        - Class 10 Hackathon pt. 2: module-3/class-10.md   
+      - 'Pre-Class 11 Lesson':
+        - ERDs/Data Modeling: module-3/dataModelsWithERDiagrams.md
         # - 'Pre-Class 12 Lesson': 
       # - 'Module Four: TITLE':
         # - 'Pre-Class 13 Lesson': 
@@ -92,13 +94,15 @@ nav:
         - Day 7 QFD: additionalResources/questionsForDiscussion/qfd-class-7.md
         - Day 8 QFD: additionalResources/questionsForDiscussion/qfd-class-8.md
         - Day 9 QFD: additionalResources/questionsForDiscussion/qfd-class-9.md
+        - Day 11 QFD: additionalResources/questionsForDiscussion/qfd-class-11.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md
       - Learn Your CLI: additionalResources/learnYourCLI.md
       - Graduation Prerequisites: additionalResources/graduationPrerequisites.md
       - Presentation Qualifications: additionalResources/presentationsQualifications.md
-      # - 'Bonus Materials':
+      - 'Bonus Materials':
+        - additionalResources/bonusMaterial/writingInMarkdown.md
 
 
 # defines the styles, usually just a single name but `custom_dir` overrides this behavior

@@ -79,7 +79,7 @@ We will use the following repo for both days this week. We will start work on th
 
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
-- [ ] Create Class-9-Hackathon Assignment
+- [ ] Create TEAM-API-Hackathon Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
 - [ ] Complete the feedback survey(if applicable)
 

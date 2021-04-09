@@ -158,7 +158,7 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 10
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **None today.**
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 11
