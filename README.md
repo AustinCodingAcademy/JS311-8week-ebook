@@ -7,6 +7,7 @@ A dead simple Node Express app that serves static [Material Themed docs](https:/
 1. Clone this repo
 2. Install Node dependencies: `npm i` (see `package.json`)
 3. Run `npm start` to see the current state of the ebook.
+4. Start with `mkdocs.yml` this is the configuration file for this book
 
 To be able to edit the ebook you will need to follow these steps first:
 

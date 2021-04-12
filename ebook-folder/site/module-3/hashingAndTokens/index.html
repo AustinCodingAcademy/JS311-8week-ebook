@@ -14,7 +14,7 @@
     
     
       
-        <title>Learn Your CLI - JS311 - Node Servers + SQL Databases</title>
+        <title>Hashing & Tokens - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learn-your-cli" class="md-skip">
+        <a href="#hashing-and-tokens" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learn Your CLI
+              Hashing & Tokens
             
           </span>
         </div>
@@ -788,12 +788,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Module Three: Authentication
@@ -832,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/hackathonPrep/" class="md-nav__link">
+      <a href="../hackathonPrep/" class="md-nav__link">
         Hackathon Prep
       </a>
     </li>
@@ -844,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/class-9/" class="md-nav__link">
+      <a href="../class-9/" class="md-nav__link">
         Class 9 Hackathon pt. 1
       </a>
     </li>
@@ -883,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/hackathon-APIreview/" class="md-nav__link">
+      <a href="../hackathon-APIreview/" class="md-nav__link">
         Hackathon API Review
       </a>
     </li>
@@ -895,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/class-10/" class="md-nav__link">
+      <a href="../class-10/" class="md-nav__link">
         Class 10 Hackathon pt. 2
       </a>
     </li>
@@ -934,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/dataModelsWithERDiagrams/" class="md-nav__link">
+      <a href="../dataModelsWithERDiagrams/" class="md-nav__link">
         ERDs/Data Modeling
       </a>
     </li>
@@ -950,12 +952,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
       
       <label class="md-nav__link" for="__nav_4_4">
         Pre-Class 12 Lesson
@@ -973,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/introToAuthentication/" class="md-nav__link">
+      <a href="../introToAuthentication/" class="md-nav__link">
         Intro to Authentication
       </a>
     </li>
@@ -983,11 +987,110 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../module-3/hashingAndTokens/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hashing & Tokens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hashing & Tokens
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checking-the-password" class="md-nav__link">
+    Checking the Password
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking the Password">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#store-hash-not-plaintext" class="md-nav__link">
+    Store Hash, not Plaintext
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-bearer-token" class="md-nav__link">
+    Creating the Bearer Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-jwt" class="md-nav__link">
+    Creating a JWT
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storing-and-using-the-jwt" class="md-nav__link">
+    Storing and Using the JWT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-the-jwt" class="md-nav__link">
+    Reading the JWT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-why" class="md-nav__link">
+    But Why?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -997,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/auth0-intro/" class="md-nav__link">
+      <a href="../auth0-intro/" class="md-nav__link">
         Auth0
       </a>
     </li>
@@ -1022,14 +1125,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Additional Resources
@@ -1047,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewChallenges/" class="md-nav__link">
+      <a href="../../additionalResources/interviewChallenges/" class="md-nav__link">
         Interview Training
       </a>
     </li>
@@ -1059,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../studentPresentations/" class="md-nav__link">
+      <a href="../../additionalResources/studentPresentations/" class="md-nav__link">
         Student Presentations
       </a>
     </li>
@@ -1071,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developSeries/" class="md-nav__link">
+      <a href="../../additionalResources/developSeries/" class="md-nav__link">
         Develop Series Collection
       </a>
     </li>
@@ -1104,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-1/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-1/" class="md-nav__link">
         Day 1 QFD
       </a>
     </li>
@@ -1116,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-2/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-2/" class="md-nav__link">
         Day 2 QFD
       </a>
     </li>
@@ -1128,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-3/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-3/" class="md-nav__link">
         Day 3 QFD
       </a>
     </li>
@@ -1140,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-4/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-4/" class="md-nav__link">
         Day 4 QFD
       </a>
     </li>
@@ -1152,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-5/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-5/" class="md-nav__link">
         Day 5 QFD
       </a>
     </li>
@@ -1164,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-6/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-6/" class="md-nav__link">
         Day 6 QFD
       </a>
     </li>
@@ -1176,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-7/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-7/" class="md-nav__link">
         Day 7 QFD
       </a>
     </li>
@@ -1188,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-8/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-8/" class="md-nav__link">
         Day 8 QFD
       </a>
     </li>
@@ -1200,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-9/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-9/" class="md-nav__link">
         Day 9 QFD
       </a>
     </li>
@@ -1212,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-10/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-10/" class="md-nav__link">
         Day 10 QFD
       </a>
     </li>
@@ -1224,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-11/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-11/" class="md-nav__link">
         Day 11 QFD
       </a>
     </li>
@@ -1236,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../questionsForDiscussion/qfd-class-12/" class="md-nav__link">
+      <a href="../../additionalResources/questionsForDiscussion/qfd-class-12/" class="md-nav__link">
         Day 12 QFD
       </a>
     </li>
@@ -1254,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blogPrompts/" class="md-nav__link">
+      <a href="../../additionalResources/blogPrompts/" class="md-nav__link">
         Blog Prompts
       </a>
     </li>
@@ -1266,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keyboardShortcuts/" class="md-nav__link">
+      <a href="../../additionalResources/keyboardShortcuts/" class="md-nav__link">
         Keyboard Shortcuts
       </a>
     </li>
@@ -1278,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitCommands/" class="md-nav__link">
+      <a href="../../additionalResources/gitCommands/" class="md-nav__link">
         Git & CLI Commands
       </a>
     </li>
@@ -1288,20 +1389,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../additionalResources/learnYourCLI/" class="md-nav__link">
         Learn Your CLI
       </a>
-      
     </li>
   
 
@@ -1311,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graduationPrerequisites/" class="md-nav__link">
+      <a href="../../additionalResources/graduationPrerequisites/" class="md-nav__link">
         Graduation Prerequisites
       </a>
     </li>
@@ -1323,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../presentationsQualifications/" class="md-nav__link">
+      <a href="../../additionalResources/presentationsQualifications/" class="md-nav__link">
         Presentation Qualifications
       </a>
     </li>
@@ -1356,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bonusMaterial/writingInMarkdown/" class="md-nav__link">
+      <a href="../../additionalResources/bonusMaterial/writingInMarkdown/" class="md-nav__link">
         How to Write in Markdown
       </a>
     </li>
@@ -1393,6 +1485,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checking-the-password" class="md-nav__link">
+    Checking the Password
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking the Password">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#store-hash-not-plaintext" class="md-nav__link">
+    Store Hash, not Plaintext
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-bearer-token" class="md-nav__link">
+    Creating the Bearer Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-jwt" class="md-nav__link">
+    Creating a JWT
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storing-and-using-the-jwt" class="md-nav__link">
+    Storing and Using the JWT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-the-jwt" class="md-nav__link">
+    Reading the JWT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-why" class="md-nav__link">
+    But Why?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1404,10 +1572,118 @@
               
                 
                 
-                <h1 id="learn-your-cli">Learn Your CLI</h1>
-<ul>
-<li><a href="http://www.linfo.org/touch.html">The Touch Command</a></li>
+                <h1 id="hashing-and-tokens">Hashing and Tokens</h1>
+<p>Now that we have the whole process fresh in our minds let's dive into the details.</p>
+<h2 id="checking-the-password">Checking the Password</h2>
+<p>While it may seem like we could simply compare the password they put into the field to the one we stored in the database for them, its actually not that easy. The reason we can't do this is for security reason.</p>
+<h3 id="store-hash-not-plaintext">Store Hash, not Plaintext</h3>
+<p>We don't store <strong>plaintext</strong> passwords in databases in case our data is ever breach. If a hacker was able to get these usernames and <strong>plaintext</strong> passwords they'd have access to all of our users information immediately!</p>
+<blockquote>
+<p>Solution: To prevent this we run their plaintext password through an algorithm called <a href="https://en.wikipedia.org/wiki/MD5">MD5</a> to create what's called a <strong>hash</strong>. This process turns <code>password</code> into <code>5F4DCC3B5AA765D61D8327DEB882CF99</code>.</p>
+</blockquote>
+<p>The way we use this hash to check against the plaintext password they send to our server when signing inD is to pass it through the MD5 algorithm(function) and compare that function's return value to the <strong>hash</strong> stored in our database.</p>
+<h2 id="creating-the-bearer-token">Creating the Bearer Token</h2>
+<p>Once their password has been compared against the hash in the database and verified we will need to send them that <strong>bearer token</strong> to use on all of their future requests.</p>
+<blockquote>
+<p>This is their "wristband" to the concert</p>
+</blockquote>
+<p>The <strong>bearer token</strong> is a special set of numbers and letters created with another algorithm called <a href="https://docs.authlib.org/en/latest/specs/rfc7519.html">RFC 7519</a> that uses our server's <strong>key signature</strong> to prove that the token came from our server and our server alone, and that it wasn't falsely manufactured by another server or someone else's computer.</p>
+<blockquote>
+<p>This "signature" is really just a password we keep secret on our server that gets used only when tokens need to be signed.</p>
+</blockquote>
+<p>So far we've been using the term <strong>bearer token</strong> but this really refers to the token when it's being presented by the client/user to the server in the request. The other name for this special key is <strong>JWT</strong>, or <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JSON Web Token</a>.</p>
+<h2 id="creating-a-jwt">Creating a JWT</h2>
+<p>A JWT might look like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</span>
+</code></pre></div>
+</td></tr></table>
+<p>Look closely and you'll see two <code>.</code> These separate the token into three parts:</p>
+<table>
+<thead>
+<tr>
+<th>Part Name</th>
+<th>Example</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</td>
+<td>includes information about the <code>type</code>, as in JWT, and the algorithm, <code>alg</code>, used to created it.</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td>eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ</td>
+<td>the actual data stored in it, like the <code>username</code> &amp; <code>iat</code> (issued at) which tells the time the token was issued.</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</td>
+<td>contains the hash of our server's key</td>
+</tr>
+</tbody>
+</table>
+<p>The provider of the Node package we'll be using to generate our signed JTWs has a really clear example on their homepage, <a href="https://jwt.io/">JWT.io</a>.</p>
+<h3 id="storing-and-using-the-jwt">Storing and Using the JWT</h3>
+<p>As mentioned above, our server will send a response to the client that stores the token on the client's cookie storage. Then it will be up to the client(our 411 React Front-end app) to add the JWT as a bearer token in the requests.</p>
+<h3 id="reading-the-jwt">Reading the JWT</h3>
+<p>Here is where we check for "wristbands". Once the request comes to our server it's going to be routed to the appropriate route but we only want <em>authenticated</em> users to access our resources so we'll add a function called something like <code>checkForAuthToken</code> or just <code>checkAuth</code>; then we'll tell our Express server to <code>.use()</code> it to <code>checkAuth</code>entication. If the check passes (the token is there and valid) then we'll allow them to do the <code>next()</code> step, <em>the route they requested</em>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">checkAuth</span><span class="p">()</span>
+  <span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">checkAuth</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// some logic here</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">failed</span><span class="p">)</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">401</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;invalid authentication&quot;</span> <span class="p">})</span>
+    <span class="kd">const</span> <span class="nx">payload</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">DECODED</span> <span class="nx">TOKEN</span><span class="o">&gt;</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">payload</span>
+    <span class="nx">next</span><span class="p">()</span>
+  <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>This would <strong>protect</strong> ALL routes in our server. The <code>next</code> parameter tells the function to continue on to the <code>next()</code> function in the request.</p>
+<p>If we want to <strong>protect</strong> only some routes with authentication we would place it as the second argument in the route:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/users&quot;</span><span class="p">,</span> <span class="nx">checkAuth</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// only gets here if authenticated</span>
+    <span class="c1">// retrieve all users from the database</span>
+  <span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p>The above function is pseudo-code but it is essentially saying, "I'm looking for an Authorization header. If I don't find one then I'm going to return an un-authorized message. Otherwise I'm going to decode the token sent with the header and attach the contents to the request (req.user) so I know who made the request". Calling the "next()" function is a successful end to the middleware function.</p>
+</blockquote>
+<p>This type of "check" is called <strong>middleware</strong>. Its meaning is in the word. We tell our server to <code>.use()</code> a function(software) in-between(middle) of the request and the resource. There are all sorts of types and purposes of middleware but this authentication check is the most commonly used technique.</p>
+<h2 id="but-why">But Why?</h2>
+<p>This is a good question! Why do we need to a JWT with a header, payload and signature? The answer to this question is security.</p>
+<p>Think way back to when we first learned about HTTP(S) and how the internet is possible because computers are all built to read the same language and use the same protocol(HTTP). This means that all information sent over wifi, fiber, coax, satellite or copper is available to all computers in-between you and the server you're talking to across the country.</p>
+<p>This space between you and that server or other computer is a very vulnerable space because it can be intercepted and read by many computers without you evening knowing. For this reason we have to <strong>encrypt</strong> the data we need to be private. <strong>Encryption</strong> is the act of "scrambling" the information in a mathematical way with a key only the sender and the receiver have.</p>
+<p>And this is the foundation of <a href="https://en.wikipedia.org/wiki/Computer_security">Cyber Security</a>.</p>
+<p>With this in mind you might be thinking that creating your password hashes and bearer tokens is very difficult. It's actually not because we just use Node packages to generate them and we just tie them together to make them work for our app.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">jwksRsa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jwks-rsa&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express-jwt&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">bcrypt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;bcrypt&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>In the next lesson we'll talk about lower level techniques of implementing these process.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/lMSM-95XH2E">YT, Chris Courses - Hashing Passwords with Bcrypt</a></li>
 </ul>
+<blockquote>
+<p>NOTE: Industry standard is no longer bcrypt. Instead use <a href="https://www.npmjs.com/package/argon2">Argon-2</a>. The process is the same.</p>
+</blockquote>
                 
               
               
@@ -1425,7 +1701,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../gitCommands/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../introToAuthentication/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1434,19 +1710,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Git & CLI Commands
+              Intro to Authentication
             </div>
           </div>
         </a>
       
       
-        <a href="../graduationPrerequisites/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../auth0-intro/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Graduation Prerequisites
+              Auth0
             </div>
           </div>
           <div class="md-footer__button md-icon">

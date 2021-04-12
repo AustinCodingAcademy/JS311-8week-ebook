@@ -14,7 +14,7 @@
     
     
       
-        <title>ERDs/Data Modeling - JS311 - Node Servers + SQL Databases</title>
+        <title>Intro to Authentication - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-modeling-with-er-diagrams" class="md-skip">
+        <a href="#intro-to-authentication" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ERDs/Data Modeling
+              Intro to Authentication
             
           </span>
         </div>
@@ -913,14 +913,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
       <label class="md-nav__link" for="__nav_4_3">
         Pre-Class 11 Lesson
@@ -930,6 +928,47 @@
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Pre-Class 11 Lesson
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataModelsWithERDiagrams/" class="md-nav__link">
+        ERDs/Data Modeling
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Pre-Class 12 Lesson
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pre-Class 12 Lesson" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Pre-Class 12 Lesson
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -947,12 +986,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ERDs/Data Modeling
+          Intro to Authentication
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ERDs/Data Modeling
+        Intro to Authentication
       </a>
       
         
@@ -976,49 +1015,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-modeling" class="md-nav__link">
-    Data Modeling
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Modeling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entity-relationship-model" class="md-nav__link">
-    Entity Relationship Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-down-the-er-diagram" class="md-nav__link">
-    Breaking Down the ER Diagram
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cardinality" class="md-nav__link">
-    Cardinality
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#determining-our-data-model" class="md-nav__link">
-    Determining our Data Model
+  <a href="#authentication-vs-authorization" class="md-nav__link">
+    Authentication vs Authorization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-it" class="md-nav__link">
-    Practice It
+  <a href="#authentication-workflow" class="md-nav__link">
+    Authentication Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-it-sending-a-bearer-token" class="md-nav__link">
+    Practice It - Sending a Bearer Token
   </a>
   
 </li>
@@ -1041,45 +1053,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
-      
-      <label class="md-nav__link" for="__nav_4_4">
-        Pre-Class 12 Lesson
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Pre-Class 12 Lesson" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
-          <span class="md-nav__icon md-icon"></span>
-          Pre-Class 12 Lesson
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../introToAuthentication/" class="md-nav__link">
-        Intro to Authentication
-      </a>
     </li>
   
 
@@ -1500,49 +1473,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-modeling" class="md-nav__link">
-    Data Modeling
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Modeling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entity-relationship-model" class="md-nav__link">
-    Entity Relationship Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-down-the-er-diagram" class="md-nav__link">
-    Breaking Down the ER Diagram
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cardinality" class="md-nav__link">
-    Cardinality
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#determining-our-data-model" class="md-nav__link">
-    Determining our Data Model
+  <a href="#authentication-vs-authorization" class="md-nav__link">
+    Authentication vs Authorization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-it" class="md-nav__link">
-    Practice It
+  <a href="#authentication-workflow" class="md-nav__link">
+    Authentication Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-it-sending-a-bearer-token" class="md-nav__link">
+    Practice It - Sending a Bearer Token
   </a>
   
 </li>
@@ -1574,76 +1520,323 @@
               
                 
                 
-                <h1 id="data-modeling-with-er-diagrams">Data Modeling with ER Diagrams</h1>
-<p><em>Strong lives are motivated by dynamic purposes. —Kenneth Hildebrand</em></p>
+                <h1 id="intro-to-authentication">Intro to Authentication</h1>
+<p><em>Nothing will ever be attempted if all possible objections must first be overcome. —Samuel Johnson</em></p>
 <h2 id="overview">Overview</h2>
-<p>At this point we have most of the knowledge needed for creating APIs. We've practiced this numerous times and you should be getting familiar with the process. Now we're going to take a break and do a deeper dive into the ER (Entity Relationship) diagrams we first looked at last week.</p>
-<h2 id="data-modeling">Data Modeling</h2>
-<p>Data modeling is the process of creating a data model for the relationships in your database. The data model emphasizes what data is needed and how it should be organized in a visual manner. In a nutshell, we want to make sure all data objects are accurately represented well before we write any code!</p>
-<p>One of the most common ways to do this is through the use of an ER diagram.</p>
-<h3 id="entity-relationship-model">Entity Relationship Model</h3>
-<p>An Entity Relationship diagram uses <a href="https://www.tutorialspoint.com/uml/uml_basic_notations.htm">UML Notation</a> to visualize the relationships between our tables. UML stands for Unified Modeling Language and it is basically the go-to for designing object-oriented systems.</p>
-<p>Remember our ER diagram from Week 3 . . .</p>
-<p><img alt="er-diagram-example" src="../../images/er-diagram-example.png" /></p>
-<h3 id="breaking-down-the-er-diagram">Breaking Down the ER Diagram</h3>
-<p>In the diagram above, the rectangles with our table names on them (usersContact) are called <strong>entities</strong>. It's just an object that represents some sort of important data. The table, once saved in the database would accept and store multiple entities with these <strong>fields</strong>/properties on them.</p>
-<!-- This could also be a [JavaScript Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) but in this example it's an SQL table. -->
-
-<p>Inside of the entity we see the <strong>attributes</strong> that correspond to our tables. Those are the <strong>field</strong>/column names and there may be symbols next to those fields. In fact, there is generally a symbol there that gives us some information about the field's responsibility. If it has a key icon, for example, that indicates that the field is the <strong>primary key</strong>. You can see a <a href="https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean">list of other field icons here</a>.</p>
-<p>Here's another diagram to look at. Notice the icons on these tables.</p>
-<p><img alt="er-diagram-example-icon-highlighting" src="../../images/er-diagram-example-icon-highlighting.png" /></p>
-<h3 id="cardinality">Cardinality</h3>
-<p>The last thing we need to talk about in order to understand our ER diagrams is <strong>cardinality</strong>. Cardinality refers to the type of relationships that we maintain between our entities. These types of relationships are how we can enforce data integrity throughout our database. That means, for example, that I can't assign a userId on a child table (ex. usersContacts) to an id that DOESN'T EXIST on the parent table (users). But what cardinality is really talking about is the max or min number of relationships that can be maintained between two entities. For example, a "user" can have multiple "userContacts" but maybe only one "usersAddress" (the diagram above, Figure 1, represents multiple user addresses). These are described as "one-to-many" and "one-to-one" relationships.</p>
-<p>The lines between the entities dictate these relationships. Let's look at the data from the "employees" database above this time, Figure 2. The double hashes coming from the "employees" table mean "one and only one" and the trident looking symbol going to the "salaries" table means "one or many". So in plain english, that means that any given employee can have multiple salaries associated with it. Why would an employee have multiple salaries? Well, looking at the "salaries" table we can see that there are <code>from_date</code> and <code>to_date</code> fields. So it looks like that table holds a history of each salary an employee has had over the course of some time. Are we starting to understand how to read these? You can see more cardinality symbols on the <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">bottom of this page</a>.</p>
-<p>To further illustrate, take a look at the "departments" entity in Figure 2 again. Notice the double hash and trident lines? This shows that each "department" can have only one "title" but multiple "dept_emp" (dept. employees).</p>
-<h2 id="determining-our-data-model">Determining our Data Model</h2>
-<p>Most of the information above assumes you already have a working database, or at least a couple tables. We've talked about how to read/interpret our diagrams and in our homework assignment today we will work on creating an ER diagram, but let's take a second to talk about modeling the data that these diagrams come from.</p>
+<p>We've practiced building APIs and analyzing the data behind them. Now it's time to add a level of security to those APIs so that we can restrict access to authorized users.</p>
+<p>Authentication is an important part of creating APIs. As I'm sure we can all guess, authentication is used to lock down specific endpoints so that they cannot be freely accessed. To learn how to implement authentication on our server(API) we'll need to understand the process or <strong>workflow</strong> as well as a few new terms. Let's get started.</p>
+<h2 id="authentication-vs-authorization">Authentication vs Authorization</h2>
+<p>Let's first clear up the definition of these two words. <strong>Authentication</strong> is the process of verify weather a person-user has access to a resource or not. For instance, you have signed up for API keys with at least two APIs. These keys authenticate your requests for the resources at those APIs; its being sent in the <code>params</code> of each of your requests. It's like buying a ticket to a concert and flashing it at the gate(<em>sign-in</em>), then you get a wristband(<em>authenticated</em>) and you're allowed to go in and enjoy the music!</p>
 <blockquote>
-<p>NOTE: data modeling is a broad subject. We will discuss only what's most important for us at this level.</p>
+<p>...but what's a <em>backstage pass</em>?</p>
 </blockquote>
-<p>Let's now assume that we are starting completely from scratch. We do not have a database set up at this point but we know we are going to use MySQL. We will want to take the following actions:</p>
-<ol>
-<li>
-<p><strong>Understand the company's industry</strong>
-  We need to know what we are building. Having an understanding of our business model will help us determine what our entities will be.</p>
-</li>
-<li>
-<p><strong>Identify our entities</strong>
-  What tables do we think we will need to create? If I am in the ecommerce space I will probably want a table called <code>customers</code>.</p>
-</li>
-<li>
-<p><strong>Identify our attributes</strong>
-  Now that we have our tables it's time to determine what fields should exist on those tables. Every "customer" should definitely have an <code>id</code>, but what else? We might want to know the customers' first and last names and probably some contact information.</p>
-</li>
-<li>
-<p><strong>Identify our relationships</strong>
-  We have a "customers" table and because we know that customers will place orders, we've also gone ahead and created an "orders" table. Each table has its own set of attributes but how are they related? What's the cardinality? Well . . . if we assume that any customer can have multiple orders (that would make sense, right?) then we know that we have established a "one-to-many" relationship.</p>
-</li>
-</ol>
-<p>This is the thought process you will go through as you develop MySQL databases on your own. It may seem simple or it may seem complicated but data modeling is an important part of the development process and a good skill to have. Always begin by drawing it out on paper so you have a good visual understanding of your database's needs.</p>
-<!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
+<p>When we build apps with data that needs to be allowed to certain person-users and restricted to others we need to implement <strong>Authorization</strong>. This is the process of assigning <strong>roles</strong> to each person-user.</p>
+<p>Maybe you're building a classroom management app for you and your students. All of the data for this app will be stored in the same database and served by the same server but you don't your students to have access to other students' grades and turned-in assignments but still have access to their own assignments and grades. However, for you, the teacher you want to be able to see all of the student's grades. To solve this problem you would assign each user of the app a role when they sign-up. Teachers would get a <code>teacher</code> role, students would get a <code>student</code> role and maybe parents would get a <code>parent</code> role.</p>
+<p>In your Express server you add an if statement to each route that asked if they were a <code>teacher</code> to access the resources behind the <code>getAllGrades()</code> so that <code>student</code> and <code>parent</code> users would be blocked from this particular resource.</p>
+<blockquote>
+<p>...authorization is a backstage pass. Beyond being admitted to the concert(authentication) you're also allowed to go backstage and maybe meet the artists!</p>
+</blockquote>
+<h2 id="authentication-workflow">Authentication Workflow</h2>
+<p>Now let's talk through the process from a high perspective. You'll be seeing code snippets as we go but just know there may be some modifications to this code in live code bases. But please read the code so you picture for yourself this process.</p>
+<p>The first step in this process is that the client/front-end will make a request to our server/API:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// front-end</span>
+  <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;https://ourapi.com/user?ID=12345&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle success</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+  <span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<p>Just as we've built our serve to do, it will be listening and will return (respond) with the resource that was requested:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// back-end</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// perform some logic to go get the logic</span>
+    <span class="c1">// maybe move this function over to a controller file??</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">users</span><span class="p">)</span>
+  <span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<p>But now we want to see if the user is in our system, aka <strong>authenticate</strong> them, before we let them get to the resource they want... To do this we will ask them to sign-in with their username and password. If they are successful with their sign-in we will send to them a "wristband", or <strong>token</strong>, that proves they are authenticated and will be used on all of their following requests (until they logout) so they don't have to keep entering their username and password. This <em>token</em> is called a <strong>bearer token</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// back-end</span>
+  <span class="kd">const</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span>
 
-<h2 id="practice-it">Practice It</h2>
-<p><img alt="lucid-chart-erd-example" src="../../images/lucid-chart-erd-example.png" /></p>
+    <span class="c1">// * build and call your own authentication function using our server&#39;s secret key</span>
+    <span class="kd">const</span> <span class="nx">jwtSecret</span> <span class="o">=</span> <span class="s1">&#39;secret123&#39;</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/jwt&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">jsonwebtoken</span><span class="p">.</span><span class="nx">sign</span><span class="p">({</span> <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;username&#39;</span> <span class="p">},</span> <span class="nx">jwtSecret</span><span class="p">)</span>
+
+      <span class="c1">// the response object has a method on it called` that takes three arguments:</span>
+        <span class="c1">// * name of the cookie</span>
+        <span class="c1">// * value of the cookie</span>
+        <span class="c1">// * parameters of the cookie</span>
+      <span class="c1">// and sets a cookie on the user&#39;s browser/client.</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">&#39;our_token&#39;</span><span class="p">,</span> <span class="nx">token</span><span class="p">,</span> <span class="p">{</span><span class="nx">httpOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+
+      <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span> <span class="nx">token</span> <span class="p">})</span>
+    <span class="p">});</span>
+
+    <span class="c1">// -or-</span>
+
+    <span class="c1">// * send the username &amp; password to a third-party like Auth0, see below:</span>
+    <span class="nx">axios</span><span class="p">(</span><span class="sb">`https://</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AUTH0_DOMAIN</span><span class="si">}</span><span class="sb">/oauth/token`</span><span class="p">,</span> <span class="p">{</span>
+      <span class="c1">// ...more on this later...</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// if the username &amp; passwords are correct send the token back to the client/front-end</span>
+      <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span> 
+      <span class="nx">res</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">&#39;our_token&#39;</span><span class="p">,</span> <span class="nx">token</span><span class="p">,</span> <span class="p">{</span><span class="nx">httpOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+
+      <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span> <span class="nx">token</span> <span class="p">})</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+  <span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<p>Once the <code>res.cookie</code> method has been called a cookie that is specific to our server's domain has been set on the user's browser/client and it's sent in the headers of each subsequent request:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// front-end</span>
+
+  <span class="c1">// create a configuration object with the the correct keys and values</span>
+  <span class="c1">// the token should be in the headers</span>
+  <span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">withCredentials</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span> <span class="nx">Authorization</span><span class="o">:</span> <span class="sb">`Bearer: </span><span class="si">${</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookies</span><span class="p">.</span><span class="nx">our_token</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// send the config object with the request</span>
+  <span class="nx">axios</span><span class="p">(</span><span class="s1">&#39;https://ourapi.com/user?ID=12345&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">config</span> <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle success</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+  <span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p>NOTE: yes <code>cookies</code> may be accessed via <code>document.cookies</code> but when we build with React we'll need to use a <a href="https://www.npmjs.com/package/react-cookie">special React cookie parser</a> to access our cookies.</p>
+</blockquote>
+<p>Now we'll build some logic into our server that asks to see that token ("wristband") and verifies if it's valid before sending the requested resources back.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// back-end</span>
+  <span class="kd">const</span> <span class="nx">checkForAuthToken</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">specialToken</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;our_token&#39;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">checkIsValid</span><span class="p">(</span><span class="nx">specialToken</span><span class="p">))</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">401</span><span class="p">)</span>
+    <span class="nx">next</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="c1">// build your own</span>
+  <span class="kd">const</span> <span class="nx">checkIsValid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// this function would run the RFC 7519 algorithm to see if the token is valid(see below)</span>
+      <span class="c1">// * if valid return true</span>
+      <span class="c1">// * if not valid return false</span>
+      <span class="c1">// * or we could use a third party to handle this like Auth0</span>
+  <span class="p">}</span>
+
+  <span class="c1">//  -- or --</span>
+  <span class="c1">// use a third-party like Auth0</span>
+</code></pre></div>
+</td></tr></table>
+<p>If this check fails we could choose to send them a 403 or re-route them to the login page, ...or both!</p>
+<p>Okay, that's the higher overview of all this authentication stuff. Let's now look more closely at the details of it. Let's start with that <strong>hash</strong> business we just saw above.</p>
+<h2 id="practice-it-sending-a-bearer-token">Practice It - Sending a Bearer Token</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> Re-create the above diagram on <a href="https://www.draw.io/">Draw.io</a></li>
-<li class="task-list-item"><input type="checkbox"/> Find the elements you need under the "Entity Relation" tab on the left toolbar</li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://replit.com/@HippErger/Express-SQLite3-AuthenticationHeaderPractice">Express Server Repl.it</a></li>
 </ul>
-<blockquote>
-<p>Hint: You can use an SQL statement to have the app automatically create the entities (tables) for you . . .</p>
-</blockquote>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">the Server</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./db&#39;</span><span class="p">);</span>
+
+  <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="s1">&#39;public&#39;</span><span class="p">));</span>
+
+  <span class="c1">// middleware function</span>
+  <span class="kd">const</span> <span class="nx">authenticate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;authorization&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">auth</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">401</span><span class="p">)</span>
+    <span class="nx">next</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="sb">`You&#39;re gettin&#39; to this server!! Ask for those digits!`</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="c1">// middleware applied</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">authenticate</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="sb">`You sent an authorization header...You&#39;re Postin!`</span><span class="p">)</span>
+  <span class="p">})</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;server started and listening on port 3000&#39;</span><span class="p">));</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Create the Database</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">sqlite3</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sqlite3&#39;</span><span class="p">).</span><span class="nx">verbose</span><span class="p">();</span>
+
+  <span class="c1">// much like the connection pool in mysql (the Node package) this object is used to create a light database with just a blank file: db2.sqlite3 </span>
+  <span class="c1">// NOTE: .sqlite3 is the suffix)</span>
+  <span class="kd">let</span> <span class="nx">db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">sqlite3</span><span class="p">.</span><span class="nx">Database</span><span class="p">(</span><span class="s1">&#39;./db2.sqlite3&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Connected to the db2 SQlite database.&#39;</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">db</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">the Database in Memory</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">-- CREATE TABLE IF NOT EXISTS books (name TEXT, author TEXT)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Open and fork the Repl.it above.</li>
+<li class="task-list-item"><input type="checkbox"/> Run the application.</li>
+<li class="task-list-item"><input type="checkbox"/> Copy the URL at the top right of the screen in the fake browser.</li>
+<li class="task-list-item"><input type="checkbox"/> Open up Postman and make a GET request to this endpoint. Did you get a response back?</li>
+<li class="task-list-item"><input type="checkbox"/> Make a POST request to this endpoint. Did you get "Unauthorized"?</li>
+<li class="task-list-item"><input type="checkbox"/> Under the Headers tab in Postman, add a header to the POST with the key "Authorization" and a value of literally any string of characters and retry. You should now see a response that says "You sent an authorization header...You're Postin!".</li>
+<li class="task-list-item"><input type="checkbox"/> Play around with the middleware function. Try changing: if (!auth) on ~line 15 to be a different condition so that you must send a specific string in the authentication header.</li>
+<li class="task-list-item"><input type="checkbox"/> Before moving on make sure you understand how it's being used. Add console.log statements into the authenticate function to see what data is being passed through it and how it's working.</li>
+</ul>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/-CuY5ADwn24">YT, LucidChart - ERD Tutorial pt. 2</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.tutorialspoint.com/uml/uml_basic_notations.htm">Article, TutorialsPoint - UML Notation</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://stackoverflow.com/questions/2097843/naming-cookies-best-practices">Forum, StackOverflow - Cookie Naming Convention</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/iD49_NIQ-R4">YT, Ben Awad - How to Store JWT in Memory</a><blockquote>
+<p>Also really good overview of security threats</p>
+</blockquote>
+</li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.taniarascia.com/full-stack-cookies-localstorage-react-express/">Article, TaniaRascia.com - Full Stack Cookie Storage</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://medium.com/@ryanchenkie_40935/react-authentication-how-to-store-jwt-in-a-cookie-346519310e81">Article, RyanChenkie@Medium - Storing JWT in Cookie in React App</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://owasp.org/www-community/attacks/csrf">OWASP - Cookie &amp; CSRF, Cross-Site Request Forgery</a></li>
 </ul>
-<!-- - [ ] [YT, tuber - title]() -->
-
 <h2 id="know-your-docs">Know Your Docs</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/er-diagrams">LucidChart Docs - ER Diagrams</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">LucidChart - ERD Symbols</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean">Forum, StackOverflow - Column Icon Meanings</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">MDN Docs - Set Cookie</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://expressjs.com/en/guide/using-middleware.html">Express Docs - Middleware</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.npmjs.com/package/react-cookie">NPM Docs - React-Cookie</a></li>
 </ul>
                 
               
@@ -1662,7 +1855,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../class-10/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../dataModelsWithERDiagrams/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1671,19 +1864,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Class 10 Hackathon pt. 2
+              ERDs/Data Modeling
             </div>
           </div>
         </a>
       
       
-        <a href="../introToAuthentication/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../hashingAndTokens/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Intro to Authentication
+              Hashing & Tokens
             </div>
           </div>
           <div class="md-footer__button md-icon">
