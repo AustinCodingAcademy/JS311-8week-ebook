@@ -62,18 +62,18 @@ There will be no student presentation for the first class.
 
 ## Class 11
 
-- [ ] *What's the difference between dependencies, devDependencies and peerDependencies in an npm package.json file?*
 - [ ] *What is a stream and what are the types of streams available in Node.js?*
+- [ ] *Node is a single threaded runtime, but how does it handle concurrent asynchronous calls?*
 
 ## Class 12
 
 - [ ] *Teach the class ways to manage unhandled exceptions and rejections in Node.*
-- [ ] *Node is a single threaded runtime, but how does it handle concurrent asynchronous calls?*
+- [ ] *Teach the class about stress, spike and unit testing. Why, what, And how are they implemented?*
 
 ## Class 13
 
 - [ ] *What is Data Normalization? Why and How do we use it? Should we normalize our data before putting it into an SQL Database?*
-- [ ] *Teach the class about stress, spike and unit testing. Why, what, And how are they implemented?*
+- [ ] *What's the difference between dependencies, devDependencies and peerDependencies in an npm package.json file?*
 
 ## Class 14
 

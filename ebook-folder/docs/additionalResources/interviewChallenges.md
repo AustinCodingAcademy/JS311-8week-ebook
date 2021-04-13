@@ -185,7 +185,13 @@ findBestSellAndBuy(myArr) // -->  { maxProfit: 10, bestBuyIndex: 3, buyPrice: 1,
 
 ### Class 13
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **Prompt 1: Recursive Permutation** - *Write a recursive function for generating all permutations of an input string. Return them as a set.*
+
+    > * Don't worry about time or space complexity—if we wanted efficiency we'd write an iterative version.
+    > * To start, assume every character in the input string is unique.
+    > * Your function can have loops in it—it just also needs to be recursive.
+    > * What's a permutation?
+    > * What's recursion?
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 14

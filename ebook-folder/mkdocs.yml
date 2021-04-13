@@ -78,9 +78,11 @@ nav:
         - Hashing & Tokens: module-3/hashingAndTokens.md
         - Auth0: module-3/auth0-intro.md
         - Class 12 Express Authentication: module-3/class-12.md
-      # - 'Module Four: Application':
+    - 'Module Four: Deployment':
+        - 'Pre-Class 13 Lesson': 
+          -  Hosting Intro: module-4/introToHosting.md
+          - Class 13 App Engine: module-4/class-13.md
       # https://studio.zollege.com/container/block-v1:ACA+JS311+08172020_JS311_C6+type@vertical+block@ae9759e12a8b484084c860acc0381996
-        # - 'Pre-Class 13 Lesson': 
         # - 'Pre-Class 14 Lesson': 
         # - 'Pre-Class 15 Lesson': 
         # - 'Pre-Class 16 Lesson':  
@@ -104,6 +106,7 @@ nav:
         - Day 10 QFD: additionalResources/questionsForDiscussion/qfd-class-10.md
         - Day 11 QFD: additionalResources/questionsForDiscussion/qfd-class-11.md
         - Day 12 QFD: additionalResources/questionsForDiscussion/qfd-class-12.md
+        - Day 13 QFD: additionalResources/questionsForDiscussion/qfd-class-13.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md
