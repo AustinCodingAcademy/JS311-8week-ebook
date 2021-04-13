@@ -8,3 +8,4 @@
 - [ ] What is a row?
 - [ ] What is a primary key constraint?
 - [ ] What is a foreign key constraint?
+- [ ] Why does data need to be divided up by tables? Why do those tables need to be linked together?

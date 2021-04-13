@@ -20,7 +20,7 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 - [ ] Slowly work through your code plan, building the steps you need.
 - [ ] Don't be afraid to mess up and say it aloud.
 - [ ] It's not about finding the solution. It's about collaborating and working toward a solution!
-- [ ] After you finish, take a picture and transfer it to a Repl.it when you get home.
+- [ ] After you finish, take a screenshot( ++cmd+shift+3++ || ++alt++ + PrtScn) and transfer it to a Repl.it when you get home.
 
 <!-- ```javascript
   // optional code example
@@ -163,13 +163,25 @@ Speak aloud every thought you have. THIS IS THE MOST IMPORTANT PART!
 
 ### Class 11
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: firstNoRepeat** - *Given a string, return the index of the first non-repeating character in the string. If none exist, return -1.*
+
+```javascript
+firstNoRepeat("seat") // 0
+
+firstNoRepeat("lollipop") // 4
+
+firstNoRepeat("poop") // -1
+```
 
 ### Class 12
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: Best Profit** - *Take an array of prices where each index in the array represents a time, i.e. every minute or every hour. Build an algorithm to find out what your best profit could have been if you bought at the lowest price and sold at the highest price, **after you bought**. You must buy before you sell.*
+
+```javascript
+ const myArr = [75, 39, 44, 1, 8, 10, 1, 11, 2, 3, 4, 5]
+
+findBestSellAndBuy(myArr) // -->  { maxProfit: 10, bestBuyIndex: 3, buyPrice: 1, bestSellAt: 7, sellPrice: 11 }
+```
 
 ### Class 13
 

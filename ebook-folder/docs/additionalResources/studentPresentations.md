@@ -63,7 +63,7 @@ There will be no student presentation for the first class.
 ## Class 11
 
 - [ ] *What's the difference between dependencies, devDependencies and peerDependencies in an npm package.json file?*
-- [ ] *What is stream and what are the types of streams available in Node.js?*
+- [ ] *What is a stream and what are the types of streams available in Node.js?*
 
 ## Class 12
 

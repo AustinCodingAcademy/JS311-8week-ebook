@@ -34,11 +34,24 @@ Here's another diagram to look at. Notice the icons on these tables.
 
 ### Cardinality
 
-The last thing we need to talk about in order to understand our ER diagrams is **cardinality**. Cardinality refers to the type of relationships that we maintain between our entities. These types of relationships are how we can enforce data integrity throughout our database. That means, for example, that I can't assign a userId on a child table (ex. usersContacts) to an id that DOESN'T EXIST on the parent table (users). But what cardinality is really talking about is the max or min number of relationships that can be maintained between two entities. For example, a "user" can have multiple "userContacts" but maybe only one "usersAddress" (the diagram above, Figure 1, represents multiple user addresses). These are described as "one-to-many" and "one-to-one" relationships.
+The last thing we need to talk about in order to understand our ER diagrams is **cardinality**. Cardinality refers to the type of relationships that we maintain between our entities. These types of relationships are how we can enforce data integrity throughout our database. For example, I can't assign a `userId` on a child table like usersContacts to an `id` that DOESN'T EXIST on the parent table users. But what cardinality is really talking about is the max or min number of relationships that can be maintained between two entities. For example, a "user" can have multiple "userContacts" but only one "usersAddress".
 
-The lines between the entities dictate these relationships. Let's look at the data from the "employees" database above this time, Figure 2. The double hashes coming from the "employees" table mean "one and only one" and the trident looking symbol going to the "salaries" table means "one or many". So in plain english, that means that any given employee can have multiple salaries associated with it. Why would an employee have multiple salaries? Well, looking at the "salaries" table we can see that there are `from_date` and `to_date` fields. So it looks like that table holds a history of each salary an employee has had over the course of some time. Are we starting to understand how to read these? You can see more cardinality symbols on the [bottom of this page](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
+These relationships are usually described as **"one-to-many"**, **"one-to-one"**, or **"many-to-many"**. The lines between the entities and the small notations at the end of them dictate these relationships.
 
-To further illustrate, take a look at the "departments" entity in Figure 2 again. Notice the double hash and trident lines? This shows that each "department" can have only one "title" but multiple "dept_emp" (dept. employees).
+![cardinality-notation-table](./../images/cardinality-notation-table.png)
+
+*Source: [LucidCharts](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)*
+
+Let's look at the data from the "employees" database above:  
+
+- [ ] Follow the line between the "employees" table to the "salaries" table. Starting at the "employees" table we see a double hashmark, this means that the relationship an entity in the "employees" table can have **one and only one** relationship with what ever table its connected to on this line.
+- [ ] at the other end of that line connected to the "salaries" table we see a trident and a hash mark. This means that each entity in this table can have one or many relationships with entities in the table it's connected to.
+- [ ] Summary: Each employee can have one and only one salary. But a salary amount could be given to one or, even, all of the employees.
+- [ ] Going further, looking at the "salaries" table we can see that there are `from_date` and `to_date` fields. So it looks like that table holds a history of each salary an employee has had over the course of some time.
+
+Are we starting to understand how to read these? You can see more cardinality symbols on the [bottom of this page](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning).
+
+To further illustrate, take a look at the "departments" entity. Notice the double hash and trident lines? This shows that each "department" can have only one "title" but multiple "dept_emp" (department employees).
 
 ## Determining our Data Model
 
@@ -61,9 +74,6 @@ Let's now assume that we are starting completely from scratch. We do not have a 
   We have a "customers" table and because we know that customers will place orders, we've also gone ahead and created an "orders" table. Each table has its own set of attributes but how are they related? What's the cardinality? Well . . . if we assume that any customer can have multiple orders (that would make sense, right?) then we know that we have established a "one-to-many" relationship.
 
 This is the thought process you will go through as you develop MySQL databases on your own. It may seem simple or it may seem complicated but data modeling is an important part of the development process and a good skill to have. Always begin by drawing it out on paper so you have a good visual understanding of your database's needs.
-
-
-<!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
 
 ## Practice It
 

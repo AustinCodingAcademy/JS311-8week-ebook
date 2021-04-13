@@ -24,7 +24,7 @@ In your Express server you add an if statement to each route that asked if they 
 
 ## Authentication Workflow
 
-Now let's talk through the process from a high perspective. You'll be seeing code snippets as we go but just know there may be some modifications to this code in live code bases. But please read the code so you picture for yourself this process.
+Now let's talk through the process from a high perspective. You'll be seeing code snippets as we go but just know there may be some modifications to this code in live code bases. But please read the pseudo-code so you picture, for yourself, this process.
 
 The first step in this process is that the client/front-end will make a request to our server/API:
 

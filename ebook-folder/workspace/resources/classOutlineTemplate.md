@@ -2,7 +2,7 @@
 
 <!-- ! HIDE FROM STUDENT; INSTRUCTOR ONLY CONTENT -->
 <!-- ## Instructor Only Content - HIDE FROM STUDENTS -->
-cp workspace/resources/classOutlineTemplate.md docs/module-
+<!-- cp workspace/resources/classOutlineTemplate.md docs/module- -->
 
 <!-- ! END INSTRUCTOR ONLY CONTENT -->
 
@@ -46,20 +46,16 @@ Today we're going to:
 
 ## Creation Time, 60-90 mins
 
-- [ ]
-
 <!-- ! Video Content:  (width="655" height="368", ratio 1.77) -->
 
 ### Push Yourself Further
 
 - [ ]
-
 <!-- 
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md) 
 -->
-
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
 - [ ] Create ** Assignment

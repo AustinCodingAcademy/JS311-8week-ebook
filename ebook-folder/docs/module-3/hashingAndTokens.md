@@ -87,9 +87,7 @@ This is a good question! Why do we need to a JWT with a header, payload and sign
 
 Think way back to when we first learned about HTTP(S) and how the internet is possible because computers are all built to read the same language and use the same protocol(HTTP). This means that all information sent over wifi, fiber, coax, satellite or copper is available to all computers in-between you and the server you're talking to across the country.
 
-This space between you and that server or other computer is a very vulnerable space because it can be intercepted and read by many computers without you evening knowing. For this reason we have to **encrypt** the data we need to be private. **Encryption** is the act of "scrambling" the information in a mathematical way with a key only the sender and the receiver have.
-
-And this is the foundation of [Cyber Security](https://en.wikipedia.org/wiki/Computer_security).
+This space between you and that server or other computer is a very vulnerable space because it can be intercepted and read by many computers without you evening knowing. For this reason we have to **encrypt** the data we need to be private. **Encryption** is the act of "scrambling" the information in a mathematical way with a key only the sender and the receiver have. ...And this is the foundation of [Cyber Security](https://en.wikipedia.org/wiki/Computer_security).
 
 With this in mind you might be thinking that creating your password hashes and bearer tokens is very difficult. It's actually not because we just use Node packages to generate them and we just tie them together to make them work for our app.
 
