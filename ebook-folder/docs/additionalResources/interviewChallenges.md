@@ -196,7 +196,7 @@ findBestSellAndBuy(myArr) // -->  { maxProfit: 10, bestBuyIndex: 3, buyPrice: 1,
 
 ### Class 14
 
-- [ ] **Prompt 1: Title** - *description*
+- [ ] **Prompt 1: Figure it Out** - *Given an array of numbers, return an array of paired subset numbers in descending order based on their sums.*
 <!-- - [ ] **Prompt 2: Title** - *description* -->
 
 ### Class 15

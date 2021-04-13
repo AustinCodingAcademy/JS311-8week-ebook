@@ -48,6 +48,8 @@ Today we're going to:
 
 <!-- ! Video Content:  (width="655" height="368", ratio 1.77) -->
 
+<!-- ![](./../images/.png) -->
+
 ### Push Yourself Further
 
 - [ ]
