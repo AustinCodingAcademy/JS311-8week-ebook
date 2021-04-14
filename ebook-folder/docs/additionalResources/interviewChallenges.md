@@ -201,13 +201,42 @@ findBestSellAndBuy(myArr) // -->  { maxProfit: 10, bestBuyIndex: 3, buyPrice: 1,
 
 ### Class 15
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: Title** - *The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)*
+
+```markdown
+P   A   H   N
+A P L S I I G
+Y   I   R
+```
+
+```javascript
+const convertZigZag = (string,numRows) => { 
+    // your code here
+}
+
+// Example 1:
+convertZigZag("PAYPALISHIRING", 3) // --> Output: "PAHNAPLSIIGYIR"
+
+// Example 2:
+convertZigZag("PAYPALISHIRING", 4) // --> Output: "PINALSIGYAHRPI"
+
+// Explanation:
+
+// P     I     N
+// A   L S   I G
+// Y A   H R
+// P     I
+```
 
 ### Class 16
 
-- [ ] **Prompt 1: Title** - *description*
-<!-- - [ ] **Prompt 2: Title** - *description* -->
+- [ ] **Prompt 1: Automatic Delivery Network** - *Your company delivers breakfast via autonomous quadcopter drones, and something mysterious has happened.*
+
+- [ ] *Each breakfast delivery is assigned a unique ID, a positive integer. When one of the company's 100 drones takes off with a delivery, the delivery's ID is added to an array, deliveryIdConfirmations. When the drone comes back and lands, the ID is again added to the same array.*
+- [ ] *After breakfast this morning there were only 99 drones on the tarmac. One of the drones never made it back from a delivery. We suspect a secret agent from Amazon placed an order and stole one of our patented drones. To track them down, we need to find their delivery ID.*
+- [ ] *Given the array of IDs, which contains many duplicate integers and one unique integer, find the unique integer.*
+- [ ] *The IDs are not guaranteed to be sorted or sequential. Orders aren't always fulfilled in the order they were received, and some deliveries get cancelled before takeoff.*
+
 
 <!-- 2. [Class 2](01Week/02DayClass.md) -
     * **Prompt 1**: *Reverse an array of strings such at input= "red","black","blue","yellow" output = "yellow","blue","black","red"*

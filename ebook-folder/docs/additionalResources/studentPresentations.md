@@ -85,4 +85,4 @@ There will be no student presentation for the first class.
 
 ## Class 16
 
-*None today.*
+*All students: Today is the final day of class! We hope you are super proud of what you've accomplished so far. Let's share what you've learned with the class.*

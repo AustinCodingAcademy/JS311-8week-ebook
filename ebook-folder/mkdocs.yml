@@ -80,15 +80,18 @@ nav:
         - Class 12 Express Authentication: module-3/class-12.md
     - 'Module Four: Deployment':
         - 'Pre-Class 13 Lesson': 
-          -  Hosting Intro: module-4/introToHosting.md
+          - Hosting Intro: module-4/introToHosting.md
           - Class 13 App Engine: module-4/class-13.md
         - 'Pre-Class 14 Lesson':
           - Hosting pt.2: module-4/hosting-pt2.md
-          - Class 14: module-4/class-14.md
-        # - 'Pre-Class 15 Lesson': 
+          - Class 14 Cloud Storage: module-4/class-14.md
+        - 'Pre-Class 15 Lesson':
+          - Intro to CI/CD: module-4/introToCI-CD.md
+          - Class 15 CI/CD: module-4/class-15.md
         # https://studio.zollege.com/container/block-v1:ACA+JS311+08172020_JS311_C6+type@vertical+block@c75d29a3ac1a46199588e68372a67e80
-        # - 'Pre-Class 16 Lesson':  
-
+        - 'Pre-Class 16 Lesson':  
+          - Wrapping Up: module-4/wrappingUp.md
+          - Class 16 Presentations: module-4/class-16.md
         # cp workspace/resources/templateFile.md docs/module-
         # cp workspace/resources/classOutlineTemplate.md docs/module-
     - 'Additional Resources':
@@ -110,6 +113,8 @@ nav:
         - Day 12 QFD: additionalResources/questionsForDiscussion/qfd-class-12.md
         - Day 13 QFD: additionalResources/questionsForDiscussion/qfd-class-13.md
         - Day 14 QFD: additionalResources/questionsForDiscussion/qfd-class-14.md
+        - Day 15 QFD: additionalResources/questionsForDiscussion/qfd-class-15.md
+        - Day 16 QFD: additionalResources/questionsForDiscussion/qfd-class-16.md
       - Blog Prompts: additionalResources/blogPrompts.md
       - Keyboard Shortcuts: additionalResources/keyboardShortcuts.md
       - Git & CLI Commands: additionalResources/gitCommands.md

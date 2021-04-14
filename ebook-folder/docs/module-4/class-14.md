@@ -160,7 +160,7 @@ We will follow the instructions below to create a new project with create-react-
 
     If all went according to plan we now have the basic `create-react-app` running in the cloud.
 
-    > A quick note about this setup . . . this is not actually configured to serve traffic just yet. Notice how we had to navigate to the "index.html" file? Our users shouldn't have to do that. We just want to note that in order to set your site up to avoid that we need to edit the website configuration and you can only do that if you have a custom domain as described here. Domains are typically pretty cheap. We'd encourage you to buy a cheap domain from [https://domains.google.com/registrar](domains.google.com) and create another bucket with your domain name (www.example.com) in order to truly have a site running in GCS (Google Cloud Storage).
+    > A quick note about this setup . . . this is not actually configured to serve traffic just yet. Notice how we had to navigate to the "index.html" file? Our users shouldn't have to do that. We just want to note that in order to set your site up to avoid that we need to edit the website configuration and you can only do that if you have a custom domain as described here. Domains are typically pretty cheap. We'd encourage you to buy a cheap domain from [https://domains.google.com/registrar](https://domains.google.com/registrar) and create another bucket with your domain name (www.example.com) in order to truly have a site running in GCS (Google Cloud Storage).
 
 8. **Follow-Up Video**
 
