@@ -30,6 +30,7 @@ nav:
         - Working in Node: module-1/whatIsNodeJS.md
         - Intro to APIs: module-1/REST-HTTP-APIs.md
         - Node & NPM: module-1/nodeRecap.md
+        - Submitting Homework: module-1/submittingHomework.md
         - Pre-Class Checklist: module-1/preClassOneChecklist.md
         - Class 1 Node, NPM, & Postman: module-1/class-1.md
       - 'Pre-Class 2 Lesson': 

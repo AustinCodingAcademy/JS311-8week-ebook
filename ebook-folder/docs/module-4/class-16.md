@@ -24,9 +24,9 @@ Today we're going to:
 - [ ] Questions for Student Led Discussion
 - [ ] Interview Challenge
 - [ ] Student Presentations
+- [ ] [End of Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLScSN8i3bPtmSH5KzpRDtH7RBUO0y4sgIji2t2vZ9N4VueYqdg/viewform)
 - [ ] Push Yourself Further
 - [ ] Blog to Show You Know
-- [ ] [End of Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLScSN8i3bPtmSH5KzpRDtH7RBUO0y4sgIji2t2vZ9N4VueYqdg/viewform)
 - [ ] Exit Recap, Attendance, and Reminders
 
 ### Questions for Student Led Discussion, 15 mins
@@ -47,6 +47,20 @@ Today we're going to:
 
 After presentations we'll be working on our Express servers and SQL databases.
 
+*****
+
+## End of Course Feedback
+
+Take 5 - 10 minutes now to complete the End of Course Evaluation. This information is incredibly important to our organization to improve, grow our instructors, textbooks, and community.
+
+- [ ] [End of Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLScSN8i3bPtmSH5KzpRDtH7RBUO0y4sgIji2t2vZ9N4VueYqdg/viewform)
+
+<!-- TODO find this form and where it's collecting data -->
+<!-- TODO Improve this FORM!!!  https://docs.google.com/forms/d/1d99ZNONx6Y2XC8DCv_yisiwDUXL1CM5EuV4md1OVyv8/edit -->
+<!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/end-of-course-survey" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
+<script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script>  -->
+*****
+
 ## Push Yourself Further
 
 If you've built your SQL database and connected it to your Express server then add a layer of authentication so your app can be deployed soon.
@@ -58,12 +72,6 @@ Use the time between classes to complete your backend so when you have the front
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md)
-
-## End of Course Feedback
-
-Take 5 - 10 minutes now to complete the End of Course Evaluation. This information is incredibly important to our organization to improve, grow our instructors, textbooks, and community.
-
-- [ ] [End of Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLScSN8i3bPtmSH5KzpRDtH7RBUO0y4sgIji2t2vZ9N4VueYqdg/viewform)
 
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
