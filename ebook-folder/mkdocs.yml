@@ -133,7 +133,7 @@ theme:
   palette:
     scheme: slate
     primary: black
-    accent: deep orange
+    accent: deep purple
     # Defines the logo in the top-left, file must be in the /doc directory
   logo: CE_WhiteBlue_Icon.png
   
