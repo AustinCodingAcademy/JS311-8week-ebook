@@ -95,6 +95,7 @@ nav:
           - Class 16 Presentations: module-4/class-16.md
         # cp workspace/resources/templateFile.md docs/module-
         # cp workspace/resources/classOutlineTemplate.md docs/module-
+    - Report A Bug: additionalResources/reportABug.md
     - 'Additional Resources':
       - Interview Training: additionalResources/interviewChallenges.md
       - Student Presentations: additionalResources/studentPresentations.md

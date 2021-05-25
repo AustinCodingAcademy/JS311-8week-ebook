@@ -121,18 +121,3 @@ The presentation should **NOT** include:
 ## How To Use This Textbook Video
 
 <iframe src="https://player.vimeo.com/video/303113203" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-*****
-
-## Additional Resources
-
-### Daily Student Presentations
-
-[Daily Student Presentation](./additionalResources/studentPresentations.md)
-
-### Git Commands
-
-### Short-cuts
-
-
-{% hidden %} For Instructor Use:
