@@ -25,8 +25,8 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    * [ ] Fork and clone the Repo
-    * [ ] Create routers, controllers and static files, REPEAT!!
+    - [ ]  Fork and clone the Repo
+    - [ ]  Create routers, controllers and static files, REPEAT!!
 - [ ] Blog to Show You Know
 - [ ] Exit Recap, Attendance, and Reminders
 
@@ -62,6 +62,10 @@ Today we are going to work with three new ways to organize our express server. W
 
 - [ ] Complete the following Mozilla tutorial on [routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md)
@@ -71,7 +75,7 @@ Today we are going to work with three new ways to organize our express server. W
 
 - [ ] Create Class 4 Blog To Show You Know Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->

@@ -75,6 +75,10 @@ You are going to lay out the data model that you'll use in our final project/Cap
 
     > Here's a [good resource to get you writing Markdown quickly](./../additionalResources/bonusMaterial/writingInMarkdown.md)!
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md)
@@ -84,7 +88,7 @@ You are going to lay out the data model that you'll use in our final project/Cap
 - [ ] Create TEAM-API-Hackathon Assignment (if you haven't already)
 - [ ] Checkpoint-2 Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->

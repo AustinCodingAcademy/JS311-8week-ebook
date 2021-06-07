@@ -71,6 +71,10 @@ There are a couple semi-advanced concepts in SQL that we haven't covered yet, bu
 - [ ] [NPM MySQL Docs - Transactions](https://www.npmjs.com/package/mysql#transactions)
 - [ ] [NPM MySQL Docs - Stored Procedures](https://www.npmjs.com/package/mysql#stored-procedures)
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md) 
@@ -80,7 +84,7 @@ There are a couple semi-advanced concepts in SQL that we haven't covered yet, bu
 - [ ] Create MySQL+CRUD Assignment
 - [ ] Create Class 8 Blog To Show You Know Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->

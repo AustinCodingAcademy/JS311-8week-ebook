@@ -69,6 +69,10 @@ If you've built your SQL database and connected it to your Express server then a
 
 Use the time between classes to complete your backend so when you have the front-end skills you can easily connect them and host a fully functioning, impressive web app to show to your friends, family, and employers.
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Blogs to Show You Know
 
 [Blog Prompts](./../additionalResources/blogPrompts.md)
@@ -77,7 +81,7 @@ Use the time between classes to complete your backend so when you have the front
 
 - [ ] Create Class 16 Blog To Show You Know Assignment
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->

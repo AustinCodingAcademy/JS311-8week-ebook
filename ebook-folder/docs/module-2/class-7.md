@@ -67,10 +67,14 @@ The following document covers `INSERT`s, `UPDATE`s and `DELETE`s as well as comm
 - [ ] Review the following document on [most popular sql commands](https://www.webhostface.com/blog/most-popular-mysql-commands/)
 - [ ] Continue using the [MySQL Documentation](https://dev.mysql.com/doc/) to further your learning. You will need to continuously reference docs like this in order to know how to write your SQL statements. Additionally, Google searches like "MySQL find all records that start with A" can be helpful in pointing you to Stack Overflow articles on the appropriate topic. The key is knowing what to search for. Often it's easier than you think.
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->

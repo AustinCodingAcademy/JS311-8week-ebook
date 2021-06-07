@@ -25,9 +25,9 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    * [ ] [311_wk2_day1_express repo](https://github.com/AustinCodingAcademy/311_wk2_day1_express.git)
-    * [ ] Complete the Express server
-    * [ ] Test with Postman
+    - [ ]  [311_wk2_day1_express repo](https://github.com/AustinCodingAcademy/311_wk2_day1_express.git)
+    - [ ]  Complete the Express server
+    - [ ]  Test with Postman
 - [ ] Push Yourself Further
 - [ ] Exit Recap, Attendance, and Reminders
 
@@ -57,9 +57,9 @@ Today we are going to set up a basic Express server and add a few routes. We wil
 - [ ] Fork and clone the following repository: [Express Intro Practice](https://github.com/AustinCodingAcademy/311_wk2_day1_express)
 `cd` into the new directory and `npm i`
 - [ ] Follow the `README` to:
-    * [ ] get started
-    * [ ] build routes and
-    * [ ] test them with Postman
+    - [ ]  get started
+    - [ ]  build routes and
+    - [ ]  test them with Postman
 - [ ] Remember to use the homework for this class to build your first routes.
 
 - [ ] [YT, Traversy Media - JS Crash Course](https://youtu.be/L72fhGm1tfE)
@@ -70,11 +70,15 @@ Today we are going to set up a basic Express server and add a few routes. We wil
 
 Follow along with this [tutorial on installing and setting up express](https://www.robinwieruch.de/node-js-express-tutorial/). This article includes concepts like "middleware" which we practiced with body-parser but haven't talked about in depth yet.
 
+## Student Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
 <!-- - [ ] Create Class ** Blog To Show You Know Assignment -->
 - [ ] Prepare for next class by completing all of your pre-class lessons
-- [ ] Complete the feedback survey(if applicable)
+- [ ] Complete the feedback survey
 
 <!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
 <script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->
