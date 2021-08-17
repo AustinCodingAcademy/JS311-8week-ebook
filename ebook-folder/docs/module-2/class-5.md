@@ -129,6 +129,10 @@ We're ready to go! We have a database set up in Google Cloud that can be accesse
 - [ ] Click "Ok" to save the connection
 The new connection should be listed under "MySQL Connections", double click it to connect to the database
 
+<!-- Just added aug16th -->
+##NOTE:
+When creating your first-instance you are using sensitive variables given to you by google to connect to the database you created. When we connect to our local server were going to use a file called `.env'. More on this soon. Just be aware the variables you use are secret.
+
 We should have successfully created a database and connected to it. We've done a lot of setup so far but for our homework we'll add some data to our database and begin querying the data. Reference the following docs for additional information and walkthroughs of what we've covered so far.
 
 #### Additional Resources

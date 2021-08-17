@@ -66,7 +66,70 @@ To use the **connection pool** *singleton* object we import it into any file tha
 ```javascript
   const pool = require('./sql/connection');
 ```
+## IMPORTANT: Dotenv
 
+Note that were working with some sensitive data right now. When connecting to our DB with the express server were creating. We always want to use a `.env` file. This is where we want to start putting all of our sensitive data from now on. This includes host name, user, passwords, database names, API_keys, and more. Its very important to start using this file for security reasons to keep people we don't want to have access to our information away such as hackers or just anyone on the internet. 
+
+## How to use `.env`
+
+ - [ ] In your terminal type `npm install dotenv`
+ - [ ] Create a `touch .env` file in the top directory of the repo your working in. 
+ - [ ] to store variables in the file use this format.
+
+```yaml
+PORT=3001
+API_KEY=thisIsMyApiKey
+HOST=localhost
+USER=root
+PASSWORD=ourpassword
+DATABASE=adminaccount
+```
+
+ - [ ] to use dotenv require it with this code `require('dotenv').config()` or import it `import dotenv from 'dotenv'`
+ - [ ] to use variables set in the `.env` file simply use `process.env.PASSWORD` when you use this code it accesses the file and finds the variable by name. 
+
+ You can use a variable at the top of your file like this to allow for quick usage in your files.
+
+ ```javascript
+//import dotenv file
+ import dotenv from 'dotenv'
+//Or require it
+require('dotenv').config()
+//store in a variable to use multiple times if needed
+ const host = process.env.HOST
+ const user = process.env.USER
+ const password = process.env.PASSWORD
+ const database = process.env.DATABASE
+ //Create a connection
+  class Connection {
+  constructor() {
+    if (!this.pool) {
+      this.pool = mysql.createPool({
+        connectionLimit: 100,
+        //see how were using the variables stored above to now secure our credentials?
+        host: host,
+        user: user,
+        password: password,
+        database: database
+        //The important part of this code is understanding how we use env variables. don't worry about the other code so much.
+      })
+      return this.pool
+    }
+    return this.pool
+  }
+}
+```
+## `.gitignore file`
+
+The final piece to the puzzle with .env is to never commit the file to github. Its important to always keep these variables to yourself. Either un-track the file when pushing to github or better yet use a `.gitignore` file. When using a `.gitignore` file this will always keep secure files from being pushed to github without you having to do much.
+
+- [ ] In your terminal type `touch .gitignore` in the top level of your repo
+- [ ] To use this file simply write the name of the file you want ignored.
+
+```yaml
+.env
+```
+Now the `.env` file will always be ignored and you can comfortably use sensitive variables.
 ## Queries
 
 Now that we have our connection pool set up, it's time to use it to query, or *mutate* if we need, our database. To do that we pass the appropriate MySQL command to the `.query` method on the `pool` object: `pool.query` as string. Typically this will happen inside our controllers, like the following:
@@ -159,6 +222,7 @@ Be sure to have this completed by the time you come into class.
 
 - [ ] [NPM MySQL Docs - Home](https://www.npmjs.com/package/mysql)
 - [ ] [MDN Docs - title]()
+- [ ] [List of files that should be ignored](https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv)
 
 
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
