@@ -1,92 +1,126 @@
-# Overview Of Authentication 
+# Overview Of Authentication
 
-*“I have not failed. I've just found 10,000 ways that won't work.”
-― Thomas A. Edison
+*“I have not failed. I've just found 10,000 ways that won't work.” ― Thomas A. Edison*
 
-## What is Authentication?
+Now that we have high overview of what authentication and authorization is, let's start zooming in on what the flow of authentication is and what we actually have to do to get it coded in our server!
 
-Hi everyone this section of the text book will focus on the overview of authentication. Authentication is used by a server when the server needs to know exactly who is accessing their app. 
+## Why Authenticate?
 
-## Why?
+Authentication is used by a server when the server needs to know exactly who is accessing their app.
 
-It's important to understand authentication because it's necessary for the security of your app and to understand what every app on the internet does when you sign in. When building your fullstack projects at the end of the class, be sure to reference back to here if you need any extra help with building your login. You can also bookmark this lesson to refer back later.
+It's important to understand authentication because it's necessary for the security of your app and to understand what every app on the internet does when you sign in. When building your fullstack projects at the end of the class, be sure to reference back to here if you need any extra help with building your login.
 
-## Visualization of All steps
+### Visualization of All steps
 
 ![stepsOfAuth](./../images/stepsOfAuth.png)
 
-## Steps of Authentication
-1.The username and password are sent to the server.
-2.The server accesses its database of users that holds the username and password.
-3.It checks the provided username and password against the one in the database.
-4.If the credentials match, the user's identity is verified, and the application decides what's next.
-5.If not, a generic error message is returned.
+### General Steps of Authentication
 
-## Sign-Up
+1. The username and password are sent to the server.
+2. The server accesses its database of users that holds the username and password.
+3. It checks the provided username and password against the one in the database.
+4. If the credentials match, the user's identity is verified, and the application decides what's next.
+5. If not, a generic error message is returned.
+
+## Sign-Up vs Sign-In
 
 ![writeToDatabase](./../images/writeToDatabase.png)
 
-The first step of Authentication is to sign up for the app you're making or using. When you sign up for a web app, it will write to the database being used by the app sending the email/password you used to sign up. It's important to understand this because it will help you visualize how the server is checking for the correct person to log-in. 
+The first step of authentication is to sign up! After all, we can't verify your identity if we don't have credentials to compare with what you provide to confirm you are who you say your are.... When one signs-up on any web app, their credentials (username/email & password) will be sent from the front-end to the server and written to the database. *It's important to understand this because it will help you visualize how the server will be checking incoming "sign-in" credentials against previously written "sign-up" credentials.* It really is as simple as this:
 
-When you send the server your sign up information, it will hash or salt the password for security reasons. We will cover more hashing soon but for now just remember the password will be scrambled.
+- [ ] Input and submit email & password info on front-end to "sign-up"
+- [ ] Front-End sends POST request with the the "sign-up" info to the server
+- [ ] The server receives the credentials and `INSERT`s a new entry in the `users` table
+- [ ] The user returns to the app to login by inputting and submitting their email & password on the front-end
+- [ ] The front-end sends a GET Request with the credentials to the server
+- [ ] The server `SELECTS` the previously written email that matches and checks to see if the passwords match
+- [ ] If `true` the next page in the app is sent to the front-end and a **bearer token** is stored cookies (more on this soon)
+- [ ] If `false` another "login" page is sent to the front-end
 
-## Example Of A Salted/hashed User Input
+### The Hash
+
+There's a small step the summary above excludes called **hashing**. See, when we store passwords in our database we don't want to store **plaintext** because if our database is ever breached/hacked into the passwords will be readable by human-eyes and simple javascript functions. To protect our users we create new strings that represent the password called a *hash*.
+
+A hash is a unique and complicated string created by passing a simple string into a mathematical formula (algorithm) that scrambles and generates a the unique string. The way it works is highly mathematical but in short it could look like this:
+
+| Simple String | The Hash Produced |
+| - | - |
+| pony | 4B3E3C2F99046F92A61BAB6775848577 |
+| apple | 1F3870BE274F6C49B3E31A0C6728957F |
+| pony | 4B3E3C2F99046F92A61BAB6775848577 |
+
+No matter what, if you pass `pony` through the hashing algorithm is will also produce the `4B3E3C2F99046F92A61BAB6775848577` every time. This is how passwords can be stored as hashes and later compared, hash to hash. We just use a hashing algorithm in-between our server receiving the request and when it reads the database.
+
+> You can play with how the [MD5 hashing algorithm will create unique strings with any common string you put in here](https://passwordsgenerator.net/md5-hash-generator/).
+
+We will cover more hashing soon but for now just remember the password will be scrambled each time its written and compared against.
+
+#### The Code for Hashing
+
+Below is a small Express server that has a hashing algorithm added to it called `argon2`. Read over the code and see if you can make sense of what's going on.
+
+= "Express App with Argon2 Hashing"
+
+    ```javascript
+      const express = require('express'),
+      // import argon for hashing
+        argon2i = require('argon2-ffi').argon2i,
+        crypto = require('crypto'),
+        bodyParser = require('body-parser');
+
+      // create express app 
+      const app = express();
+      const jsonParser = bodyParser.json();
+
+      // post request route for when a user signs up for the app
+      app.post('/signup', jsonParser, function(req, res){
+        // if incorrect credentials send status 400
+        if(!req.body) return res.sendStatus(400);
+        // using argon2, hash the request body that has the password.
+        crypto.randonBytes(32, function(err, salt){
+          if(err) throw err;
+          argon2i.hash(req.body.password, salt).then(hash => {
+            console.log(hash);
+            // then send a 201 status that it was successful.
+            res.sendStatus(201);
+          })
+        })
+      })
+
+      app.listen(3001, function(){
+        console.log("listening on port 3001");
+      })
+    ```
+
+As you can see from this code the password will now be scrambled like this `password:wkehodjsuekr` from now on. If you want to learn more about hashing and argon take a look at the docs below. We will also be covering this in more depth soon.
+
+*******
+
+## Write Code of Authentication
+
+The following code example will assume our human-user has already "sign-up" so their email/username and password are already stored in our database.
+
+### Request from the Front-End
+
+logging in to the app. When you go to log into a webapp it will prompt you for the credentials you entered during the sign up. When you click the login button it will then make a `get` request to the server or API you are trying to access.
+
+=== "Request from the Front-End"
 
 ```javascript
-const express = require('express'),
-//require argon for hashing and salt
-  argon2i = require('argon2-ffi').argon2i,
-  crypto = require('crypto'),
-  bodyParser = require('body-parser');
-
-//create express app 
-const app = express();
-const jsonParser = bodyParser.json();
-
-//post request for when a user signs up for the app
-app.post('/signup', jsonParser, function(req, res){
-  //if incorrect credentials send status 400
-  if(!req.body) return res.sendStatus(400);
-//using argon hash the request body that has the password.
-  crypto.randonBytes(32, function(err, salt){
-    if(err) throw err;
-    argon2i.hash(req.body.password, salt).then(hash => {
-      console.log(hash);
-      //then send a 201 status that it was successful.
-      res.sendStatus(201);
-    })
+  axios.get('https://theserverorapiurl.com/user?ID=1')
+  .then(function (response) {
+    //handle success
+    //remember to console.log
+    console.log(response)
   })
-})
-
-app.listen(3001, function(){
-  console.log("listening on port 3001");
-})
-
-```
-As you can see from this code the password will now be scrambled like this `password:wkehodjsuekr` from now on. If you want to learn more about hashing and argon take a look at the docs below. We wil also be covering this in more depth soon.
-
-## Step 1
-
-logging in to the app. When you go to log into a webapp it will prompt you for the credentials you entered during the sign up. When you click the login button it will then make a `get` request to the server or API you are trying to access. 
-
-```javascript
-axios.get('https://theserverorapiurl.com/user?ID=1')
-.then(function (response) {
-  //handle success
-  //remember to console.log
-  console.log(response)
-})
 ```
 
 When you submit a login remember the next steps all happen within seconds but are vital to understand authorization. 
 
-## Step 2
-
-This step once clicked, the login sends the server a call that tells the server to take a look at the database the app is using to verify who is logging in. 
-
-## Step 3
+### Server Handles the Request
 
 It checks the provided username and hashed password against the one in the database.
+<!-- TODO @David, what is "it"?  -->
 
 credentials you sent => user=username:hashedPassword  ==> checks the database user=myusername:mypassword
 
@@ -112,13 +146,31 @@ This is the logic that checks the token and verifies if its valid before sending
   //  -- or --
   // use a third-party like Auth0
 ```
-## Step 4
+
+### Server Calls the Hashing Algorithm
+
+<!-- TODO @David Fill this out -->
+
+### Server Requests the Password from the DB
+<!-- TODO @David Fill this out -->
+
+### Server Compares the Return Values
+<!-- TODO @David Fill this out -->
+
+<!-- ## Step 4 -->
 
 If the credentials match, the user's identity is verified, and the application decides what's next. After they are successfully authenticated our app will send the user a bearer token to keep with you during the time you are using the app. (once you logout this token will be terminated until you login again). If you didn't receive this token then you would have to re-login every time you wanted to change pages in the app. Its not very user friendly. 
 
-After you are granted authorization to the web app you will now have a cookie attached to your info in the database and this cookie will follow you around the web app keeping you authorized. 
+After you are granted authorization to the web app you will now have a cookie attached to your info in the database and this cookie will follow you around the web app keeping you authorized.
 
-## Cookie code
+### Server Generates a Bearer Token
+
+<!-- TODO @David -->
+<!-- !Ooops, we didn't even talk about a bear token or how that get generated... -->
+
+### Server Sends a Token to the Front-End
+
+### Front-End Stores The Token in Cookies
 
 ```javascript
   // back-end
@@ -161,16 +213,27 @@ After you are granted authorization to the web app you will now have a cookie at
 
 ### Conclusion
 
-I hope this helps visualize the process of the code being written. If you have trouble with the coming classes reference back here and try to visualize the code being written and why its important. 
+<!-- TODO @David Don't write this like it's blog. This is an ebook that has lots of documentation. Encourage and push them toward the next lesson -->
+I hope this helps visualize the process of the code being written. If you have trouble with the coming classes reference back here and try to visualize the code being written and why its important.
 
-## Follow-up Video 
+<!-- ## Follow-up Video  -->
 <!-- TODO add video -->
+
 ## Additional Resources
+
+<!-- TODO @David fix these titles to match naming convention, see other files to see naming convention -->
+<!-- EXAMPLES: 
+
+      TYPE  -- CONTRIBUTOR/SITE -- TITLE
+- [ ] [Forum, StackOverflow - Cookie Naming Convention](https://stackoverflow.com/questions/2097843/naming-cookies-best-practices)
+- [ ] [YT, Ben Awad - How to Store JWT in Memory](https://youtu.be/iD49_NIQ-R4) 
+-->
 
 - [ ] [ExpressJS Authentication](https://www.tutorialspoint.com/expressjs/expressjs_authentication.htm)
 - [ ] [argon tutorial](https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs)
 
 ## Know Your Docs
 
+<!-- TODO @David fix this title. Always use this naming convention -->
 - [ ] [MDN Docs - title](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)
-- [ ] [MDN Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+- [ ] [MDN Docs - Set Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)

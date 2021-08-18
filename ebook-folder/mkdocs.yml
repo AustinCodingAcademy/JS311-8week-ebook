@@ -62,6 +62,7 @@ nav:
         - Class 7 SQL CRUD : module-2/class-7.md
       - 'Pre-Class 8 Lesson': 
         - Adding SQL to Express: module-2/sqlAndExpressjs.md
+        - DotEnv: module-3/envOverview.md
         - Class 8 MySQL + Express: module-2/class-8.md
     - 'Module Three: Authentication': 
       - 'Pre-Class 9 Lesson':
@@ -76,7 +77,7 @@ nav:
         - Class 11 Data Modeling: module-3/class-11.md
       - 'Pre-Class 12 Lesson':
         - Intro to Authentication: module-3/introToAuthentication.md
-        - Server Authentication Overview: module-3/serverAuthenticationOverview.md
+        - Adding Authentication: module-3/serverAuthenticationOverview.md
         - Hashing & Tokens: module-3/hashingAndTokens.md
         - Auth0: module-3/auth0-intro.md
         - Class 12 Express Authentication: module-3/class-12.md

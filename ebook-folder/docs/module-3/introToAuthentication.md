@@ -4,7 +4,7 @@
 
 ## Overview
 
-We've practiced building APIs and analyzing the data behind them. Now it's time to add a level of security to those APIs so that we can restrict access to authorized users.
+We've practiced building APIs and connecting the to databases but now it's time to add a level of security to those APIs so that we can restrict access to our data.
 
 Authentication is an important part of creating APIs. As I'm sure we can all guess, authentication is used to lock down specific endpoints so that they cannot be freely accessed. To learn how to implement authentication on our server(API) we'll need to understand the process or **workflow** as well as a few new terms. Let's get started.
 
