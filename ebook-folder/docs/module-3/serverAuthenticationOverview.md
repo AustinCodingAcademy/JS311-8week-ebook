@@ -100,6 +100,19 @@ As you can see from this code the password will now be scrambled like this `pass
 
 The following code example will assume our human-user has already "sign-up" so their email/username and password are already stored in our database.
 
+```javascript
+// middleware function, middleware is just a name for the function that checks a user os authenticated. When we create this function we can now use it to check all of our routes for the correct user.
+      const authenticate = (req, res, next) => {
+        const auth = req.headers['authorization']
+        if (!auth) return res.sendStatus(401)
+        next()
+      }
+
+// middleware applied, now we have the function we can pass in this authenticate function to our route as a parameter and it will run the function before posting. 
+      app.post('/', authenticate, (req, res) => {
+        res.send(`You sent an authorization header...You're Postin!`)
+      })
+```
 ### Request from the Front-End
 
 logging in to the app. When you go to log into a webapp it will prompt you for the credentials you entered during the sign up. When you click the login button it will then make a `get` request to the server or API you are trying to access.
@@ -118,9 +131,7 @@ logging in to the app. When you go to log into a webapp it will prompt you for t
 When you submit a login remember the next steps all happen within seconds but are vital to understand authorization. 
 
 ### Server Handles the Request
-
-It checks the provided username and hashed password against the one in the database.
-<!-- TODO @David, what is "it"?  -->
+The server checks the provided username and hashed password against the one in the database.
 
 credentials you sent => user=username:hashedPassword  ==> checks the database user=myusername:mypassword
 
@@ -148,15 +159,42 @@ This is the logic that checks the token and verifies if its valid before sending
 ```
 
 ### Server Calls the Hashing Algorithm
+When we create our server it will have a simple post request, that when we put in our username and password it will call the hashing algorithm to take the password input and hash using argon2. 
 
+```javascript
+require argon2 = require('argon2')
+//1. register user
+server.post('/register', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+//using this code we will hash our password a user inputs.
+    const hash = await argon2.hash(password)
+    console.log(hash)
+  }catch (err) {
+//error code here
+  }
+})
+```
+
+following this code we will open postman and run a request to our local host url and our register route like this: POST `http://localhost:4000/register`. navigate to the body of the post request in postman and input two key fields. fist field will be email with a random email of your choosing. The second will be password with any random password you choose. Then kick up your local host in the terminal and run the post request on postman. You should receive a random string that looks like this `$argon2i$v=19$m=4096,t=3,p=1$rHPRPtbiIVGRVT4dUWDizw$v4jily1SeNYrmDhX9uD8MOePv+9U+2Lqvwc4iUsJOa0`.
 <!-- TODO @David Fill this out -->
 
 ### Server Requests the Password from the DB
 <!-- TODO @David Fill this out -->
-
+The server hit the get request route we set up and then runs a function to compare the inputted password with the password stored in the database.
 ### Server Compares the Return Values
 <!-- TODO @David Fill this out -->
-
+```javascript
+ app.post('/login', function(req, res) {
+  Parse.User.enableUnsafeCurrentUser();
+  Parse.User.logIn(req.body.username, req.body.password).then(function(user) {
+    res.redirect('/home');
+  }, function(error) {
+    res.render('login', { flash: error.message });
+  });
+});
+```
 <!-- ## Step 4 -->
 
 If the credentials match, the user's identity is verified, and the application decides what's next. After they are successfully authenticated our app will send the user a bearer token to keep with you during the time you are using the app. (once you logout this token will be terminated until you login again). If you didn't receive this token then you would have to re-login every time you wanted to change pages in the app. Its not very user friendly. 
@@ -164,14 +202,22 @@ If the credentials match, the user's identity is verified, and the application d
 After you are granted authorization to the web app you will now have a cookie attached to your info in the database and this cookie will follow you around the web app keeping you authorized.
 
 ### Server Generates a Bearer Token
+The bearer token is a token created by the server to ensure you are coming from the correct place. Using JWT you'll be able to create a token and then a signature will be in place from now on. More on JWT soon but keep in mind this step.
 
-<!-- TODO @David -->
-<!-- !Ooops, we didn't even talk about a bear token or how that get generated... -->
-
+```javascript
+//require sign from jwt
+const { sign } = require('jsonwebtoken');
+//create a function
+const createBearerToken = userId => {
+  return sign({ userId }, process.env.BEARER_TOKEN_SECRET, {
+    expiresIn: '15m',
+  }) 
+}
+```
 ### Server Sends a Token to the Front-End
-
+Once the Token is created we will send it back to our front end. The front end of your code will use the bearer token we created to authenticate a user. The front-end will use a post request to access the bearer token we created in the back-end.
 ### Front-End Stores The Token in Cookies
-
+We store the token in a cookie for the browser to keep track of. 
 ```javascript
   // back-end
   const login = (req, res) => {
@@ -214,8 +260,7 @@ After you are granted authorization to the web app you will now have a cookie at
 ### Conclusion
 
 <!-- TODO @David Don't write this like it's blog. This is an ebook that has lots of documentation. Encourage and push them toward the next lesson -->
-I hope this helps visualize the process of the code being written. If you have trouble with the coming classes reference back here and try to visualize the code being written and why its important.
-
+Take what you learned from this lesson and really take the time to look over the resources below. Authentication is one of the most important parts of learning the back-end flow of applications. Next were going to talk about hashing and tokens in more depth. Refer back here and see how the tokens are being used in the big picture.
 <!-- ## Follow-up Video  -->
 <!-- TODO add video -->
 
@@ -229,8 +274,9 @@ I hope this helps visualize the process of the code being written. If you have t
 - [ ] [YT, Ben Awad - How to Store JWT in Memory](https://youtu.be/iD49_NIQ-R4) 
 -->
 
-- [ ] [ExpressJS Authentication](https://www.tutorialspoint.com/expressjs/expressjs_authentication.htm)
-- [ ] [argon tutorial](https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs)
+- [ ] [Artical, ExpressJS Authentication, tutorial](https://www.tutorialspoint.com/expressjs/expressjs_authentication.htm)
+- [ ] [Artical, argon tutorial - video and tutorial](https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs)
+- [ ] [video, jwt - tutorial](https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/)
 
 ## Know Your Docs
 
