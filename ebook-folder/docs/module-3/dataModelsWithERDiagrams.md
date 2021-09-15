@@ -6,12 +6,17 @@
 
 At this point we have most of the knowledge needed for creating APIs. We've practiced this numerous times and you should be getting familiar with the process. Now we're going to take a break and do a deeper dive into the ER (Entity Relationship) diagrams we first looked at last week.
 
-## Data Modeling
+## Why Use Data Modeling?
 
 Data modeling is the process of creating a data model for the relationships in your database. The data model emphasizes what data is needed and how it should be organized in a visual manner. In a nutshell, we want to make sure all data objects are accurately represented well before we write any code!
 
 One of the most common ways to do this is through the use of an ER diagram.
 
+You may be thinking to yourself, "Awesome, but why would I do this?" Here's a couple reasons why to use a data model. Using data models are much easier than changing your real database. It's a lot easier to build a data map than writing SQL queries to change your database. Being able to quickly change, and see the changes in a data model will help keep your new database from becoming disorganized, or incorrect. When creating a database it's easier for you to review a data model than review a a database design. In most cases when you start working for a new company if you, show a database to your team lead it might be more challenging to explain than simply showing a data model to them. These data models help improve organization and communication with your team. 
+
+When we use data models, a good way to visualize why we do this is by imagining a company entity that owns several dental schools. Three of the schools this company owns would be separate entity tables: Houston, Austin, Dallas. We would have a bunch of properties in our company entity called `employee_number, phone_number, address, phone_number2, email`. Now since our employee number property never changes and will always represent a single employee we can use this property in our other tables. We can have the employee number in the company's table and then use it again in our austin table for example, to maximize efficiency. When creating our data models always be thinking about maximizing use of our properties and this is why were going to be creating our own models. Take the time to think about all the individual relationships each entity and property can have for our final project's. 
+
+  > NOTE: Employee_number is an example of a primary key and will follow strict rules to be considered a PK. It will never change and can only be assigned to one person. Since it follows these rules we can re-use this throughout our database.  
 ### Entity Relationship Model
 
 An Entity Relationship diagram uses [UML Notation](https://www.tutorialspoint.com/uml/uml_basic_notations.htm) to visualize the relationships between our tables. UML stands for Unified Modeling Language and it is basically the go-to for designing object-oriented systems.
@@ -39,6 +44,15 @@ The last thing we need to talk about in order to understand our ER diagrams is *
 These relationships are usually described as **"one-to-many"**, **"one-to-one"**, or **"many-to-many"**. The lines between the entities and the small notations at the end of them dictate these relationships.
 
 ![cardinality-notation-table](./../images/cardinality-notation-table.png)
+## Relationships explained
+
+- [ ] One to One: This relationship can be summed up as one table to another table allowing only one connection each. Such as a User table having a one to one relationship for a drivers license table. The user can only have one drivers license so it would be applicable to use the one to one relationship.
+
+- [ ] One to Many: An example of a One to many relationship would be a users table again with an orders table. The user can have as many orders as they want so using one to many would work perfectly.
+
+- [ ] Many to One: The next relationship is many to one and this can be understood as the opposite of the previous. Now lets say we have a credit card table would be a many cards to a user table that would only have a single user.
+
+- [ ] Many to Many: An example of this would be a professors table to a students table. The professor can have many students and the students can have many professors. 
 
 *Source: [LucidCharts](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)*
 

@@ -177,7 +177,7 @@ server.post('/register', async (req, res) => {
 })
 ```
 
-following this code we will open postman and run a request to our local host url and our register route like this: POST `http://localhost:4000/register`. navigate to the body of the post request in postman and input two key fields. fist field will be email with a random email of your choosing. The second will be password with any random password you choose. Then kick up your local host in the terminal and run the post request on postman. You should receive a random string that looks like this `$argon2i$v=19$m=4096,t=3,p=1$rHPRPtbiIVGRVT4dUWDizw$v4jily1SeNYrmDhX9uD8MOePv+9U+2Lqvwc4iUsJOa0`.
+following this code we can open postman and run a request to our local host url and our register route like this: POST `http://localhost:4000/register`. navigate to the body of the post request in postman and input two key fields. fist field will be email with a random email of your choosing. The second will be password with any random password you choose. Then kick up your local host in the terminal and run the post request on postman. You should receive a random string that looks like this `$argon2i$v=19$m=4096,t=3,p=1$rHPRPtbiIVGRVT4dUWDizw$v4jily1SeNYrmDhX9uD8MOePv+9U+2Lqvwc4iUsJOa0`.
 <!-- TODO @David Fill this out -->
 
 ### Server Requests the Password from the DB

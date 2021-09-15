@@ -140,6 +140,19 @@ The Star Wars API was a useful starting place, but it only allows us to retrieve
 <!-- !Video Content: 321: Using Postman -->
 <iframe src="https://player.vimeo.com/video/344941801?byline=0&portrait=0" width="655" height="368" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
+### Learning Curl!
+
+We've learned the basics of what an API is today and touched on how to make a call but another way to make an API request is using something called `curl`. `curl` is a way to make calls using your terminal and getting information back sometimes faster and more efficiently. Its good to understand alternative ways to make requests and `curl` can be another strong choice to make requests. Simply follow these steps and you can practice using `curl`. To install `curl` you can follow instructions on their website, I included a link to the website in the additional resources section. 
+
+- [ ] Check to see if `curl` is already installed `curl --version`
+  > NOTE: curl is default command most computers already have installed. 
+- [ ] If `curl` is not already installed [download `curl`](https://curl.se/docs/install.html) 
+  > NOTE: If you have Homebrew installed you can also run the command `brew install curl`. 
+- [ ] Check Version using command `curl --version`
+- [ ] Now run command `curl https://jsonplaceholder.typicode.com/posts`
+
+This URL is a dummy website to make practice API calls with. If you paste the URL in the browser you can see the data written in JSON. Once you run this command in the terminal you have successfully created an API request using `curl`. Feel free to visit this website and run a few more tests trying a different routes or a different type of request. We can also test this type of call by running our API route with some dummy data we can input in our files. Happy coding! 
+
 ## Additional Resources
 
 - [ ] [Article, RestfulAPI - What is REST?](https://restfulapi.net/)
