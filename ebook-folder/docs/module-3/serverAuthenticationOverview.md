@@ -182,7 +182,7 @@ following this code we can open postman and run a request to our local host url 
 
 ### Server Requests the Password from the DB
 <!-- TODO @David Fill this out -->
-The server hit the get request route we set up and then runs a function to compare the inputted password with the password stored in the database.
+The server hits the get request route we set up and then runs a function to compare the inputted password with the password stored in the database.
 ### Server Compares the Return Values
 <!-- TODO @David Fill this out -->
 ```javascript
