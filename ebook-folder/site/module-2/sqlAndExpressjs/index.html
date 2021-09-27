@@ -9,8 +9,8 @@
       
       
       
-      <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -42,8 +42,6 @@
     
     
       
-
-
     
     
   </head>
@@ -55,9 +53,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple">
+      
   
-    
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -74,9 +71,11 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases" data-md-component="logo">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
       
   <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
 
@@ -100,8 +99,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -111,18 +111,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,9 +153,11 @@
                     
 
 
+
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases" data-md-component="logo">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
       
   <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
 
@@ -282,8 +280,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/REST-HTTP-APIs/" class="md-nav__link">
+      <a href="../../module-1/introToAPIs/" class="md-nav__link">
         Intro to APIs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/whatIsREST/" class="md-nav__link">
+        What's REST
       </a>
     </li>
   
@@ -774,7 +784,6 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
-      
         
       
       
@@ -789,7 +798,6 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
   
   
     
@@ -811,6 +819,20 @@
         <li class="md-nav__item">
   <a href="#connections" class="md-nav__link">
     Connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-dotenv" class="md-nav__link">
+    IMPORTANT: Dotenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-env" class="md-nav__link">
+    How to use .env
   </a>
   
 </li>
@@ -1090,20 +1112,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-3/envOverview/" class="md-nav__link">
-        .env Overview
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../module-3/serverAuthenticationOverview/" class="md-nav__link">
-        Server Authentication Overview
+        Adding Authentication
       </a>
     </li>
   
@@ -1817,7 +1827,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
     
   
   
@@ -1837,6 +1846,20 @@
         <li class="md-nav__item">
   <a href="#connections" class="md-nav__link">
     Connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-dotenv" class="md-nav__link">
+    IMPORTANT: Dotenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-env" class="md-nav__link">
+    How to use .env
   </a>
   
 </li>
@@ -1940,7 +1963,7 @@
   <span class="kd">const</span> <span class="nx">mysql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mysql&#39;</span><span class="p">)</span>
 
   <span class="kd">class</span> <span class="nx">Connection</span> <span class="p">{</span>
-    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">pool</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;creating connection pool...&#39;</span><span class="p">)</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">pool</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createPool</span><span class="p">({</span>
@@ -1958,7 +1981,7 @@
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="kd">const</span> <span class="nx">instance</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Connection</span><span class="p">()</span>
+  <span class="kd">const</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Connection</span><span class="p">()</span>
 
   <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">;</span>
 </code></pre></div>
@@ -1971,6 +1994,80 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">pool</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./sql/connection&#39;</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
+<h2 id="important-dotenv">IMPORTANT: Dotenv</h2>
+<p>Note that were working with some sensitive data right now. When connecting to our DB with the express server were creating. We always want to use a <code>.env</code> file. This is where we want to start putting all of our sensitive data from now on. This includes host name, user, passwords, database names, API_keys, and more. Its very important to start using this file for security reasons to keep people we don't want to have access to our information away such as hackers or just anyone on the internet. </p>
+<h2 id="how-to-use-env">How to use <code>.env</code></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> In your terminal type <code>npm install dotenv</code></li>
+<li class="task-list-item"><input type="checkbox"/> Create a <code>touch .env</code> file in the top directory of the repo your working in. </li>
+<li class="task-list-item"><input type="checkbox"/> to store variables in the file use this format.</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">PORT=3001</span>
+<span class="l l-Scalar l-Scalar-Plain">API_KEY=thisIsMyApiKey</span>
+<span class="l l-Scalar l-Scalar-Plain">HOST=localhost</span>
+<span class="l l-Scalar l-Scalar-Plain">USER=root</span>
+<span class="l l-Scalar l-Scalar-Plain">PASSWORD=ourpassword</span>
+<span class="l l-Scalar l-Scalar-Plain">DATABASE=adminaccount</span>
+</code></pre></div>
+</td></tr></table>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> to use dotenv require it with this code <code>require('dotenv').config()</code> or import it <code>import dotenv from 'dotenv'</code></li>
+<li class="task-list-item"><input type="checkbox"/> to use variables set in the <code>.env</code> file simply use <code>process.env.PASSWORD</code> when you use this code it accesses the file and finds the variable by name. </li>
+</ul>
+<p>You can use a variable at the top of your file like this to allow for quick usage in your files.</p>
+<p><code>``javascript
+//import dotenv file
+ import dotenv from 'dotenv'
+//Or require it
+require('dotenv').config()
+//store in a variable to use multiple times if needed
+ const host = process.env.HOST
+ const user = process.env.USER
+ const password = process.env.PASSWORD
+ const database = process.env.DATABASE
+ //Create a connection
+  class Connection {
+  constructor() {
+    if (!this.pool) {
+      this.pool = mysql.createPool({
+        connectionLimit: 100,
+        //see how were using the variables stored above to now secure our credentials?
+        host: host,
+        user: user,
+        password: password,
+        database: database
+        //The important part of this code is understanding how we use env variables. don't worry about the other code so much.
+      })
+      return this.pool
+    }
+    return this.pool
+  }
+}
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>## `.gitignore file`
+
+The final piece to the puzzle with .env is to never commit the file to github. Its important to always keep these variables to yourself. Either un-track the file when pushing to github or better yet use a `.gitignore` file. When using a `.gitignore` file this will always keep secure files from being pushed to github without you having to do much.
+
+- [ ] In your terminal type `touch .gitignore` in the top level of your repo
+- [ ] To use this file simply write the name of the file you want ignored.
+
+```yaml
+.env
+</code></pre></div>
+</td></tr></table>
+Now the</code>.env` file will always be ignored and you can comfortably use sensitive variables.</p>
 <h2 id="queries">Queries</h2>
 <p>Now that we have our connection pool set up, it's time to use it to query, or <em>mutate</em> if we need, our database. To do that we pass the appropriate MySQL command to the <code>.query</code> method on the <code>pool</code> object: <code>pool.query</code> as string. Typically this will happen inside our controllers, like the following:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2082,6 +2179,7 @@
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> <a href="https://www.npmjs.com/package/mysql">NPM MySQL Docs - Home</a></li>
 <li class="task-list-item"><input type="checkbox"/> <a href="">MDN Docs - title</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv">List of files that should be ignored</a></li>
 </ul>
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->
@@ -2144,7 +2242,6 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -2152,8 +2249,7 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../class-7/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Class 7 SQL CRUD" rel="prev">
+        <a href="../class-7/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2168,8 +2264,7 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
         </a>
       
       
-        
-        <a href="../class-8/" class="md-footer__link md-footer__link--next" aria-label="Next: Class 8 MySQL + Express" rel="next">
+        <a href="../class-8/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2204,10 +2299,10 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
       
     
   </body>

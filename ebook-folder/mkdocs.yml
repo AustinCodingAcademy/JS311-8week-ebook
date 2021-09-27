@@ -28,7 +28,8 @@ nav:
         - Code Sandboxes: module-1/codeSandboxes.md
         - How to Succeed: module-1/succeedInThisCourse.md
         - Working in Node: module-1/whatIsNodeJS.md
-        - Intro to APIs: module-1/REST-HTTP-APIs.md
+        - Intro to APIs: module-1/introToAPIs.md
+        - What's REST: module-1/whatIsREST.md
         - Node & NPM: module-1/nodeRecap.md
         - Submitting Homework: module-1/submittingHomework.md
         - Pre-Class Checklist: module-1/preClassOneChecklist.md
@@ -62,7 +63,7 @@ nav:
         - Class 7 SQL CRUD : module-2/class-7.md
       - 'Pre-Class 8 Lesson': 
         - Adding SQL to Express: module-2/sqlAndExpressjs.md
-        - DotEnv: module-3/envOverview.md
+        # - DotEnv: module-3/envOverview.md
         - Class 8 MySQL + Express: module-2/class-8.md
     - 'Module Three: Authentication': 
       - 'Pre-Class 9 Lesson':

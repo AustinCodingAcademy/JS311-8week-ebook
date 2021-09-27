@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
     
     
       
-        <title>.env Overview - JS311 - Node Servers + SQL Databases</title>
+        <title>Intro to APIs - JS311 - Node Servers + SQL Databases</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -42,8 +42,6 @@
     
     
       
-
-
     
     
   </head>
@@ -55,9 +53,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple">
+      
   
-    
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -65,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dotenv-explained" class="md-skip">
+        <a href="#intro-to-restful-apis" class="md-skip">
           Skip to content
         </a>
       
@@ -74,9 +71,11 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases" data-md-component="logo">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-header__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
       
   <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
 
@@ -94,14 +93,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .env Overview
+              Intro to APIs
             
           </span>
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -111,18 +111,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -157,9 +153,11 @@
                     
 
 
+
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases" data-md-component="logo">
+    <a href="../.." title="JS311 - Node Servers + SQL Databases" class="md-nav__button md-logo" aria-label="JS311 - Node Servers + SQL Databases">
       
   <img src="../../CE_WhiteBlue_Icon.png" alt="logo">
 
@@ -190,12 +188,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Module One: Express Servers
@@ -211,12 +211,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         Pre-Class 1 Lessons
@@ -234,7 +236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/prepareYourMachine/" class="md-nav__link">
+      <a href="../prepareYourMachine/" class="md-nav__link">
         Prepare Your Machine
       </a>
     </li>
@@ -246,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/codeSandboxes/" class="md-nav__link">
+      <a href="../codeSandboxes/" class="md-nav__link">
         Code Sandboxes
       </a>
     </li>
@@ -258,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/succeedInThisCourse/" class="md-nav__link">
+      <a href="../succeedInThisCourse/" class="md-nav__link">
         How to Succeed
       </a>
     </li>
@@ -270,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/whatIsNodeJS/" class="md-nav__link">
+      <a href="../whatIsNodeJS/" class="md-nav__link">
         Working in Node
       </a>
     </li>
@@ -280,10 +282,129 @@
             
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intro to APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Intro to APIs
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-api" class="md-nav__link">
+    What's an API?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's an API?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-one-of-an-api-native-apis" class="md-nav__link">
+    Example One of an API - Native APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-two-of-an-api-web-api" class="md-nav__link">
+    Example Two of an API - Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-three-of-an-api-rest-api" class="md-nav__link">
+    Example Three of an API - REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-are-we-building" class="md-nav__link">
+    Which Are We Building?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-it-whats-an-api" class="md-nav__link">
+    See It - What's An API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-explore-the-star-wars-api" class="md-nav__link">
+    Practice - Explore the Star Wars API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-docs" class="md-nav__link">
+    Know Your Docs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../module-1/REST-HTTP-APIs/" class="md-nav__link">
-        Intro to APIs
+      <a href="../whatIsREST/" class="md-nav__link">
+        What's REST
       </a>
     </li>
   
@@ -294,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/nodeRecap/" class="md-nav__link">
+      <a href="../nodeRecap/" class="md-nav__link">
         Node & NPM
       </a>
     </li>
@@ -306,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/submittingHomework/" class="md-nav__link">
+      <a href="../submittingHomework/" class="md-nav__link">
         Submitting Homework
       </a>
     </li>
@@ -318,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/preClassOneChecklist/" class="md-nav__link">
+      <a href="../preClassOneChecklist/" class="md-nav__link">
         Pre-Class Checklist
       </a>
     </li>
@@ -330,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/class-1/" class="md-nav__link">
+      <a href="../class-1/" class="md-nav__link">
         Class 1 Node, NPM, & Postman
       </a>
     </li>
@@ -369,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/axios-HTTPstatusCodes/" class="md-nav__link">
+      <a href="../axios-HTTPstatusCodes/" class="md-nav__link">
         Axios + Status Codes
       </a>
     </li>
@@ -381,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/class-2/" class="md-nav__link">
+      <a href="../class-2/" class="md-nav__link">
         Class 2 Axios Practice
       </a>
     </li>
@@ -420,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/introToExpress/" class="md-nav__link">
+      <a href="../introToExpress/" class="md-nav__link">
         Intro To Express
       </a>
     </li>
@@ -432,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/class-3/" class="md-nav__link">
+      <a href="../class-3/" class="md-nav__link">
         Class 3 First Server
       </a>
     </li>
@@ -471,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/expressRouters/" class="md-nav__link">
+      <a href="../expressRouters/" class="md-nav__link">
         Routers
       </a>
     </li>
@@ -483,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/expressControllers/" class="md-nav__link">
+      <a href="../expressControllers/" class="md-nav__link">
         Controllers
       </a>
     </li>
@@ -495,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/expressStaticFiles/" class="md-nav__link">
+      <a href="../expressStaticFiles/" class="md-nav__link">
         Static Files
       </a>
     </li>
@@ -507,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/class-4/" class="md-nav__link">
+      <a href="../class-4/" class="md-nav__link">
         Class 4 Serving Static Files
       </a>
     </li>
@@ -802,14 +923,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Module Three: Authentication
@@ -848,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hackathonPrep/" class="md-nav__link">
+      <a href="../../module-3/hackathonPrep/" class="md-nav__link">
         Hackathon Prep
       </a>
     </li>
@@ -860,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../class-9/" class="md-nav__link">
+      <a href="../../module-3/class-9/" class="md-nav__link">
         Class 9 Hackathon pt. 1
       </a>
     </li>
@@ -899,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hackathon-APIreview/" class="md-nav__link">
+      <a href="../../module-3/hackathon-APIreview/" class="md-nav__link">
         Hackathon API Review
       </a>
     </li>
@@ -911,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../class-10/" class="md-nav__link">
+      <a href="../../module-3/class-10/" class="md-nav__link">
         Class 10 Hackathon pt. 2
       </a>
     </li>
@@ -950,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataModelsWithERDiagrams/" class="md-nav__link">
+      <a href="../../module-3/dataModelsWithERDiagrams/" class="md-nav__link">
         ERDs/Data Modeling
       </a>
     </li>
@@ -962,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../class-11/" class="md-nav__link">
+      <a href="../../module-3/class-11/" class="md-nav__link">
         Class 11 Data Modeling
       </a>
     </li>
@@ -978,14 +1097,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
       <label class="md-nav__link" for="__nav_4_4">
         Pre-Class 12 Lesson
@@ -1003,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introToAuthentication/" class="md-nav__link">
+      <a href="../../module-3/introToAuthentication/" class="md-nav__link">
         Intro to Authentication
       </a>
     </li>
@@ -1013,104 +1130,10 @@
             
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          .env Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        .env Overview
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    How to use
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#more-explained" class="md-nav__link">
-    More explained
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gitignore-file" class="md-nav__link">
-    .gitignore file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-tips" class="md-nav__link">
-    Extra Tips
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#video-overview" class="md-nav__link">
-    Video Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#know-your-docs" class="md-nav__link">
-    Know Your Docs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
   
     <li class="md-nav__item">
-      <a href="../serverAuthenticationOverview/" class="md-nav__link">
-        Server Authentication Overview
+      <a href="../../module-3/serverAuthenticationOverview/" class="md-nav__link">
+        Adding Authentication
       </a>
     </li>
   
@@ -1121,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hashingAndTokens/" class="md-nav__link">
+      <a href="../../module-3/hashingAndTokens/" class="md-nav__link">
         Hashing & Tokens
       </a>
     </li>
@@ -1133,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth0-intro/" class="md-nav__link">
+      <a href="../../module-3/auth0-intro/" class="md-nav__link">
         Auth0
       </a>
     </li>
@@ -1145,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../class-12/" class="md-nav__link">
+      <a href="../../module-3/class-12/" class="md-nav__link">
         Class 12 Express Authentication
       </a>
     </li>
@@ -1824,7 +1847,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
     
   
   
@@ -1835,37 +1857,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    How to use
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#more-explained" class="md-nav__link">
-    More explained
+  <a href="#whats-an-api" class="md-nav__link">
+    What's an API?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's an API?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-one-of-an-api-native-apis" class="md-nav__link">
+    Example One of an API - Native APIs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gitignore-file" class="md-nav__link">
-    .gitignore file
+        
+          <li class="md-nav__item">
+  <a href="#example-two-of-an-api-web-api" class="md-nav__link">
+    Example Two of an API - Web API
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-tips" class="md-nav__link">
-    Extra Tips
+        
+          <li class="md-nav__item">
+  <a href="#example-three-of-an-api-rest-api" class="md-nav__link">
+    Example Three of an API - REST API
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#video-overview" class="md-nav__link">
-    Video Overview
+        
+          <li class="md-nav__item">
+  <a href="#which-are-we-building" class="md-nav__link">
+    Which Are We Building?
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-it-whats-an-api" class="md-nav__link">
+    See It - What's An API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-explore-the-star-wars-api" class="md-nav__link">
+    Practice - Explore the Star Wars API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1896,47 +1945,51 @@
               
                 
                 
-                <h1 id="dotenv-explained">Dotenv Explained</h1>
-<p>Hi everyone, Today were going to be explaining what <code>.env</code> variables are and how to use them in further projects. </p>
-<p>first off a <code>.env</code> file is just a file named <code>.env</code> when you make this file it will be the secure place to store all of your sensitive data variables. Such as API-keys or anything that you don't want a hacker or just anyone knowing about. </p>
-<h2 id="how-to-use">How to use</h2>
+                <h1 id="intro-to-restful-apis">Intro to RESTful APIs</h1>
+<p><em>Take calculated risks. That is quite different from being rash. —George S. Patton</em></p>
+<h2 id="overview">Overview</h2>
+<p>In this course, we're going to learn how to build an <strong>API</strong> using <strong>Node.js</strong> and <strong>Express</strong>. If you don't know exactly what an "API" is, why you'd want to build one, or how <strong>Express</strong> fits in, don't worry! That's why we're here.</p>
+<h2 id="whats-an-api">What's an API?</h2>
+<p>A traditional software application has a User Interface(<strong>UI</strong>): a mechanism that allows a person to interact(interface) with a computer; these include: Graphical User Interfaces (GUIs), a Web-Based User Interfaces, a Text-Based User Interfaces like a command line, or a Voice Interface like Siri. Whatever form it takes, the UI is a way for a human person to tell the computer what they want it to do. But what if we want the computer to interact with other computers? A user interface built for human interaction isn't well-suited for programmatic interaction because it takes keystrokes and mouse clicks... that's where APIs come in.</p>
+<p><strong>API</strong> is an acronym that stands for <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. In its most general sense, an API is a well-defined way for one computer program to interact with another program. More technically, an API is a set of functions and data structures that allow other application developers to leverage the functionality and/or data of other software within their own software applications.</p>
+<p>There are many different ways to implement an API, so the term can be somewhat ambiguous. There are high-level APIs and low-level APIs, internal APIs and public APIs, and so on, but in all cases they help different programs interact. Let's look at two examples.</p>
+<h3 id="example-one-of-an-api-native-apis">Example One of an API - Native APIs</h3>
+<p>If you are building a desktop application that runs on macOS or Windows, you will likely want your app to have menus, buttons, windows and other familiar user interface elements. You could build these things from scratch, drawing each pixel and handling every keystroke and mouse click in your code in order to make it look and act like other software, but that's a <em>LOT of work</em>!</p>
+<p>Fortunately, the creators of macOS and Windows provided APIs that make your life as an application developer much easier. These APIs provide many functions (methods) that can help you create menus and buttons, respond to mouse clicks, etc. Other functions might help you interact with the file system or determine who is currently logged in. These APIs are building blocks that make it easier for application developers to create new software by giving your application well-defined ways to interact with the features of the operating system.</p>
+<h3 id="example-two-of-an-api-web-api">Example Two of an API - Web API</h3>
+<p>The HTML APIs you learned in Web 101 like <strong>Canvas</strong>, <strong>Geolocation</strong>, <strong>Drag and Drop</strong>, etc. These are also APIs because they provide the web developer(you) with functionality that can be accessed through property names like <code>.getContext()</code> or <code>isdraggable=</code>. These are built into the HTML language but not implicitly used or required, yet are available by simply knowing their property names. Pretty cool, right?</p>
+<h3 id="example-three-of-an-api-rest-api">Example Three of an API - REST API</h3>
+<p>Let's say you're building a tourism mobile app with detailed information about the historical sites in your city. You'd also like to provide the traveler with a list of highly-rated restaurants that are near each site. You could gather this information yourself and include it in your app, but restaurants come and go, ratings change, and it's somewhat outside of the main scope of your app. Besides, other apps like Yelp already have this pretty well covered. Fortunately, Yelp provides an API that you can use to leverage their business data and ratings. Using their API, your app can search for nearby restaurants that are rated 4 stars or higher and conveniently display them alongside the site the traveler is currently viewing.</p>
+<h3 id="which-are-we-building">Which Are We Building?</h3>
+<p>There's a subtle difference between the examples we just covered. In the first, your desktop app is running on a computer right alongside the operating system. Your app and the operating system can interact directly. In the second, you are accessing objects built-into the language itself. In the third example, your app is running on a smart phone. Does the person using your app need to have the Yelp app installed? Is your tourism app talking directly to the Yelp mobile app? No, it's not. Your app is using a <strong>remote API</strong>. It communicates with a remote server located somewhere in "The Cloud". More precisely, your app communicates over the internet with server software made by Yelp, which is running on a computer in some data center("The Cloud"), and that software was specifically designed to allow other programs, like yours, to interact with it in a well-defined way.</p>
+<p>Each of these examples can be termed APIs, but it is APIs in the third example, a remote <strong>RESTful APIs</strong>, that we will be building in this course, using a specific architectural style known as REST, <strong>Representational State Transfer</strong>. We'll get into the details of <strong>REST</strong> APIs later. For now, just be aware that when many people say "API" they often mean this specific kind of remote API known as a <strong>RESTful API</strong>. But APIs come in many forms and you'll undoubtedly become familiar with many different types in your career.</p>
+<p>Below is a short video that explains the concept of APIs and how they enable the connectivity that we have become accustomed to in modern applications.</p>
+<h3 id="see-it-whats-an-api">See It - What's An API?</h3>
+<!-- !Video Content: MuleSoft Videos - What is an API? -->
+<iframe width="655" height="368" src="https://www.youtube.com/embed/s7wmiS2mSXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="practice-explore-the-star-wars-api">Practice - Explore the Star Wars API</h3>
+<p>Go to the <a href="https://swapi.dev/">Star Wars API</a> site and experiment with it. The site gives you a simple UI and hints so you can try different API requests. Be sure to use the hints and see what the return values are. Visit the documentation page for a full explanation of what it offers and will allow you to do.</p>
+<p>Here are a few things to try:</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> In your terminal type <code>npm install dotenv</code></li>
-<li class="task-list-item"><input type="checkbox"/> Create a <code>touch .env</code> file in the top directory of the repo your working in. </li>
-<li class="task-list-item"><input type="checkbox"/> to store variables in the file use this format.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">PORT=3001</span>
-<span class="l l-Scalar l-Scalar-Plain">API_KEY=thisIsMyApiKey</span>
-</code></pre></div>
-</td></tr></table></li>
-<li class="task-list-item"><input type="checkbox"/> to use dotenv require it with this code <code>require('dotenv').config()</code> or import it <code>import dotenv from 'dotenv'</code></li>
-<li class="task-list-item"><input type="checkbox"/> to use variables set in the <code>.env</code> file simply use <code>process.env.API_KEY</code> when you use this code it accesses the file and finds the variable by name. </li>
+<li class="task-list-item"><input type="checkbox"/> Try retrieving a few different people by changing the id value.</li>
+<li class="task-list-item"><input type="checkbox"/> What happens if you put in an invalid id value, such as 9999?</li>
+<li class="task-list-item"><input type="checkbox"/> Can you retrieve a list of all people?</li>
+<li class="task-list-item"><input type="checkbox"/> Discover other types of information you can access, besides people.</li>
+<li class="task-list-item"><input type="checkbox"/> Do you notice any common pattern for how you use the API?</li>
 </ul>
-<p>You can use a variable at the top of your file like this to allow for quick usage in your files.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">API_KEY</span>
-</code></pre></div>
-</td></tr></table>
-<h2 id="more-explained">More explained</h2>
-<p>Now that you have your secret variable stored you can use it in different files but also keep it hidden from others. Another side note is you always want to un-track your <code>.env</code> file when pushing to github or the better way is to create a <code>.gitignore</code> file.</p>
-<p>When you use a .gitignore file just place the name of the file you want ignored in the ignore file. From now on when you push to github it wont push this file up. </p>
-<h2 id="gitignore-file">.gitignore file</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">.env</span>
-</code></pre></div>
-</td></tr></table>
-<h2 id="extra-tips">Extra Tips</h2>
-<p>When using <code>.env</code> don't make more than one file and NEVER COMMIT. 
-Also its important to just have a single <code>.env</code> file Not multiple. </p>
-<h2 id="video-overview">Video Overview</h2>
-<ul>
-<li><a href=""></a></li>
-</ul>
+<p><em>You can <a href="https://codepen.io/austincoding/pen/RzNaOw">fork this CodePen</a> or create your own repo to play with.</em></p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href=""></a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://reqres.in/">Req/Res API</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.youtube.com/watch?v=SLwpqD8n3d0">YT, Programming With Mosh - What is a REST API</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://restfulapi.net/">Tutorial - Guiding Principles of REST</a></li>
 </ul>
 <h2 id="know-your-docs">Know Your Docs</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.npmjs.com/package/dotenv">NPM docs - dotenv</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">MDN Docs - Intro to Web APIs</a> </li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">MDN Docs - Third-Party APIs</a> </li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Glossary/REST">MDN Docs - REST</a> </li>
 </ul>
                 
               
@@ -1948,7 +2001,6 @@ Also its important to just have a single <code>.env</code> file Not multiple. </
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -1956,8 +2008,7 @@ Also its important to just have a single <code>.env</code> file Not multiple. </
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../introToAuthentication/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro to Authentication" rel="prev">
+        <a href="../whatIsNodeJS/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1966,20 +2017,19 @@ Also its important to just have a single <code>.env</code> file Not multiple. </
               <span class="md-footer__direction">
                 Previous
               </span>
-              Intro to Authentication
+              Working in Node
             </div>
           </div>
         </a>
       
       
-        
-        <a href="../serverAuthenticationOverview/" class="md-footer__link md-footer__link--next" aria-label="Next: Server Authentication Overview" rel="next">
+        <a href="../whatIsREST/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Server Authentication Overview
+              What's REST
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2008,10 +2058,10 @@ Also its important to just have a single <code>.env</code> file Not multiple. </
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
       
     
   </body>
