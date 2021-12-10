@@ -14,7 +14,7 @@
     
     
       
-        <title>Adding SQL to Express - JS311 - Node Servers + SQL Databases</title>
+        <title>Adding MySQL to Express - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding SQL to Express
+              Adding MySQL to Express
             
           </span>
         </div>
@@ -675,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advancedSELECTstatments/" class="md-nav__link">
+      <a href="../advancedSELECTstatements/" class="md-nav__link">
         Advanced SELECT
       </a>
     </li>
@@ -788,12 +788,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Adding SQL to Express
+          Adding MySQL to Express
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Adding SQL to Express
+        Adding MySQL to Express
       </a>
       
         
@@ -821,19 +821,38 @@
     Connections
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#important-dotenv" class="md-nav__link">
-    IMPORTANT: Dotenv
+    <nav class="md-nav" aria-label="Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-storing-sensitive-information-with-env-gitignore-files" class="md-nav__link">
+    IMPORTANT: Storing Sensitive Information with .env &amp; .gitignore Files
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="IMPORTANT: Storing Sensitive Information with .env &amp; .gitignore Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-to-use-env" class="md-nav__link">
     How to use .env
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gitignore-file" class="md-nav__link">
+    The .gitignore File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1113,7 +1132,7 @@
   
     <li class="md-nav__item">
       <a href="../../module-3/serverAuthenticationOverview/" class="md-nav__link">
-        Adding Authentication
+        Authentication Continued
       </a>
     </li>
   
@@ -1848,19 +1867,38 @@
     Connections
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#important-dotenv" class="md-nav__link">
-    IMPORTANT: Dotenv
+    <nav class="md-nav" aria-label="Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-storing-sensitive-information-with-env-gitignore-files" class="md-nav__link">
+    IMPORTANT: Storing Sensitive Information with .env &amp; .gitignore Files
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="IMPORTANT: Storing Sensitive Information with .env &amp; .gitignore Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-to-use-env" class="md-nav__link">
     How to use .env
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gitignore-file" class="md-nav__link">
+    The .gitignore File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1908,11 +1946,11 @@
                 <h1 id="adding-sql-statements-to-an-express-server">Adding SQL Statements to an Express Server</h1>
 <p><em>Constant dripping hollows out a stone. —Lucretius</em></p>
 <h2 id="overview">Overview</h2>
-<p>Up to this point we've learned about two technologies: MySQL and Express, separately. Now it's time to put them both together. The APIs we create will need access to a database, and while running these statements in MySQL Workbench has helped us learn . . . it's time to move the operations into Node.js.</p>
+<p>Up to this point we've learned about two technologies: MySQL and Express, separately. Now it's time to put them both together. The APIs we create will need access to a database, and while running these statements in MySQL Workbench has helped us learn . . . it's time to move these SQL statements into our Express server so it can create, read, update, and delete data in our database.</p>
 <p>There are two aspects we need to talk about when using MySQL in Express: connections and queries. We will talk about each concept independently.</p>
 <h2 id="connections">Connections</h2>
-<p>When we connected to MySQL Workbench in the previous few classes, we created a <strong>single connection</strong>. In a single connection, MySQL statements are executed in sequence, one after another. That means if we write two statements (<code>UPDATE</code> etc, <code>SELECT</code> etc) the program will run the first and then the second. This is great when using MySQL Workbench but in the APIs we are creating, people will be making requests too quickly for a single connection to keep up with. Two hundred people might call <code>SELECT * FROM users</code> at nearly identical times but could experience drastically different wait times based on whether or not they were the first person or the 200th person. That is because the 200th person needs to wait for the <code>SELECT</code> statement to run 199 times before it executes for them. We solve this by using <strong>connection pools</strong>.</p>
-<p><strong>Connection pools</strong> are groups of <strong>connections</strong>. We can specify any arbitrary number that represents how many <strong>concurrent</strong> connections our database instance can accept at any given time and our application will use those connections until it reaches the maximum number of allowed connections. For example, we may create a connection pool and give it a "connection limit" of 100. Now in the previous example, if 200 people hit our API at the same exact time, nobody will have to wait for more than 2 SQL queries to be run because we can spread our 200 operations over 100 different connections. Here's an example of creating a connection pool with the <a href="https://www.npmjs.com/package/mysql">Node package: mysql</a> in Express:</p>
+<p>When we <a href="./mySql-WorkbenchSetup#connect-mysql-workbench">connected to MySQL Workbench in a previous class</a>, we were creating what's called a <strong>single connection</strong>. In a single connection, MySQL statements are executed in sequence, one after another. That means if we write two statements lik <code>UPDATE</code> etc, <code>SELECT</code> etc, the program will run the first and then the second. This is great when using MySQL Workbench but in the APIs we will be creating, people will be making requests too often &amp; too quickly for a single connection to keep up with. Two hundred people might call <code>SELECT * FROM users</code> at nearly identical times but could experience drastically different wait times based on whether or not they were the first person or the 2,000th person. That is because the 2,000th person needs to wait for the <code>SELECT</code> statement to run 1,999 times before it executes for them. We solve this by using <strong>connection pools</strong>.</p>
+<p><strong>Connection pools</strong> are groups of single connections. We can specify any arbitrary number that represents how many concurrent connections our database instance can accept at any given time and our application will use those connections until it reaches the maximum number of allowed connections. For example, we may create a connection pool and give it a <code>connectionLimit</code> of <code>100</code>. Now in the previous example, if 2,000 people hit our API at the same exact time, nobody will have to wait for more than 20 SQL queries to be run because we can spread our 2,000 operations over 100 different connections. Here's an example of creating a connection pool with the <a href="https://www.npmjs.com/package/mysql">Node package: mysql</a> in Express:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1921,18 +1959,21 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// create a variable to reference the createPool method on the mysql package and give it attributes</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// create a variable to reference the `createPool` method on the `mysql` package and give it the following attributes</span>
 
   <span class="kd">const</span> <span class="nx">pool</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createPool</span><span class="p">({</span>
     <span class="nx">connectionLimit</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span>
-    <span class="nx">host</span><span class="o">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
-    <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
-    <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
-    <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;admin&#39;</span>
+    <span class="nx">host</span><span class="o">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>  <span class="cm">/*where to connect to the database*/</span>
+    <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>  <span class="cm">/* the user that has permission to access the database*/</span>
+    <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="cm">/*the credentials for that user*/</span>
+    <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;admin&#39;</span> <span class="cm">/*the database this connection should be made to*/</span>
   <span class="p">})</span>
 </code></pre></div>
 </td></tr></table>
-<p>We will also create a <strong>singleton</strong> (object that can only be instantiated once) to return this connection pool to us so that we don't accidentally create multiple connection pools. In the code below you'll notice an <code>if()</code> statement, this is what's creating the <strong>singleton object</strong>.</p>
+<blockquote>
+<p>NOTE: the values match the same values you gave to MySQL workbench to <a href="./mySql-WorkbenchSetup#connect-mysql-workbench">make a connection in a previous class</a>.</p>
+</blockquote>
+<p>We will also create a <strong>singleton</strong> (object that can only be instantiated once) to return this connection pool to us so that we don't accidentally create multiple connection pools. In the code below you'll notice an <code>if(!this.pool)</code> statement, this is what's creating the <strong>singleton object</strong>.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1987,89 +2028,123 @@
 </code></pre></div>
 </td></tr></table>
 <blockquote>
-<p>It's asking, "is <code>this</code> <code>pool</code> object already created? If so let's just return that object. If not let's create a new connection pool object."  </p>
+<p>NOTE: It's asking, "does <code>this.pool</code> object already created? If so let's just return that object. If not let's create a new connection pool object."  </p>
 </blockquote>
 <p>We'll see more on this in the homework assignment.</p>
 <p>To use the <strong>connection pool</strong> <em>singleton</em> object we import it into any file that needs it like this:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">pool</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./sql/connection&#39;</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="important-dotenv">IMPORTANT: Dotenv</h2>
-<p>Note that were working with some sensitive data right now. When connecting to our DB with the express server were creating. We always want to use a <code>.env</code> file. This is where we want to start putting all of our sensitive data from now on. This includes host name, user, passwords, database names, API_keys, and more. Its very important to start using this file for security reasons to keep people we don't want to have access to our information away such as hackers or just anyone on the internet. </p>
-<h2 id="how-to-use-env">How to use <code>.env</code></h2>
+<h3 id="important-storing-sensitive-information-with-env-gitignore-files">IMPORTANT: Storing Sensitive Information with <code>.env</code> &amp; <code>.gitignore</code> Files</h3>
+<p>Note that we're and will be working with some sensitive data(the credentials to our live databases!!). When connecting to our DB with the express server (that will be stored in a repo of GitHub). We want to use a <code>.env</code> file, a place to put environment specific sensitive data. This is where we want to start putting <em>all of our sensitive data from now on</em>. This includes <code>host name</code>, <code>user</code>, <code>passwords</code>, <code>database names</code>, <code>API_keys</code>, and etc. It's very important to start using this file for security reasons to keep people we don't want to have access to our information away such as hackers or just anyone on the internet. The final step to safeguarding our sensitive information is to include our <code>.env</code> file in a <code>.gitignore</code> file so our git software will <em>ignore</em> the <code>.env</code> file and not push it up to the repo when we commit changes.</p>
+<h4 id="how-to-use-env">How to use <code>.env</code></h4>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> In your terminal type <code>npm install dotenv</code></li>
-<li class="task-list-item"><input type="checkbox"/> Create a <code>touch .env</code> file in the top directory of the repo your working in. </li>
-<li class="task-list-item"><input type="checkbox"/> to store variables in the file use this format.</li>
+<li class="task-list-item"><input type="checkbox"/> First <code>cd</code> into the app you want to work, maybe the last server you built.</li>
+<li class="task-list-item"><input type="checkbox"/> Then run <code>npm install dotenv</code> to install the Node dotenv package</li>
+<li class="task-list-item"><input type="checkbox"/> Next run <code>touch .env .gitignore</code> to create two different files: <code>.env</code> &amp; <code>.gitignore</code></li>
+<li class="task-list-item"><input type="checkbox"/> Inside the <code>.env</code> file create the following YAML to store sensitive data.</li>
 </ul>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">PORT=3001</span>
-<span class="l l-Scalar l-Scalar-Plain">API_KEY=thisIsMyApiKey</span>
-<span class="l l-Scalar l-Scalar-Plain">HOST=localhost</span>
-<span class="l l-Scalar l-Scalar-Plain">USER=root</span>
-<span class="l l-Scalar l-Scalar-Plain">PASSWORD=ourpassword</span>
-<span class="l l-Scalar l-Scalar-Plain">DATABASE=adminaccount</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="l l-Scalar l-Scalar-Plain">PORT=3001</span>
+  <span class="l l-Scalar l-Scalar-Plain">API_KEY=thisIsMyApiKey</span>
+  <span class="l l-Scalar l-Scalar-Plain">HOST=localhost</span>
+  <span class="l l-Scalar l-Scalar-Plain">USER=root</span>
+  <span class="l l-Scalar l-Scalar-Plain">PASSWORD=ourpassword</span>
+  <span class="l l-Scalar l-Scalar-Plain">DATABASE=adminaccount</span>
 </code></pre></div>
 </td></tr></table>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> to use dotenv require it with this code <code>require('dotenv').config()</code> or import it <code>import dotenv from 'dotenv'</code></li>
-<li class="task-list-item"><input type="checkbox"/> to use variables set in the <code>.env</code> file simply use <code>process.env.PASSWORD</code> when you use this code it accesses the file and finds the variable by name. </li>
+<li class="task-list-item"><input type="checkbox"/> Now go to the <code>.gitignore</code> file add the following to tell git not to include the sensitive information in commits.</li>
 </ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">.env</span>
+</code></pre></div>
+</td></tr></table>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> to use the information in the dotenv file you'll just import the file at the top of any file you need them like this: <code>require('dotenv').config()</code></li>
+</ul>
+<blockquote>
+<p>NOTE: <code>.config()</code> is a method that expose the values to that specific file.</p>
+</blockquote>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> to use variables you'll write: <code>process.env.PASSWORD</code>.</li>
+</ul>
+<blockquote>
+<p>NOTE: When you use this code it accesses the file and finds the variable by name.</p>
+</blockquote>
 <p>You can use a variable at the top of your file like this to allow for quick usage in your files.</p>
-<p><code>``javascript
-//import dotenv file
- import dotenv from 'dotenv'
-//Or require it
-require('dotenv').config()
-//store in a variable to use multiple times if needed
- const host = process.env.HOST
- const user = process.env.USER
- const password = process.env.PASSWORD
- const database = process.env.DATABASE
- //Create a connection
-  class Connection {
-  constructor() {
-    if (!this.pool) {
-      this.pool = mysql.createPool({
-        connectionLimit: 100,
-        //see how were using the variables stored above to now secure our credentials?
-        host: host,
-        user: user,
-        password: password,
-        database: database
-        //The important part of this code is understanding how we use env variables. don't worry about the other code so much.
-      })
-      return this.pool
-    }
-    return this.pool
-  }
-}
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>## `.gitignore file`
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">//import dotenv file</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dotenv&#39;</span><span class="p">).</span><span class="nx">config</span><span class="p">()</span>
 
-The final piece to the puzzle with .env is to never commit the file to github. Its important to always keep these variables to yourself. Either un-track the file when pushing to github or better yet use a `.gitignore` file. When using a `.gitignore` file this will always keep secure files from being pushed to github without you having to do much.
+<span class="c1">//store in a variable to use multiple times if needed</span>
+ <span class="kd">const</span> <span class="nx">host</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">HOST</span>
+ <span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">USER</span>
+ <span class="kd">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PASSWORD</span>
+ <span class="kd">const</span> <span class="nx">database</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DATABASE</span>
 
-- [ ] In your terminal type `touch .gitignore` in the top level of your repo
-- [ ] To use this file simply write the name of the file you want ignored.
-
-```yaml
-.env
+ <span class="c1">//Create a connection</span>
+  <span class="kd">class</span> <span class="nx">Connection</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">pool</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">pool</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createPool</span><span class="p">({</span>
+        <span class="nx">connectionLimit</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span>
+        <span class="c1">//see how were using the variables stored above to now secure our credentials?</span>
+        <span class="nx">host</span><span class="o">:</span> <span class="nx">host</span><span class="p">,</span>
+        <span class="nx">user</span><span class="o">:</span> <span class="nx">user</span><span class="p">,</span>
+        <span class="nx">password</span><span class="o">:</span> <span class="nx">password</span><span class="p">,</span>
+        <span class="nx">database</span><span class="o">:</span> <span class="nx">database</span>
+        <span class="c1">//The important part of this code is understanding how we use env variables. don&#39;t worry about the other code so much.</span>
+      <span class="p">})</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">pool</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">pool</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-Now the</code>.env` file will always be ignored and you can comfortably use sensitive variables.</p>
+<h4 id="the-gitignore-file">The <code>.gitignore</code> File</h4>
+<p>The final piece to the puzzle with <code>.env</code> is to never commit the file to github. It's important to always keep these variables to yourself. Either un-track the file when pushing to GitHub or better yet use a <code>.gitignore</code> file. When using a <code>.gitignore</code> file this will always keep secure files from being pushed to GitHub without you having to manually untrack them.</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> In your terminal type <code>touch .gitignore</code> in the top level of your repo</li>
+<li class="task-list-item"><input type="checkbox"/> To use this file simply write the name of the file(s) you want ignored.</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">.env</span>
+</code></pre></div>
+</td></tr></table>
+<p>Now the <code>.env</code> file will always be ignored and you can comfortably use sensitive variables in it.</p>
+<p>The file can be used to ignore all sorts of files you don't want/need in your repo and should be used by Mac users to disregard <code>DS_Store</code> files! But both Windows and Mac users can create custom and secure <code>.gitignore</code> files using this <a href="https://www.toptal.com/developers/gitignore"><code>.gitignore</code> file generator at Toptal</a> or use the links listed in <a href="#additional-resources">Additional Resources</a> below.</p>
+<hr />
 <h2 id="queries">Queries</h2>
-<p>Now that we have our connection pool set up, it's time to use it to query, or <em>mutate</em> if we need, our database. To do that we pass the appropriate MySQL command to the <code>.query</code> method on the <code>pool</code> object: <code>pool.query</code> as string. Typically this will happen inside our controllers, like the following:</p>
+<p>Now that we have our connection pool set up, it's time to use it to query our database. A query is just a request to do something with the data; either read it, update it, delete it or create more of it. To do any of these we pass the appropriate MySQL command to the <code>.query</code> method on the <code>pool</code> object: <code>pool.query</code> as a String. Typically this will happen inside our controllers, like the following:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2089,9 +2164,9 @@ Now the</code>.env` file will always be ignored and you can comfortably use sens
   <span class="p">});</span>
 </code></pre></div>
 </td></tr></table>
-<p>The above will bring back all of the rows from the "users" table.</p>
+<p>The above will bring back all of the rows from the <code>users</code> table.</p>
 <blockquote>
-<p>One thing to note is that the MySQL NPM package doesn't (currently) make use of promises so the queries will be written as callbacks. In this example, if we see an error we are going to log it and then tell the user that something unexpected happened. Otherwise, we are going to return the rows from the dataset.</p>
+<p>One thing to note is that the MySQL NPM package doesn't currently (<em>as of Sept 2021</em>) make use of promises so the queries will be written as callbacks. In this example, if we see an error we are going to log it and then tell the user that something unexpected happened. Otherwise, we are going to return the rows from the dataset.</p>
 </blockquote>
 <p>What if you want to specify specific fields to bring back or specify fields to limit the query using a <code>WHERE</code> clause? You can do that as well.</p>
 <!-- used before because the parser didn't recognize the ?? in the sql string...seems to work now. -->
@@ -2113,7 +2188,7 @@ Now the</code>.env` file will always be ignored and you can comfortably use sens
 
   <span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">sql</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">rows</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Error occorred: &quot;</span> <span class="o">+</span> <span class="nx">err</span> <span class="p">});</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Error occurred: &quot;</span> <span class="o">+</span> <span class="nx">err</span> <span class="p">});</span>
       <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;An unexpected error occurred&quot;</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
@@ -2123,15 +2198,16 @@ Now the</code>.env` file will always be ignored and you can comfortably use sens
 <p>What's happening on the first three lines? A few things, let's break them down:</p>
 <ol>
 <li>We're creating a string and saving it to a variable called <code>sql</code>. We could name it anything we want, maybe <code>sqlString</code>...whatever.<ul>
-<li>Inside that string we use question marks (<code>??</code>) &amp; (<code>?</code>) to act as "variables". These "variables" allow us to create dynamic queries, that is to say, "We don't know what all of our users will request and therefore we can't create controllers for each of them, instead we'll program a few controllers to <strong>dynamically</strong> handle all of those requests."</li>
+<li>Inside that string we use question marks (<code>??</code>) &amp; (<code>?</code>) to act as "variables". These "variables" allow us to create dynamic queries, that is to say, "We don't know what all of our users will request and therefore we can't create controllers for each of their request so instead we'll program a few controllers to <strong>dynamically</strong> handle all of those requests."</li>
 <li>When we build this string we're following the directions in the <a href="https://www.npmjs.com/package/mysql">NPM MySQL Docs</a> which says field names and table names get double question marks (<code>??</code>) and values get a single question mark (<code>?</code>).</li>
 </ul>
 </li>
 <li>
-<p>Then we create an array called <code>replacements</code> filled with the values of our query. In this example they're statically placed but later you can create them dynamically based on the request.</p>
-<ul>
-<li>The order is important. Place the values in the order you want them appear in the string because after we pass them both through the <code>.format</code> method on the <code>mysql</code> object that SQL statement becomes:</li>
-</ul>
+<p>Then we create an array called <code>replacements</code> filled with the values of our query.</p>
+<blockquote>
+<p>In this example they're statically placed but later you can create them dynamically based on the incoming request.
+<strong>The order is important.</strong> Place the values in the order you want them appear in the string because after we pass them both through the <code>.format</code> method on the <code>mysql</code> object (line 3) that SQL statement will become:</p>
+</blockquote>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">FROM</span> <span class="n">users</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div>
 </td></tr></table>
@@ -2141,28 +2217,22 @@ Now the</code>.env` file will always be ignored and you can comfortably use sens
 </li>
 </ol>
 <p>You may be asking:</p>
-<blockquote>
-<ul>
-<li>Q: "Why do we need to use this extra step? Couldn't we just write them in directly?"</li>
-<li>
-<p>A: Yep, you could but you won't be able to make it dynamically handle different types of requests.</p>
-</li>
-<li>
-<p>Q: "But couldn't we use Template Literals to dynamically create a string for this instead?"</p>
-</li>
-<li>
-<p>A: That would seem like the logical solution but using Template Literals would expose your server to a very really security threat called <a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a> where a person could pass a truthy statement in at the end of the query and have all of your data returned to them!</p>
-</li>
-<li>
-<p>Q: So how does <code>mysql.format()</code> prevent that?</p>
-</li>
-<li>A: The logic of this methods checks and cleans out sql injections and won't allow anything in that doesn't fit the string.</li>
-</ul>
-</blockquote>
-<p>Now you know.</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Question 1: <strong>"Why do we need to use this extra step? Couldn't we just write them in directly?"</strong></label><div class="tabbed-content">
+<p><strong>Answer 1:</strong> Yep, you could but you wouldn't be able to make it dynamically handle different types of requests.</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Question 2: <strong>"But couldn't we use Template Literals to dynamically create a string for this instead?"</strong></label><div class="tabbed-content">
+<p><strong>Answer 2:</strong> That would seem like the logical solution BUT using Template Literals would expose your server to a <strong>very really security threat</strong> called <a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a> where a person could pass a truthy statement in at the end of the query and have all of your data returned to them!</p>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Question 3: <strong>"So how does <code>mysql.format()</code> prevent that?"</strong></label><div class="tabbed-content">
+<p><strong>Answer 3:</strong> The logic of this methods checks and cleans out sql injections and won't allow anything in that doesn't fit the string.</p>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">..................The Mo' You Know.......................</label><div class="tabbed-content">
+<p><iframe src="https://giphy.com/embed/d2YVk2ZRuQuqvVlu" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p>
+</div>
+</div>
+<hr />
 <p>We're basically giving the <code>.format</code> method a SQL statement with some variables and an array of values to replace them with.</p>
-<p>It's important for you to understand the <a href="https://www.npmjs.com/package/mysql">Node library package named MySQL</a>. It has methods you can use to our advantage. One of them is the one you just saw: <code>mysql.format()</code>. Be sure to bookmark the <a href="https://www.npmjs.com/package/mysql">NPM MySQL docs</a> to keep them handy.</p>
-<p>Be sure to check out the <a href="#additional-resources">Additional Resources</a></p>
+<p>It's important for you to understand the <a href="https://www.npmjs.com/package/mysql">Node library package named mysql</a>. It has methods you can use to our advantage. One of them is the one you just saw: <code>mysql.format()</code>. Be sure to bookmark the <a href="https://www.npmjs.com/package/mysql">NPM Package mysql Docs</a> to keep them handy and check out the <a href="#additional-resources">Additional Resources</a>.</p>
 <h2 id="practice-it">Practice It</h2>
 <p>Follow along with this video to create your own Express Server with the Node MySQL package:</p>
 <p><a href="https://drive.google.com/file/d/1GFDcn1FTLvkiRAkByNGZYsdPUv7xqC3g/view">Video, Emily Moses@ACA - Setting up an Express Server w/MySQL Package</a></p>
@@ -2172,14 +2242,12 @@ Now the</code>.env` file will always be ignored and you can comfortably use sens
 <li class="task-list-item"><input type="checkbox"/> <a href="https://codeforgeek.com/nodejs-mysql-tutorial/">Tutorial, CodeForGeek - NodeJS &amp; MySQL</a></li>
 <li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/EN6Dx22cPRI">YT, Traversy Media - Using SQL in Express.js</a></li>
 <li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/_IyN5HNV7QE">YT, Aman Karbanda - Node.js &amp; SQL Connection Pool</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://drive.google.com/file/d/1GFDcn1FTLvkiRAkByNGZYsdPUv7xqC3g/view">Video, Emily Moses@ACA - Setting up an Express Server w/MySQL Package</a></li>
-<li class="task-list-item"><input type="checkbox"/> Look ahead to the <a href="../../additionalResources/questionsForDiscussion/qfd-class-8/">Questions for Student Led Discussion</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv">Generator, TOPTAL .gitignore File - For Mac Users</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.toptal.com/developers/gitignore/api/dotenv,windows,visualstudiocode,node">Generator, TOPTAL .gitignore File - For Windows Users</a></li>
 </ul>
 <h2 id="know-your-docs">Know Your Docs</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> <a href="https://www.npmjs.com/package/mysql">NPM MySQL Docs - Home</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="">MDN Docs - title</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv">List of files that should be ignored</a></li>
 </ul>
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->

@@ -36,12 +36,12 @@ Each of these examples can be termed APIs, but it is APIs in the third example, 
 
 Below is a short video that explains the concept of APIs and how they enable the connectivity that we have become accustomed to in modern applications.
 
-### See It - What's An API?
+## See It - What's An API?
 
 <!-- !Video Content: MuleSoft Videos - What is an API? -->
 <iframe width="655" height="368" src="https://www.youtube.com/embed/s7wmiS2mSXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Practice - Explore the Star Wars API
+## Practice - Explore the Star Wars API
 
 Go to the [Star Wars API](https://swapi.dev/) site and experiment with it. The site gives you a simple UI and hints so you can try different API requests. Be sure to use the hints and see what the return values are. Visit the documentation page for a full explanation of what it offers and will allow you to do.
 
@@ -63,6 +63,6 @@ Here are a few things to try:
 
 ## Know Your Docs
 
-- [ ] [MDN Docs - Intro to Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 
-- [ ] [MDN Docs - Third-Party APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs) 
-- [ ] [MDN Docs - REST](https://developer.mozilla.org/en-US/docs/Glossary/REST) 
+- [ ] [MDN Docs - Intro to Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [ ] [MDN Docs - Third-Party APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [ ] [MDN Docs - REST](https://developer.mozilla.org/en-US/docs/Glossary/REST)

@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/advancedSELECTstatments/" class="md-nav__link">
+      <a href="../../module-2/advancedSELECTstatements/" class="md-nav__link">
         Advanced SELECT
       </a>
     </li>
@@ -775,8 +775,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/sqlAndExpressjs/" class="md-nav__link">
-        Adding SQL to Express
+      <a href="../../module-2/mysql-Express-dotenv/" class="md-nav__link">
+        Adding MySQL to Express
       </a>
     </li>
   
@@ -1004,19 +1004,19 @@
     Why Use Data Modeling?
   </a>
   
-    <nav class="md-nav" aria-label="Why Use Data Modeling?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uml-notation" class="md-nav__link">
+    UML Notation
+  </a>
+  
+    <nav class="md-nav" aria-label="UML Notation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entity-relationship-model" class="md-nav__link">
-    Entity Relationship Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-down-the-er-diagram" class="md-nav__link">
-    Breaking Down the ER Diagram
+  <a href="#fields-entities" class="md-nav__link">
+    Fields &amp; Entities
   </a>
   
 </li>
@@ -1038,11 +1038,24 @@
     Relationships Explained
   </a>
   
+    <nav class="md-nav" aria-label="Relationships Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-relationships-further-explained" class="md-nav__link">
+    Entity Relationships Further Explained
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#determining-our-data-model" class="md-nav__link">
-    Determining our Data Model
+    Determining Our Data Model
   </a>
   
 </li>
@@ -1133,7 +1146,7 @@
   
     <li class="md-nav__item">
       <a href="../serverAuthenticationOverview/" class="md-nav__link">
-        Adding Authentication
+        Authentication Continued
       </a>
     </li>
   
@@ -1868,19 +1881,19 @@
     Why Use Data Modeling?
   </a>
   
-    <nav class="md-nav" aria-label="Why Use Data Modeling?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uml-notation" class="md-nav__link">
+    UML Notation
+  </a>
+  
+    <nav class="md-nav" aria-label="UML Notation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entity-relationship-model" class="md-nav__link">
-    Entity Relationship Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-down-the-er-diagram" class="md-nav__link">
-    Breaking Down the ER Diagram
+  <a href="#fields-entities" class="md-nav__link">
+    Fields &amp; Entities
   </a>
   
 </li>
@@ -1902,11 +1915,24 @@
     Relationships Explained
   </a>
   
+    <nav class="md-nav" aria-label="Relationships Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-relationships-further-explained" class="md-nav__link">
+    Entity Relationships Further Explained
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#determining-our-data-model" class="md-nav__link">
-    Determining our Data Model
+    Determining Our Data Model
   </a>
   
 </li>
@@ -1948,49 +1974,110 @@
                 <h1 id="data-modeling-with-er-diagrams">Data Modeling with ER Diagrams</h1>
 <p><em>Strong lives are motivated by dynamic purposes. —Kenneth Hildebrand</em></p>
 <h2 id="overview">Overview</h2>
-<p>At this point we have most of the knowledge needed for creating APIs. We've practiced this numerous times and you should be getting familiar with the process. Now we're going to take a break and do a deeper dive into the <strong>Entity Relationship Diagrams</strong> (ERD) we first looked at last week.</p>
+<p>At this point we have most of the knowledge needed for creating APIs(servers). We've practiced this numerous times and you should be getting familiar with the process. Now we're going to take a break and take a deeper dive into the <strong>Entity Relationship Diagrams</strong> (ERD) we first looked at last week.</p>
 <h2 id="why-use-data-modeling">Why Use Data Modeling?</h2>
-<p>Data modeling is the process of creating a data model for the relationships in your database. The data model emphasizes what data is needed and how it should be organized in a visual manner. In a nutshell, we want to make sure all data objects are accurately represented well before we write any code!</p>
+<p>Data modeling is the process of creating a model that represents the relationships between the different types of data in your database. The data model emphasizes what data is needed and how it should be organized in a visual manner. In a nutshell, we want to make sure all (<em>or most</em>) of our data objects are accurately represented well before we write any code! This will save some headaches down the road.</p>
 <p>One of the most common ways to do this is through the use of an <strong>ERD</strong> (Entity Relationship Diagram).</p>
-<p>You may be thinking to yourself, "Awesome, but why would I do this?" Here's a couple reasons why to use a data model. Using data models are much easier than changing your real database. It's a lot easier to build a data map than writing SQL queries to change your database. Being able to quickly change, and see the changes in a data model will help keep your new database from becoming disorganized, or incorrect. When creating a database it's easier for you to review a data model than review a a database design. In most cases when you start working for a new company if you, show a database to your team lead it might be more challenging to explain than simply showing a data model to them. These data models help improve organization and communication with your team. </p>
-<p>When we use data models, a good way to visualize why we do this is by imagining a company entity that owns several dental schools. Three of the schools this company owns would be separate entity tables: Houston, Austin, Dallas. We would have a bunch of properties in our company entity called <code>employee_number</code>, <code>phone_number</code>, <code>address</code>, <code>phone_number2</code>, and <code>email</code>. Now since our employee number property never changes and will always represent a single employee we can use this property in our other tables. We can have the employee number in the company's table and then use it again in our austin table for example, to maximize efficiency. When creating our data models always be thinking about maximizing use of our properties and this is why were going to be creating our own models. Take the time to think about all the individual relationships each entity and property can have for our final project's. </p>
+<p>You may be thinking to yourself, "Greaaat...but why would I do this?" Here's a couple reasons why to use a data model. Using data models are much easier than changing your real database. It's a lot easier to build a data map than writing SQL queries to change your database. Being able to quickly change, and see the changes in a data model will help keep your new database from becoming disorganized, or incorrect. When creating a database it's easier for you to review a data model than review a a database design. In most cases it is harder to describe a database to your someone than simply showing them a model that represents the database. These data models help improve organization and communication within your team.</p>
+<p>A good way to visualize why we do this is by imagining a company entity that owns several dental schools; one in Houston, one in Austin, and one in Dallas. Each of these schools would have similar <strong>properties</strong> to one another but would obviously have different <strong>values</strong>, i.e. they would each have <code>school_name</code>, <code>street_address</code>, <code>campus_director</code>, <code>phone_number</code>, <code>website_URL</code>, <code>email</code>, etc.
+ This way we could create a <code>school</code> table that would hold each of these schools together as similar data:</p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">School Entity Table </label><div class="tabbed-content">
+<p>| <code>school_id</code> | <code>school_name</code> | <code>street_address</code> | <code>campus_director</code> | <code>phone_number</code> | <code>website_URL</code> | <code>email</code> | <code>school_id</code> |
+| <code>001</code> | - | - | - | - | - | - |
+| <code>002</code> | <code>Austin Dental School</code> | <code>123 Main Street</code> | <code>058</code> | <code>555-123-5520</code> | <code>waterloodental.us</code> | <code>waterloodental@email.com</code> |
+| <code>003</code> | <code>Dallas Dental School</code> | <code>123 Main Avenue</code> | <code>091</code> | <code>555-123-2250</code> | <code>dfwdental.us</code> | <code>dfwdental@email.com</code> |
+| <code>004</code> | <code>Houston Dental School</code> | <code>123 Main Boulevard</code> | <code>014</code> | <code>555-123-0025</code> | <code>htowndental.us</code> | <code>htowndental@email.com</code> |</p>
+</div>
+</div>
+<p>Then each of the <code>employee</code>s that worked at these schools would have different <strong>properties</strong> from the schools but the same <strong>properties</strong> to each other with different <strong>values</strong>. For this reason they would go into a different table:</p>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Employee Entity Table</label><div class="tabbed-content"></div>
+</div>
+<table>
+<thead>
+<tr>
+<th><code>employee_id</code></th>
+<th><code>first_name</code></th>
+<th><code>last_name</code></th>
+<th><code>phone_number</code></th>
+<th><code>address</code></th>
+<th><code>email</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>014</code></td>
+<td><code>Alice</code></td>
+<td><code>Walker</code></td>
+<td><code>555-9963</code></td>
+<td><code>900 Finney Street</code></td>
+<td><code>alice@email.com</code></td>
+</tr>
+<tr>
+<td><code>058</code></td>
+<td><code>Lena</code></td>
+<td><code>Heady</code></td>
+<td><code>555-6399</code></td>
+<td><code>900 Comal Street</code></td>
+<td><code>lena@email.com</code></td>
+</tr>
+<tr>
+<td><code>091</code></td>
+<td><code>James</code></td>
+<td><code>Dean</code></td>
+<td><code>555-3699</code></td>
+<td><code>900 Commerce Street</code></td>
+<td><code>james@email.com</code></td>
+</tr>
+<tr>
+<td><code>011</code></td>
+<td><code>Edward</code></td>
+<td><code>Newton</code></td>
+<td><code>555-6936</code></td>
+<td><code>900 Flat Street</code></td>
+<td><code>edward@email.com</code></td>
+</tr>
+</tbody>
+</table>
+<p>Notice the <code>campus_director</code> property on the School Entity Table. Do you see how it's just a number? This number would relate to an employee in the Employee Entity Table. Since our <code>employee_id_</code> property will never changes and will always represent a single employee we can use this property in  other tables to <em>relate</em> the pieces of data without having to duplicate the information in both tables. We can have the <code>employee_id_</code> in the schools's table and then use it again in our Payroll Table, for example, to maximize efficiency. When creating our data models we want to always be thinking about maximizing the re-use of our properties. Take the time to think about all the individual relationships each entity and property can have for your final project's.</p>
 <blockquote>
-<p>NOTE: <code>employee_number</code> is an example of a <strong>primary key</strong> (PK) and will follow strict rules to be considered a <strong>PK</strong>. It will never change and can only be assigned to one person. Since it follows these rules we can re-use this throughout our database.  </p>
+<p>NOTE: <code>employee_id</code> is an example of a <strong>primary key</strong> (PK) and will follow strict rules to be considered a <strong>PK</strong>. It will never change and can only be assigned to one person. Since it follows these rules we can re-use this throughout our database.</p>
+<p>NOTE 2: Generally, <code>id</code>s are created one at a time in ascending order with each new entity entry. This is default and automatic in mySQL.</p>
 </blockquote>
-<h3 id="entity-relationship-model">Entity Relationship Model</h3>
-<p>An Entity Relationship Diagram uses <strong><a href="https://www.tutorialspoint.com/uml/uml_basic_notations.htm">UML Notation</a></strong> to visualize the relationships between our tables. <strong>UML</strong> stands for <strong>Unified Modeling Language</strong> and it is basically the go-to for designing object-oriented systems.</p>
-<p>Remember our ER diagram from Week 3 . . .</p>
+<hr />
+<h2 id="uml-notation">UML Notation</h2>
+<p>Entity Relationship Diagrams are written in <strong><a href="https://www.tutorialspoint.com/uml/uml_basic_notations.htm">UML Notation</a></strong> to visualize the relationships between tables. <strong>UML</strong> stands for <strong>Unified Modeling Language</strong> and it is basically the go-to for designing object-oriented systems.</p>
+<p>Remember our ER Diagram from Week 3 . . .</p>
 <p><img alt="er-diagram-example" src="../../images/er-diagram-example.png" /></p>
-<h3 id="breaking-down-the-er-diagram">Breaking Down the ER Diagram</h3>
-<p>In the diagram above, the rectangles with our <strong>table</strong> names on them <code>usersContact</code> are called <strong>entities</strong>. It's just an object that represents some sort of important data. The table, once saved in the database would accept and store multiple entities with these <strong>fields</strong>/properties on them.</p>
+<h3 id="fields-entities">Fields &amp; Entities</h3>
+<p><em>In short: each row is an </em><em>entity</em><em> and each column is a </em><em>field</em><em>.</em></p>
+<p>In the diagram above, the rectangles with our <strong>table</strong> names on them <code>usersContact</code> are called <strong>entities</strong>. It's just an object that represents some type of data. The table, once saved in the database would accept and store multiple entities with these <strong>fields</strong> (properties) on them.</p>
 <blockquote>
-<p>NOTE: Remember, tables are made of rows and columns. In a SQL table, each entry (entity) is a row and each column is a property/field/attribute of the entity. </p>
+<p>NOTE: Remember, tables are made of rows and columns. In a SQL table, each entry (<strong>entity</strong>) is a row. And each column is a <strong>field</strong> (property/attribute) of the entity. The cells would represent the values stored in each field on each entity.</p>
 </blockquote>
-<p>Inside of the entity we see the <strong>attributes</strong> that correspond to our tables. Those are the <strong>field</strong>/column names and there may be symbols next to those fields. In fact, there is generally a symbol there that gives us some information about the field's responsibility. If it has a key icon, for example, that indicates that the field is the <strong>primary key</strong>. You can see a <a href="https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean">list of other field icons here</a>.</p>
+<p>Inside of the entity we see the <strong>attributes</strong> that correspond to our tables. Those are the <strong>field</strong>/column names and there may be symbols next to those fields. In fact, there is generally a symbol there that gives us some information about the field's responsibility. If it has a key icon, for example, that indicates that the field is the <strong>primary key</strong>(PK). You can see a <a href="https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean">list of other field icons here</a>.</p>
 <p>Here's another diagram to look at. Notice the icons on these tables.</p>
 <p><img alt="er-diagram-example-icon-highlighting" src="../../images/er-diagram-example-icon-highlighting.png" /></p>
 <h3 id="cardinality">Cardinality</h3>
 <p>The last thing we need to talk about in order to understand our ER diagrams is <strong>cardinality</strong>. Cardinality refers to the type of relationships that we maintain between our entities. These types of relationships are how we can enforce data integrity throughout our database. For example, I can't assign a <code>userId</code> on a child table like usersContacts to an <code>id</code> that DOESN'T EXIST on the parent table users. But what cardinality is really talking about is the maximum or minimum number of relationships that can be maintained between two entities. For example, a <code>user</code> can have multiple <code>userContacts</code> but only one <code>usersAddress</code>.</p>
 <p>These relationships are usually described as <strong>"one-to-many"</strong>, <strong>"one-to-one"</strong>, or <strong>"many-to-many"</strong>. The lines between the entities and the small notations at the end of them dictate these relationships.</p>
 <p><img alt="cardinality-notation-table" src="../../images/cardinality-notation-table.png" /></p>
+<hr />
 <h2 id="relationships-explained">Relationships Explained</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox"/> One-to-One: This relationship can be summed up as one table to another table allowing only one connection each. Such as a User table having a one to one relationship for a drivers license table. The user can only have one drivers license so it would be applicable to use the one to one relationship.</p>
+<p><input type="checkbox"/> <strong>One-to-One</strong>: This relationship can be summed up as one table to another table allowing only one connection each. Such as a User table having a One-to-One relationship for a drivers license table. The user can only have one drivers license so it would be applicable to use the One-to-One relationship.</p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox"/> One-to-Many: An example of a One to many relationship would be a users table again with an orders table. The user can have as many orders as they want so using one to many would work perfectly.</p>
+<p><input type="checkbox"/> <strong>One-to-Many</strong>: An example of a One-to-Many relationship would be a Users table and an Orders table. The User can have as many Orders as they want but each Order could only have one User; using a One-to-Many relationship would work perfectly.</p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox"/> Many-to-One: The next relationship is many to one and this can be understood as the opposite of the previous. Now lets say we have a credit card table would be a many cards to a user table that would only have a single user.</p>
+<p><input type="checkbox"/> <strong>Many-to-One</strong>: this can be understood as the opposite of the previous. Let's say we have a Bank Account table &amp; a Users table. Each User could have many Bank Accounts but each Back Account would have only one User.</p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox"/> Many-to-Many: An example of this would be a professors table to a students table. The professor can have many students and the students can have many professors. </p>
+<p><input type="checkbox"/> <strong>Many-to-Many</strong>: An example of this would be a Course table to a Student table. Each Course can have many students and each Student can have many Courses.</p>
 </li>
 </ul>
-<blockquote>
-<p><em>Source: <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">LucidCharts</a></em></p>
-</blockquote>
+<h3 id="entity-relationships-further-explained">Entity Relationships Further Explained</h3>
 <p>Let's look at the data from the <code>employees</code> database above:  </p>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> Follow the line between the <code>employees</code> table to the <code>salaries</code> table. Starting at the <code>employees</code> table we see a double hash mark, this means that the relationship an entity in the <code>employees</code> table can have <strong>one and only one</strong> relationship with what ever table its connected to on this line.</li>
@@ -2000,7 +2087,7 @@
 </ul>
 <p>Are we starting to understand how to read these? You can see more cardinality symbols on the <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">bottom of this page</a>.</p>
 <p>To further illustrate, take a look at the <code>departments</code> entity. Notice the double hash and trident lines? This shows that each <code>department</code> can have only one <code>title</code> but multiple <code>dept_emp</code> (department employees).</p>
-<h2 id="determining-our-data-model">Determining our Data Model</h2>
+<h2 id="determining-our-data-model">Determining Our Data Model</h2>
 <p>Most of the information above assumes you already have a working database, or at least a couple tables. We've talked about how to read/interpret our diagrams and in our homework assignment today we will work on creating an ER diagram, but let's take a second to talk about modeling the data that these diagrams come from.</p>
 <blockquote>
 <p>NOTE: data modeling is a broad subject. We will discuss only what's most important for us at this level.</p>
@@ -2043,8 +2130,8 @@
 
 <h2 id="know-your-docs">Know Your Docs</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/er-diagrams">LucidChart Docs - ER Diagrams</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">LucidChart - ERD Symbols</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/er-diagrams">LucidCharts Docs - ER Diagrams</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning">LucidCharts - ERD Symbols</a></li>
 <li class="task-list-item"><input type="checkbox"/> <a href="https://stackoverflow.com/questions/10778561/what-do-the-mysql-workbench-column-icons-mean">Forum, StackOverflow - Column Icon Meanings</a></li>
 </ul>
                 

@@ -14,7 +14,7 @@
     
     
       
-        <title>Adding Authentication - JS311 - Node Servers + SQL Databases</title>
+        <title>Authentication Continued - JS311 - Node Servers + SQL Databases</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding Authentication
+              Authentication Continued
             
           </span>
         </div>
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/advancedSELECTstatments/" class="md-nav__link">
+      <a href="../../module-2/advancedSELECTstatements/" class="md-nav__link">
         Advanced SELECT
       </a>
     </li>
@@ -775,8 +775,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/sqlAndExpressjs/" class="md-nav__link">
-        Adding SQL to Express
+      <a href="../../module-2/mysql-Express-dotenv/" class="md-nav__link">
+        Adding MySQL to Express
       </a>
     </li>
   
@@ -1034,12 +1034,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Adding Authentication
+          Authentication Continued
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Adding Authentication
+        Authentication Continued
       </a>
       
         
@@ -1060,42 +1060,30 @@
     Why Authenticate?
   </a>
   
-    <nav class="md-nav" aria-label="Why Authenticate?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#visualization-of-all-steps" class="md-nav__link">
-    Visualization of All steps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-steps-of-authentication" class="md-nav__link">
-    General Steps of Authentication
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#sign-up-vs-sign-in" class="md-nav__link">
-    Sign-Up vs Sign-In
+  <a href="#the-steps-of-authentication" class="md-nav__link">
+    The Steps of Authentication
   </a>
   
-    <nav class="md-nav" aria-label="Sign-Up vs Sign-In">
+    <nav class="md-nav" aria-label="The Steps of Authentication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-hash" class="md-nav__link">
-    The Hash
+  <a href="#the-sign-up-overview" class="md-nav__link">
+    The Sign-Up Overview
   </a>
   
-    <nav class="md-nav" aria-label="The Hash">
+    <nav class="md-nav" aria-label="The Sign-Up Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1114,74 +1102,10 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#write-code-of-authentication" class="md-nav__link">
-    Write Code of Authentication
-  </a>
-  
-    <nav class="md-nav" aria-label="Write Code of Authentication">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#request-from-the-front-end" class="md-nav__link">
-    Request from the Front-End
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-handles-the-request" class="md-nav__link">
-    Server Handles the Request
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-calls-the-hashing-algorithm" class="md-nav__link">
-    Server Calls the Hashing Algorithm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-requests-the-password-from-the-db" class="md-nav__link">
-    Server Requests the Password from the DB
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-compares-the-return-values" class="md-nav__link">
-    Server Compares the Return Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-generates-a-bearer-token" class="md-nav__link">
-    Server Generates a Bearer Token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-sends-a-token-to-the-front-end" class="md-nav__link">
-    Server Sends a Token to the Front-End
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#front-end-stores-the-token-in-cookies" class="md-nav__link">
-    Front-End Stores The Token in Cookies
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
+  <a href="#the-sign-in-overview" class="md-nav__link">
+    The Sign-In Overview
   </a>
   
 </li>
@@ -1935,42 +1859,30 @@
     Why Authenticate?
   </a>
   
-    <nav class="md-nav" aria-label="Why Authenticate?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#visualization-of-all-steps" class="md-nav__link">
-    Visualization of All steps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-steps-of-authentication" class="md-nav__link">
-    General Steps of Authentication
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#sign-up-vs-sign-in" class="md-nav__link">
-    Sign-Up vs Sign-In
+  <a href="#the-steps-of-authentication" class="md-nav__link">
+    The Steps of Authentication
   </a>
   
-    <nav class="md-nav" aria-label="Sign-Up vs Sign-In">
+    <nav class="md-nav" aria-label="The Steps of Authentication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-hash" class="md-nav__link">
-    The Hash
+  <a href="#the-sign-up-overview" class="md-nav__link">
+    The Sign-Up Overview
   </a>
   
-    <nav class="md-nav" aria-label="The Hash">
+    <nav class="md-nav" aria-label="The Sign-Up Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1989,74 +1901,10 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#write-code-of-authentication" class="md-nav__link">
-    Write Code of Authentication
-  </a>
-  
-    <nav class="md-nav" aria-label="Write Code of Authentication">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#request-from-the-front-end" class="md-nav__link">
-    Request from the Front-End
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-handles-the-request" class="md-nav__link">
-    Server Handles the Request
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-calls-the-hashing-algorithm" class="md-nav__link">
-    Server Calls the Hashing Algorithm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-requests-the-password-from-the-db" class="md-nav__link">
-    Server Requests the Password from the DB
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-compares-the-return-values" class="md-nav__link">
-    Server Compares the Return Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-generates-a-bearer-token" class="md-nav__link">
-    Server Generates a Bearer Token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-sends-a-token-to-the-front-end" class="md-nav__link">
-    Server Sends a Token to the Front-End
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#front-end-stores-the-token-in-cookies" class="md-nav__link">
-    Front-End Stores The Token in Cookies
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
+  <a href="#the-sign-in-overview" class="md-nav__link">
+    The Sign-In Overview
   </a>
   
 </li>
@@ -2095,41 +1943,47 @@
                 
                 <h1 id="overview-of-authentication">Overview Of Authentication</h1>
 <p><em>“I have not failed. I've just found 10,000 ways that won't work.” ― Thomas A. Edison</em></p>
-<p>Now that we have high overview of what authentication and authorization is, let's start zooming in on what the flow of authentication is and what we actually have to do to get it coded in our server!</p>
+<p>Now that we have a high overview of what authentication and authorization are, let's start zooming in on what the flow of authentication is and what we actually have to do to get it coded in our server!</p>
 <h2 id="why-authenticate">Why Authenticate?</h2>
-<p>Authentication is used by a server when the server needs to know exactly who is accessing their app.</p>
-<p>It's important to understand authentication because it's necessary for the security of your app and to understand what every app on the internet does when you sign in. When building your fullstack projects at the end of the class, be sure to reference back to here if you need any extra help with building your login.</p>
-<h3 id="visualization-of-all-steps">Visualization of All steps</h3>
+<p>Authentication is used by a server to give permission for a user to access the data it serves.</p>
+<p>It's important to understand authentication because it's necessary for the security of your app and to understand what every app on the internet does when you sign in. When building your fullstack projects at the end of the program, be sure to reference back here if you need any extra help with building your login.</p>
+<h2 id="the-steps-of-authentication">The Steps of Authentication</h2>
+<p>Authentication is the process of comparing passwords to passwords to verify or authenticate the identity of a user.</p>
 <p><img alt="stepsOfAuth" src="../../images/stepsOfAuth.png" /></p>
-<h3 id="general-steps-of-authentication">General Steps of Authentication</h3>
 <ol>
 <li>The username and password are sent to the server.</li>
 <li>The server accesses its database of users that holds the username and password.</li>
-<li>It checks the provided username and password against the one in the database.</li>
+<li>The server checks the provided username &amp; password against the username &amp; password in the database.</li>
 <li>If the credentials match, the user's identity is verified, and the application decides what's next.</li>
 <li>If not, a generic error message is returned.</li>
 </ol>
-<h2 id="sign-up-vs-sign-in">Sign-Up vs Sign-In</h2>
+<hr />
+<h3 id="the-sign-up-overview">The Sign-Up Overview</h3>
+<p>There's a difference between Sign-Up vs Sign-In. We first need to <strong>Sign-up</strong>.</p>
 <p><img alt="writeToDatabase" src="../../images/writeToDatabase.png" /></p>
-<p>The first step of authentication is to sign up! After all, we can't verify your identity if we don't have credentials to compare with what you provide to confirm you are who you say your are.... When one signs-up on any web app, their credentials (username/email &amp; password) will be sent from the front-end to the server and written to the database. <em>It's important to understand this because it will help you visualize how the server will be checking incoming "sign-in" credentials against previously written "sign-up" credentials.</em> It really is as simple as this:</p>
+<p>The first step of authentication is to sign up! After all, we can't verify your identity if we don't have credentials to compare with what you provide to confirm you are who you say you are.... When one <strong>signs-up</strong> on any web app, their credentials (username/email &amp; password) will be sent from the front-end to the server and written to the database.</p>
+<blockquote>
+<p><em>NOTE: It's important to understand this because it will help you visualize how the server will be checking incoming "sign-in" credentials against previously written "sign-up" credentials.</em></p>
+</blockquote>
+<p>It really is as simple as this:</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> Input and submit email &amp; password info on front-end to "sign-up"</li>
-<li class="task-list-item"><input type="checkbox"/> Front-End sends POST request with the the "sign-up" info to the server</li>
+<li class="task-list-item"><input type="checkbox"/> Input and submit email/username &amp; password info on front-end to "sign-up"</li>
+<li class="task-list-item"><input type="checkbox"/> Front-End sends POST request with the the email/username &amp; password to the server</li>
 <li class="task-list-item"><input type="checkbox"/> The server receives the credentials and <code>INSERT</code>s a new entry in the <code>users</code> table</li>
 <li class="task-list-item"><input type="checkbox"/> The user returns to the app to login by inputting and submitting their email &amp; password on the front-end</li>
-<li class="task-list-item"><input type="checkbox"/> The front-end sends a GET Request with the credentials to the server</li>
+<li class="task-list-item"><input type="checkbox"/> The front-end sends a POST Request with the credentials to the server</li>
 <li class="task-list-item"><input type="checkbox"/> The server <code>SELECTS</code> the previously written email that matches and checks to see if the passwords match</li>
-<li class="task-list-item"><input type="checkbox"/> If <code>true</code> the next page in the app is sent to the front-end and a <strong>bearer token</strong> is stored cookies (more on this soon)</li>
+<li class="task-list-item"><input type="checkbox"/> If <code>true</code> the next page in the app is sent to the front-end and a <strong>bearer token</strong> is stored in cookies (more on this soon)</li>
 <li class="task-list-item"><input type="checkbox"/> If <code>false</code> another "login" page is sent to the front-end</li>
 </ul>
-<h3 id="the-hash">The Hash</h3>
-<p>There's a small step the summary above excludes called <strong>hashing</strong>. See, when we store passwords in our database we don't want to store <strong>plaintext</strong> because if our database is ever breached/hacked into the passwords will be readable by human-eyes and simple javascript functions. To protect our users we create new strings that represent the password called a <em>hash</em>.</p>
-<p>A hash is a unique and complicated string created by passing a simple string into a mathematical formula (algorithm) that scrambles and generates a the unique string. The way it works is highly mathematical but in short it could look like this:</p>
+<h4 id="hashing">Hashing</h4>
+<p>There's a small step the summary above excludes called <strong>hashing</strong>. See, when we store passwords in our database we don't want to store <strong>plaintext</strong> because if our database is ever breached(hacked) the passwords will be readable by human-eyes and simple javascript functions. To protect our users we create new Strings that represent the passwords called a <strong>hash</strong>.</p>
+<p>A <strong>hash</strong> is a unique and complicated String created by passing a simple String into a mathematical formula (algorithm) that scrambles and generates a unique String. The way it works is highly mathematical (<a href="https://www.npmjs.com/package/argon2">luckily there are Node packages for it</a>) but in short it could look like this:</p>
 <table>
 <thead>
 <tr>
 <th>Simple String</th>
-<th>The Hash Produced</th>
+<th>The Hashed String</th>
 </tr>
 </thead>
 <tbody>
@@ -2147,14 +2001,14 @@
 </tr>
 </tbody>
 </table>
-<p>No matter what, if you pass <code>pony</code> through the hashing algorithm is will also produce the <code>4B3E3C2F99046F92A61BAB6775848577</code> every time. This is how passwords can be stored as hashes and later compared, hash to hash. We just use a hashing algorithm in-between our server receiving the request and when it reads the database.</p>
+<p>No matter what, if you pass <code>pony</code> through the hashing algorithm is will also produce the <code>4B3E3C2F99046F92A61BAB6775848577</code> every time. This is how passwords can be stored as hashes and later compared, <strong>hash</strong> to <strong>hash</strong>. We just use a hashing algorithm in the route on our server between receiving the request to "login" and when the server reads the previously stored hash in the database created during "sign-up".</p>
 <blockquote>
 <p>You can play with how the <a href="https://passwordsgenerator.net/md5-hash-generator/">MD5 hashing algorithm will create unique strings with any common string you put in here</a>.</p>
 </blockquote>
-<p>We will cover more hashing soon but for now just remember the password will be scrambled each time its written and compared against.</p>
-<h4 id="the-code-for-hashing">The Code for Hashing</h4>
+<p>Once the plaintext password has been hashed the new unique String will be stored in the database along with the username/email.</p>
+<h5 id="the-code-for-hashing">The Code for Hashing</h5>
 <p>Below is a small Express server that has a hashing algorithm added to it called <code>argon2</code>. Read over the code and see if you can make sense of what's going on.</p>
-<p>= "Express App with Argon2 Hashing"</p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Express App with Argon2 Hashing</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2184,42 +2038,81 @@
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>```javascript
-  const express = require(&#39;express&#39;),
-  // import argon for hashing
-    argon2i = require(&#39;argon2-ffi&#39;).argon2i,
-    crypto = require(&#39;crypto&#39;),
-    bodyParser = require(&#39;body-parser&#39;);
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+  <span class="c1">// import argon for hashing</span>
+  <span class="kd">const</span> <span class="nx">argon2i</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;argon2-ffi&#39;</span><span class="p">).</span><span class="nx">argon2i</span>
+  <span class="kd">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">)</span>
 
-  // create express app 
-  const app = express();
-  const jsonParser = bodyParser.json();
+  <span class="c1">// create express app </span>
+  <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+  <span class="kd">const</span> <span class="nx">jsonParser</span> <span class="o">=</span> <span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
 
-  // post request route for when a user signs up for the app
-  app.post(&#39;/signup&#39;, jsonParser, function(req, res){
-    // if incorrect credentials send status 400
-    if(!req.body) return res.sendStatus(400);
-    // using argon2, hash the request body that has the password.
-    crypto.randonBytes(32, function(err, salt){
-      if(err) throw err;
-      argon2i.hash(req.body.password, salt).then(hash =&gt; {
-        console.log(hash);
-        // then send a 201 status that it was successful.
-        res.sendStatus(201);
-      })
-    })
-  })
+  <span class="c1">// post request route for when a user signs up for the app</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/signup&#39;</span><span class="p">,</span> <span class="nx">jsonParser</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+    <span class="c1">// if no data has been sent, send back status 400</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">400</span><span class="p">)</span>
+    <span class="c1">// using argon2, hash the request body that has the password.</span>
+    <span class="nx">crypto</span><span class="p">.</span><span class="nx">randonBytes</span><span class="p">(</span><span class="mf">32</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">salt</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span>
+      <span class="nx">argon2i</span><span class="p">.</span><span class="nx">hash</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="nx">salt</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">hash</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// don&#39;t log in production code...for learning purposes only</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="c1">//...replace with code to write the username &amp; password to the database</span>
 
-  app.listen(3001, function(){
-    console.log(&quot;listening on port 3001&quot;);
-  })
-```
+        <span class="c1">// then send a 201 status that it was successful.</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">201</span><span class="p">)</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+  <span class="p">})</span>
+
+  <span class="c1">// ...more routes would go here...</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3001</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;listening on port 3001&quot;</span><span class="p">)</span>
+  <span class="p">})</span>
 </code></pre></div>
 </td></tr></table>
-<p>As you can see from this code the password will now be scrambled like this <code>password:wkehodjsuekr</code> from now on. If you want to learn more about hashing and argon take a look at the docs below. We will also be covering this in more depth soon.</p>
-<hr />
-<h2 id="write-code-of-authentication">Write Code of Authentication</h2>
-<p>The following code example will assume our human-user has already "sign-up" so their email/username and password are already stored in our database.</p>
+</div>
+</div>
+<p>As you might have seen, when someone sends a POST request to <code>/signup</code> it should include a <code>username</code> and <code>password</code>. If it does, the server will run the hashing function <code>crypto.randonBytes</code> &amp; <code>argon2i.hash</code> on the password. You are probably wondering what <code>salt</code> is. <code>salt</code> is the number of times the algorithm is supposed to run before the hash is determined "complete".</p>
+<p>Hackers have access to run the same algorithm that creates your password hashes. This means, if they get ahold of your list of usernames &amp; passwords they can run them backwards as well and learn the plaintext version of your passwords and then access your user's data. Nevertheless, they will still be guessing at possible inputs to get to the correct password. To break through this barrier they will formulate something called a <strong>Brute Force</strong> attack, where in, they tell a powerful computer to run the same algorithm over and over on the list of hashed passwords attempting to get the right passwords. This is where a <strong>salt round</strong> comes in. A <strong>salt round</strong> is the number of times the algorithm scrambles the plaintext password. 1 salt = 1 time, 5 salts = 5 times. Each time you increase the <strong>salt</strong> you increase the difficulty for the hacker by a factor of about 10! By increasing this number you make it more expensive in both time and energy for the hacker to make it profitable to hack your users. The double-edge of this sword is that it also makes it more expensive for your computers to run the hashing algorithm. The trick is to find a happy medium! Usually 12 is the ideal number; but, some have suggested you <a href="https://security.stackexchange.com/questions/17207/recommended-of-rounds-for-bcrypt">calculate the number with the total amount of time you can stand.</a></p>
+<p>To get an idea of why salting is so important when hashing password, check out this post from 2011.</p>
+<p><img alt="securityStackExchange-saltingGuesses" src="../../images/securityStackExchange-saltingGuesses.png" /></p>
+<blockquote>
+<p>SOURCE: <a href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993">Security StackExchange</a></p>
+</blockquote>
+<h3 id="the-sign-in-overview">The Sign-In Overview</h3>
+<p>Now that we know passwords will be hashed on <strong>sign-up</strong>, what happens when a user signs-in?</p>
+<p>Obviously we don't want our user to have to input a username and password for every page and resource they'd like to access. Instead, we want them to have them sign-in once and then allow them to freely move around their account until they <strong>sign-off</strong>.</p>
+<p>The trouble is that our server (just a computer) doesn't know who they are like we humans would if we saw them. So, to make this work we have to give the user a "wristband" that they would show to each part of the server when they wanted to see a new page or resource. This "wristband" is called a <strong>bearer token</strong>.</p>
+<p>A <strong>bearer token</strong>, or a <strong>JSON Web Token</strong>/<strong>JWT</strong>, is a unique set of letters and numbers created by the server the represents a successful <strong>sign-in</strong>. Its generated when username &amp; passwords match and sent back to the client (the user) and stored on their device so that it can be sent back to the server with each new subsequent request to see a new page or resource. In this way, the user can move freely about their account without worrying about signing-in over and over; but instead we developers just have to be smart enough to make that front-end client send the <strong>bearer token</strong> back with each new request, and make our server require a <strong>bearer token</strong> to allow the resources to be sent back with the response.</p>
+<!-- Let's dive into this, shall we? -->
+
+<!-- ***** new page ***** -->
+
+<!-- 
+## Now Build Your Authentication Workflow
+
+In this section we're going to comb over the entire process of authentication, after the user has already **signed-up**, with more granular detail. Use the side menu of this page (>>>) to see the overview and visualize the entire process. -->
+
+<!-- Request from the Front-End
+Server Handles the Request
+Server Calls the Hashing Algorithm
+Server Requests the Password from the DB
+Server Compares the Return Values
+Server Generates a Bearer Token
+Server Sends a Token to the Front-End
+Front-End Stores The Token in Cookies
+Conclusion
+
+### Request from the Front-End/Client
+
+**Sign-in**. Any web app you use will prompt you for your credentials(username & password). When you click the login button the front-end will then make a POST request to the server sending the credentials.
+
+=== "Request from the Front-End"
+
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2230,42 +2123,74 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// middleware function, middleware is just a name for the function that checks a user os authenticated. When we create this function we can now use it to check all of our routes for the correct user.</span>
-      <span class="kd">const</span> <span class="nx">authenticate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="kd">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;authorization&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">auth</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">401</span><span class="p">)</span>
-        <span class="nx">next</span><span class="p">()</span>
-      <span class="p">}</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// front-end code (NOT SERVER-SIDE)</span>
+  <span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;axios&#39;</span><span class="p">)</span>
 
-<span class="c1">// middleware applied, now we have the function we can pass in this authenticate function to our route as a parameter and it will run the function before posting. </span>
-      <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">authenticate</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="sb">`You sent an authorization header...You&#39;re Postin!`</span><span class="p">)</span>
-      <span class="p">})</span>
+  <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;https://theserverorapiurl.com/login&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">username</span><span class="o">:</span> <span class="s1">&#39;WFinn&#39;</span><span class="p">,</span>
+    <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;password123&#39;</span>
+  <span class="p">});</span>
+
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">},</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="request-from-the-front-end">Request from the Front-End</h3>
-<p>logging in to the app. When you go to log into a webapp it will prompt you for the credentials you entered during the sign up. When you click the login button it will then make a <code>get</code> request to the server or API you are trying to access.</p>
-<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Request from the Front-End</label><div class="tabbed-content"></div>
-</div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;https://theserverorapiurl.com/user?ID=1&#39;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">//handle success</span>
-    <span class="c1">//remember to console.log</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
-  <span class="p">})</span>
+
+ > Remember: When you submit a login, the next steps all happen within seconds but are vital to understand authorization.
+
+ > Also, we use Postman to imitate client-side requests so we don't have to build our front-end and back-end, only to have a bug in either one and not know what we're missing. Instead we build our back-end, test it with Postman, then move to building the front-end with the same requests we made in Postman.
+
+### How the Server Handles the Request
+
+Once the server receives the request, it will:
+
+- [ ] Calls the hashing algorithm and run the plaintext password through it,
+- [ ] retrieve the hashed password from the database created during sign-up,
+- [ ] compare the two hashed Strings,
+- [ ] if they don't match (`false`) an error will be sent back the client/front-end;
+- [ ] if they match (`true`) a function to create a bearer token will be invoked,
+- [ ] the bearer token will be sent back to the client/front-end.
+
+Let's build that process.
+
+=== "**1. In a new `server` folder create an `index.js` file:**"
+
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// server/index.js</span>
+  <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">argon2i</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;argon2-ffi&#39;</span><span class="p">).</span><span class="nx">argon2i</span>
+  <span class="kd">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">)</span>
+
+  <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Listening on port 3000...&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 </td></tr></table>
-<p>When you submit a login remember the next steps all happen within seconds but are vital to understand authorization. </p>
-<h3 id="server-handles-the-request">Server Handles the Request</h3>
-<p>The server checks the provided username and hashed password against the one in the database.</p>
-<p>credentials you sent =&gt; user=username:hashedPassword  ==&gt; checks the database user=myusername:mypassword</p>
-<p>This is the logic that checks the token and verifies if its valid before sending the request resource back.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+
+=== "TODO cp argon2 file"
+
+    cp argon2 file in to release directory - [https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs](https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs)
+
+=== "**3. Create the route to hash the password for sign-ups:**"
+
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2282,28 +2207,75 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// back-end</span>
-  <span class="kd">const</span> <span class="nx">checkForAuthToken</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">specialToken</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;our_token&#39;</span><span class="p">]</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">// server/index.js</span>
+  <span class="c1">// ...import statements here...</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">checkIsValid</span><span class="p">(</span><span class="nx">specialToken</span><span class="p">))</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">401</span><span class="p">)</span>
-    <span class="nx">next</span><span class="p">()</span>
-  <span class="p">}</span>
+  <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">jsonParser</span> <span class="o">=</span> <span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
 
-  <span class="c1">// build your own</span>
-  <span class="kd">const</span> <span class="nx">checkIsValid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// this function would run the RFC 7519 algorithm to see if the token is valid(see below)</span>
-      <span class="c1">// * if valid return true</span>
-      <span class="c1">// * if not valid return false</span>
-      <span class="c1">// * or we could use a third party to handle this like Auth0</span>
-  <span class="p">}</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/signup&#39;</span><span class="p">,</span> <span class="nx">jsonParser</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">400</span><span class="p">);</span>
 
-  <span class="c1">//  -- or --</span>
-  <span class="c1">// use a third-party like Auth0</span>
+    <span class="nx">crypto</span><span class="p">.</span><span class="nx">randomBytes</span><span class="p">(</span><span class="mf">32</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">salt</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+
+      <span class="nx">argon2i</span><span class="p">.</span><span class="nx">hash</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="nx">salt</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">hash</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">);</span> <span class="cm">/* in the future, you&#39;ll replace this line with a call to a controller that will store the `hash` &amp; `req.body.username` in the Users table in the database */</span>
+
+        <span class="nx">res</span><span class="p">.</span><span class="nx">sendStatus</span><span class="p">(</span><span class="mf">201</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Listening on port 3000...&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="server-calls-the-hashing-algorithm">Server Calls the Hashing Algorithm</h3>
-<p>When we create our server it will have a simple post request, that when we put in our username and password it will call the hashing algorithm to take the password input and hash using argon2. </p>
+
+=== "**4. Test it with Postman**"
+
+    - [ ] Run the file with Node from the terminal `node index.js`
+    - [ ] Open Postman
+    - [ ] Create a POST request to `http://localhost:3000/signup`.
+    - [ ] Navigate to the `body` of the post request and create two fields: `username` & `password`
+    - [ ] Send
+    - [ ] You should receive a unique String that looks something like this: `$argon2i$v=19$m=4096,t=3,p=1$rHPRPtbiIVGRVT4dUWDizw$v4jily1SeNYrmDhX9uD8MOePv+9U+2Lqvwc4iUsJOa0`. -->
+
+<!-- #### Server Calls the Hashing Algorithm -->
+
+<!-- ### Server Requests the Password from the DB -->
+<!-- TODO @David Fill this out -->
+<!-- The server hits the get request route we set up and then runs a function to compare the inputted password with the password stored in the database.
+
+### Server Compares the Return Values -->
+<!-- TODO @David Fill this out -->
+
+<!-- ```javascript
+  app.post('/login', function(req, res) {
+    Parse.User.enableUnsafeCurrentUser();
+    Parse.User.logIn(req.body.username, req.body.password).then(function(user) {
+      res.redirect('/home');
+    }, function(error) {
+      res.render('login', { flash: error.message });
+    });
+  });
+``` -->
+<!-- ## Step 4 -->
+
+<!-- If the credentials match, the user's identity is verified, and the application decides what's next. After they are successfully authenticated our app will send the user a bearer token to keep with you during the time you are using the app. (once you logout this token will be terminated until you login again). If you didn't receive this token then you would have to re-login every time you wanted to change pages in the app. Its not very user friendly.
+
+After you are granted authorization to the web app you will now have a cookie attached to your info in the database and this cookie will follow you around the web app keeping you authorized.
+
+### Server Generates a Bearer Token
+
+The bearer token is a token created by the server to ensure you are coming from the correct place. Using JWT you'll be able to create a token and then a signature will be in place from now on. More on JWT soon but keep in mind this step.
+
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2316,73 +2288,32 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">require</span> <span class="nx">argon2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;argon2&#39;</span><span class="p">)</span>
-<span class="c1">//1. register user</span>
-<span class="nx">server</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/register&#39;</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="p">{</span> <span class="nx">email</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
-
-  <span class="k">try</span> <span class="p">{</span>
-<span class="c1">//using this code we will hash our password a user inputs.</span>
-    <span class="kd">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">argon2</span><span class="p">.</span><span class="nx">hash</span><span class="p">(</span><span class="nx">password</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">)</span>
-  <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-<span class="c1">//error code here</span>
-  <span class="p">}</span>
-<span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
-<p>following this code we can open postman and run a request to our local host url and our register route like this: POST <code>http://localhost:4000/register</code>. navigate to the body of the post request in postman and input two key fields. fist field will be email with a random email of your choosing. The second will be password with any random password you choose. Then kick up your local host in the terminal and run the post request on postman. You should receive a random string that looks like this <code>$argon2i$v=19$m=4096,t=3,p=1$rHPRPtbiIVGRVT4dUWDizw$v4jily1SeNYrmDhX9uD8MOePv+9U+2Lqvwc4iUsJOa0</code>.</p>
-<!-- TODO @David Fill this out -->
-
-<h3 id="server-requests-the-password-from-the-db">Server Requests the Password from the DB</h3>
-<!-- TODO @David Fill this out -->
-<p>The server hits the get request route we set up and then runs a function to compare the inputted password with the password stored in the database.</p>
-<h3 id="server-compares-the-return-values">Server Compares the Return Values</h3>
-<!-- TODO @David Fill this out -->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">Parse</span><span class="p">.</span><span class="nx">User</span><span class="p">.</span><span class="nx">enableUnsafeCurrentUser</span><span class="p">();</span>
-  <span class="nx">Parse</span><span class="p">.</span><span class="nx">User</span><span class="p">.</span><span class="nx">logIn</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">password</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/home&#39;</span><span class="p">);</span>
-  <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">flash</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="p">});</span>
-  <span class="p">});</span>
-<span class="p">});</span>
-</code></pre></div>
-</td></tr></table>
-<!-- ## Step 4 -->
-
-<p>If the credentials match, the user's identity is verified, and the application decides what's next. After they are successfully authenticated our app will send the user a bearer token to keep with you during the time you are using the app. (once you logout this token will be terminated until you login again). If you didn't receive this token then you would have to re-login every time you wanted to change pages in the app. Its not very user friendly. </p>
-<p>After you are granted authorization to the web app you will now have a cookie attached to your info in the database and this cookie will follow you around the web app keeping you authorized.</p>
-<h3 id="server-generates-a-bearer-token">Server Generates a Bearer Token</h3>
-<p>The bearer token is a token created by the server to ensure you are coming from the correct place. Using JWT you'll be able to create a token and then a signature will be in place from now on. More on JWT soon but keep in mind this step.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">//require sign from jwt</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">//require sign from jwt</span>
 <span class="kd">const</span> <span class="p">{</span> <span class="nx">sign</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonwebtoken&#39;</span><span class="p">);</span>
-<span class="c1">//create a function</span>
+
+<span class="c1">//create a function that will generate a unique bearer token</span>
 <span class="kd">const</span> <span class="nx">createBearerToken</span> <span class="o">=</span> <span class="nx">userId</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">sign</span><span class="p">({</span> <span class="nx">userId</span> <span class="p">},</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BEARER_TOKEN_SECRET</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">expiresIn</span><span class="o">:</span> <span class="s1">&#39;15m&#39;</span><span class="p">,</span>
   <span class="p">})</span> 
 <span class="p">}</span>
+
+
+<span class="c1">// server.post(&#39;/register&#39;, async (req, res) =&gt; {...etc</span>
+
+<span class="c1">//  app.post(&#39;/login&#39;, function(req, res) {...etc</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="server-sends-a-token-to-the-front-end">Server Sends a Token to the Front-End</h3>
-<p>Once the Token is created we will send it back to our front end. The front end of your code will use the bearer token we created to authenticate a user. The front-end will use a post request to access the bearer token we created in the back-end.</p>
-<h3 id="front-end-stores-the-token-in-cookies">Front-End Stores The Token in Cookies</h3>
-<p>We store the token in a cookie for the browser to keep track of. 
+
+### Server Sends a Token to the Front-End
+
+Once the Token is created we will send it back to our front end. The front end of your code will use the bearer token we created to authenticate a user. The front-end will use a post request to access the bearer token we created in the back-end.
+
+### Front-End Stores The Token in Cookies
+
+We store the token in a cookie for the browser to keep track of.
+
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2455,33 +2386,87 @@
       <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
   <span class="p">})</span>
 </code></pre></div>
-</td></tr></table></p>
-<h3 id="conclusion">Conclusion</h3>
+</td></tr></table>
+
+### Conclusion -->
+
 <!-- TODO @David Don't write this like it's blog. This is an ebook that has lots of documentation. Encourage and push them toward the next lesson -->
-<p>Take what you learned from this lesson and really take the time to look over the resources below. Authentication is one of the most important parts of learning the back-end flow of applications. Next were going to talk about hashing and tokens in more depth. Refer back here and see how the tokens are being used in the big picture.</p>
+<!-- Take what you learned from this lesson and really take the time to look over the resources below. Authentication is one of the most important parts of learning the back-end flow of applications. Next were going to talk about hashing and tokens in more depth. Refer back here and see how the tokens are being used in the big picture. -->
+
 <!-- ## Follow-up Video  -->
 <!-- TODO add video -->
 
 <h2 id="additional-resources">Additional Resources</h2>
-<!-- TODO @David fix these titles to match naming convention, see other files to see naming convention -->
-<!-- EXAMPLES: 
-
-      TYPE  -- CONTRIBUTOR/SITE -- TITLE
-- [ ] [Forum, StackOverflow - Cookie Naming Convention](https://stackoverflow.com/questions/2097843/naming-cookies-best-practices)
-- [ ] [YT, Ben Awad - How to Store JWT in Memory](https://youtu.be/iD49_NIQ-R4) 
--->
-
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.tutorialspoint.com/expressjs/expressjs_authentication.htm">Artical, ExpressJS Authentication, tutorial</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs">Artical, argon tutorial - video and tutorial</a></li>
-<li class="task-list-item"><input type="checkbox"/> <a href="https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/">video, jwt - tutorial</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.tutorialspoint.com/expressjs/expressjs_authentication.htm">Article, TutorialsPoint, ExpressJS Authentication</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.veracode.com/blog/secure-development/zero-hashing-under-10-minutes-argon2-nodejs">Article, Veracode - Zero to Hashing in 10 minutes</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/">Video, FreeCodeCamp - What are JWTs?</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://stackoverflow.com/questions/2097843/naming-cookies-best-practices">Forum, StackOverflow - Cookie Naming Convention</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://youtu.be/iD49_NIQ-R4">YT, Ben Awad - How to Store JWT in Memory</a> </li>
 </ul>
 <h2 id="know-your-docs">Know Your Docs</h2>
-<!-- TODO @David fix this title. Always use this naming convention -->
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">MDN Docs - title</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://www.npmjs.com/package/argon2">NPM Docs - Argon2</a></li>
+<li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">MDN Docs - Web Authentication</a></li>
 <li class="task-list-item"><input type="checkbox"/> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">MDN Docs - Set Cookie</a></li>
 </ul>
+<!-- The following code example will assume our human-user has already "sign-up" so their email/username and password are already stored in our database.
+
+```javascript
+  // middleware function, middleware is just a name for the function that runs between a request and response; in this case we want to check to see if they are authenticated before we respond. When we create this function we can now use it to check all of our routes for the correct user.
+  const authenticate = (req, res, next) => {
+    const auth = req.headers['authorization']
+    if (!auth) return res.sendStatus(401)
+    next()
+  }
+
+  // middleware applied, now we have the function we can pass in this authenticate function to our route as a parameter and it will run the function before posting. 
+  app.post('/', authenticate, (req, res) => {
+    res.send(`You sent an authorization header...You're Postin!`)
+  })
+``` -->
+
+<!-- This is the logic that checks the token and verifies if its valid before sending the request resource back.
+
+```javascript
+  // back-end
+  const checkForAuthToken = (req, res, next) => {
+    const specialToken = req.headers['our_token']
+
+    if (!checkIsValid(specialToken)) return res.sendStatus(401)
+    next()
+  }
+
+  // build your own
+  const checkIsValid = (token) => {
+    // this function would run the RFC 7519 algorithm to see if the token is valid(see below)
+      // * if valid return true
+      // * if not valid return false
+      // * or we could use a third party to handle this like Auth0
+  }
+
+  //  -- or --
+  // use a third-party like Auth0
+``` -->
+
+<!-- When we create our server it will have a simple post request, that when we put in our username and password it will call the hashing algorithm to take the password input and hash using argon2.
+
+```javascript
+const argon2 = require('argon2')
+//1. register(sign-up) user
+server.post('/register', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+  //using this code we will hash the password a user inputs.
+    const hash = await argon2.hash(password)
+    console.log(hash)
+  } catch (err) {
+    //error code here
+    console.log(err)
+  }
+})
+``` -->
                 
               
               

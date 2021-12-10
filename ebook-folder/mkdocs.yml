@@ -20,6 +20,12 @@ site_name: JS311 - Node Servers + SQL Databases
 # use this to create the nav bar on the left-side of the window view
 # TODO replace all CAPITALIZED words with appropriate titles
 
+
+# module-2/sqlAndExpressjs.md
+#  ebook-folder/docs/module-3/envOverview.md                  |  0
+#  ebook-folder/docs/module-3/serverAuthenticationOverview.md |  4 ++--
+
+
 nav:
     - Home: 'index.md'
     - 'Module One: Express Servers':
@@ -56,14 +62,14 @@ nav:
         - SELECT Statements: module-2/writingSELECTstatements.md
         - Class 5 SELECT: module-2/class-5.md
       - 'Pre-Class 6 Lesson': 
-        - Advanced SELECT: module-2/advancedSELECTstatments.md
+        - Advanced SELECT: module-2/advancedSELECTstatements.md
         - Class 6 Advanced SELECT: module-2/class-6.md
       - 'Pre-Class 7 Lesson':
         - SQL CRUD : module-2/sqlCRUD.md
         - Class 7 SQL CRUD : module-2/class-7.md
       - 'Pre-Class 8 Lesson': 
-        - Adding SQL to Express: module-2/sqlAndExpressjs.md
-        # - DotEnv: module-3/envOverview.md
+        - Adding MySQL to Express: module-2/mysql-Express-dotenv.md
+        - Alternative DB Solutions: module-2/dbOnAWS.md
         - Class 8 MySQL + Express: module-2/class-8.md
     - 'Module Three: Authentication': 
       - 'Pre-Class 9 Lesson':
@@ -78,7 +84,7 @@ nav:
         - Class 11 Data Modeling: module-3/class-11.md
       - 'Pre-Class 12 Lesson':
         - Intro to Authentication: module-3/introToAuthentication.md
-        - Adding Authentication: module-3/serverAuthenticationOverview.md
+        - Authentication Continued: module-3/serverAuthenticationOverview.md
         - Hashing & Tokens: module-3/hashingAndTokens.md
         - Auth0: module-3/auth0-intro.md
         - Class 12 Express Authentication: module-3/class-12.md

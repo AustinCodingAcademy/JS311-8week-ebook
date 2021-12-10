@@ -10,17 +10,17 @@ Authentication is an important part of creating APIs. As I'm sure we can all gue
 
 ## Authentication vs Authorization
 
-Let's first clear up the definition of these two words. **Authentication** is the process of verify weather a person-user has access to a resource or not. For instance, you have signed up for API keys with at least two APIs. These keys authenticate your requests for the resources at those APIs; its being sent in the `params` of each of your requests. It's like buying a ticket to a concert and flashing it at the gate(*sign-in*), then you get a wristband(*authenticated*) and you're allowed to go in and enjoy the music!
+Let's first clear up the definition of these two words. **Authentication** is the process of verifying whether a person-user has access to a server; are they a user?. It's like buying a ticket to a concert and flashing it at the gate(*sign-in*), then you get a wristband(*authenticated*) and you're allowed to go in and enjoy the music!
 
   > ...but what's a *backstage pass*?
 
 When we build apps with data that needs to be allowed to certain person-users and restricted to others we need to implement **Authorization**. This is the process of assigning **roles** to each person-user.
 
-Maybe you're building a classroom management app for you and your students. All of the data for this app will be stored in the same database and served by the same server but you don't your students to have access to other students' grades and turned-in assignments but still have access to their own assignments and grades. However, for you, the teacher you want to be able to see all of the student's grades. To solve this problem you would assign each user of the app a role when they sign-up. Teachers would get a `teacher` role, students would get a `student` role and maybe parents would get a `parent` role.
+Maybe you're building a classroom management app for you and your students. All of the data for this app will be stored in the same database and served by the same server but you don't want your students to have access to other students' grades and turned-in assignments but still have access to their own assignments and grades. However, for you, the teacher you want to be able to see all of the student's grades. To solve this problem you would assign each user of the app a role when they sign-up so each has specific levels of **authorization**. Teachers would get a `teacher` role, students would get a `student` role and maybe parents would get a `parent` role.
 
-In your Express server you add an if statement to each route that asked if they were a `teacher` to access the resources behind the `getAllGrades()` so that `student` and `parent` users would be blocked from this particular resource.
+In your Express server you'd add an `if` statement to each route that asks if they are a `teacher` to access the resources behind the `getAllGrades()` so that `student` and `parent` users would be blocked from this particular resource.
 
-  > ...authorization is a backstage pass. Beyond being admitted to the concert(authentication) you're also allowed to go backstage and maybe meet the artists!
+  > ...**authorization** is a backstage pass. Beyond being admitted to the concert(**authentication**) you're also allowed to go backstage and maybe meet the artists!
 
 ## Authentication Workflow
 
@@ -221,4 +221,3 @@ Okay, that's the higher overview of all this authentication stuff. Let's now loo
 - [ ] [MDN Docs - Set Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
 - [ ] [Express Docs - Middleware](https://expressjs.com/en/guide/using-middleware.html)
 - [ ] [NPM Docs - React-Cookie](https://www.npmjs.com/package/react-cookie)
-

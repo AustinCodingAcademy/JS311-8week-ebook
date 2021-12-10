@@ -81,9 +81,13 @@ In general, software making a request is a **client**. Software that listens for
 
 ### The Protocol: HTTP/HTTPS
 
-**H**yper **T**ext **T**ransfer is the **P**rotocol is that clients and servers use to communicate on the web. HTTPS is a more secure version of HTTP in which the information being exchanged is encrypted. The first part of a URI (e.g., HTTP:) indicates which protocol is being used so the client and server know how to talk to each other, *it sets the rules for the conversation*. Technically, a REST API can use any protocol to communicate, but in practice they usually use HTTP or HTTPS (The **S** stands for *Secure*).
+**H**yper **T**ext **T**ransfer is the **P**rotocol that clients and servers use to communicate on the web. HTTPS is a more secure version of HTTP in which the information being exchanged is encrypted. The first part of a URI (e.g., HTTP:) indicates which protocol is being used so the client and server know how to talk to each other, *it sets the rules for the conversation*. Technically, a REST API can use any protocol to communicate, but in practice they usually use HTTP or HTTPS (The **S** stands for *Secure*).
 
-HTTP has two types of messages: **requests** and **responses**. A request object is sent and the appropriate thing to send back is a response object. We won't necessarily be creating request and response messages from scratch, we have frameworks and other tools to help with that, but we will be working with some of their parts and it is good to have a mental picture of what these message objects look like.
+HTTP has two types of messages: **requests** and **responses**. A request message is sent and the appropriate thing to send back is a response message.
+
+  > *Unsurprisingly, these "messages" are stored as objects because that's how computers store memory and relate to things, with objects, duh! From here on on you'll be seeing the terms **request object** & **response object** which refer to the messages being sent back and forth over HTTP.*
+  
+We won't necessarily be creating request and response objects from scratch, we have frameworks and other tools to help with that, but we will be working with some of their parts and it is good to have a mental picture of what these message objects look like.
 
 A **request** message/object is made up of the following main parts:
 
@@ -100,22 +104,35 @@ A **response** message/object has these parts:
 | --- | --- |
 | Status Code / Message	| A numeric code and short message that indicate whether the request was successful.|
 | Headers	| A collection of colon-separated key-value pairs that can be used to provide additional context about the response, e.g., Content-Type: application/json indicates that the content of the body is in JSON format.|
-| Body	| A payload that can be sent with the response.|
+| Body | A payload that can be sent with the response.|
 
 You can find more detailed [information about HTTP here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests).
 
+#### Request Methods
+
+Just quickly for now (we'll go into more detail later): when sending a request object we are doing it for a specific purpose either to get some data (the resource or resources), to add some data, to change some data, or to delete some data. In order to tell the server what we intend to do we have to define the **request method** on the request object with one of the following: GET, PUT, DELETE, and POST.
+
+| Method | Intended Action |
+| - | - |
+| GET | get a resource or multiple resources (data) |
+| PUT | change a resource (data) |
+| DELETE | delete a resource |
+| POST | add a resource |
+
+  > When you start using Postman you can reference this table to learn your request methods.
+
 ### Tools to Interact with REST APIs
 
-Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, known as a **GET** request, which is used (unsurprisingly) to *get* a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called [Postman](https://www.postman.com/) that we can use to more fully interact with REST APIs.
+Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, a **GET** request, which is used (*surprise*) to *get* a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called [Postman](https://www.postman.com/) that we can use to more easily interact with REST APIs and fully use all of the request methods: GET, PUT, DELETE, and POST.
 
-### Postman
+#### Postman
 
-In the following video, we'll look [at another API](https://reqres.in/), provided by [Ben Howdle](https://github.com/benhowdle89), and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the interface provided by the website and then we'll use Postman to interact with the API.
+In the following video, we'll look at mock API called Req/Res, provided by [Ben Howdle](https://github.com/benhowdle89), and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the [interface provided by the website](https://reqres.in/) and then we'll use Postman to interact with the API.
 
 <!-- !Video Content: 321: Using Postman -->
 <iframe src="https://player.vimeo.com/video/344941801?byline=0&portrait=0" width="655" height="368" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-### Curl
+#### Curl
 
 We've learned the basics of what an API is today and touched on how to make a call but another way to make an API request is using something called `curl`. `curl` is a way to make calls using your terminal and getting information back sometimes faster and more efficiently. Its good to understand alternative ways to make requests and `curl` can be another strong choice to make requests. Simply follow these steps and you can practice using `curl`. To install `curl` you can follow instructions on their website (see [Additional Resources](#Additional-Resources) below).
 
@@ -126,7 +143,9 @@ We've learned the basics of what an API is today and touched on how to make a ca
 - [ ] Check Version using command `curl --version`
 - [ ] Now run command `curl https://jsonplaceholder.typicode.com/posts`
 
-This URL is a dummy website to make practice API calls with. If you paste the URL in the browser you can see the data written in JSON. Once you run this command in the terminal you have successfully created an API request using `curl`. Feel free to visit this website and run a few more tests trying a different routes or a different type of request. We can also test this type of call by running our API route with some dummy data we can input in our files. Happy coding!
+  > NOTE: This URL is a dummy website to make practice API calls with. If you paste the URL in the browser you can see the data written in JSON. Once you run this command in the terminal you have successfully created an API request using `curl`.
+  
+Feel free to visit this website and run a few more tests trying a different routes or a different type of request. We can also test this type of call by running our API route with some dummy data we can input in our files. Happy coding!
 
 ## Additional Resources
 

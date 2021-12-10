@@ -360,6 +360,19 @@
     The Protocol: HTTP/HTTPS
   </a>
   
+    <nav class="md-nav" aria-label="The Protocol: HTTP/HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-methods" class="md-nav__link">
+    Request Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -367,7 +380,8 @@
     Tools to Interact with REST APIs
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Tools to Interact with REST APIs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#postman" class="md-nav__link">
@@ -380,6 +394,11 @@
   <a href="#curl" class="md-nav__link">
     Curl
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -784,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/advancedSELECTstatments/" class="md-nav__link">
+      <a href="../../module-2/advancedSELECTstatements/" class="md-nav__link">
         Advanced SELECT
       </a>
     </li>
@@ -886,8 +905,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/sqlAndExpressjs/" class="md-nav__link">
-        Adding SQL to Express
+      <a href="../../module-2/mysql-Express-dotenv/" class="md-nav__link">
+        Adding MySQL to Express
       </a>
     </li>
   
@@ -1133,7 +1152,7 @@
   
     <li class="md-nav__item">
       <a href="../../module-3/serverAuthenticationOverview/" class="md-nav__link">
-        Adding Authentication
+        Authentication Continued
       </a>
     </li>
   
@@ -1890,6 +1909,19 @@
     The Protocol: HTTP/HTTPS
   </a>
   
+    <nav class="md-nav" aria-label="The Protocol: HTTP/HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-methods" class="md-nav__link">
+    Request Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1897,7 +1929,8 @@
     Tools to Interact with REST APIs
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Tools to Interact with REST APIs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#postman" class="md-nav__link">
@@ -1910,6 +1943,11 @@
   <a href="#curl" class="md-nav__link">
     Curl
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2036,8 +2074,12 @@
 <p>For example, when we click the <a href="https://swapi.dev/api/people/1?format=json">https://swapi.dev/api/people/1</a> link, our web browser is the <strong>client</strong>. And the computer at swapi.dev, that sends back the data about Luke Skywalker, is the <strong>server</strong>.</p>
 <p>In general, software making a request is a <strong>client</strong>. Software that listens for <strong>requests</strong> and sends back a <strong>response</strong> is a <strong>server</strong>. <strong>Request</strong> and <strong>response</strong> are important concepts that we'll be working with as we build APIs.</p>
 <h3 id="the-protocol-httphttps">The Protocol: HTTP/HTTPS</h3>
-<p><strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer is the <strong>P</strong>rotocol is that clients and servers use to communicate on the web. HTTPS is a more secure version of HTTP in which the information being exchanged is encrypted. The first part of a URI (e.g., HTTP:) indicates which protocol is being used so the client and server know how to talk to each other, <em>it sets the rules for the conversation</em>. Technically, a REST API can use any protocol to communicate, but in practice they usually use HTTP or HTTPS (The <strong>S</strong> stands for <em>Secure</em>).</p>
-<p>HTTP has two types of messages: <strong>requests</strong> and <strong>responses</strong>. A request object is sent and the appropriate thing to send back is a response object. We won't necessarily be creating request and response messages from scratch, we have frameworks and other tools to help with that, but we will be working with some of their parts and it is good to have a mental picture of what these message objects look like.</p>
+<p><strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer is the <strong>P</strong>rotocol that clients and servers use to communicate on the web. HTTPS is a more secure version of HTTP in which the information being exchanged is encrypted. The first part of a URI (e.g., HTTP:) indicates which protocol is being used so the client and server know how to talk to each other, <em>it sets the rules for the conversation</em>. Technically, a REST API can use any protocol to communicate, but in practice they usually use HTTP or HTTPS (The <strong>S</strong> stands for <em>Secure</em>).</p>
+<p>HTTP has two types of messages: <strong>requests</strong> and <strong>responses</strong>. A request message is sent and the appropriate thing to send back is a response message.</p>
+<blockquote>
+<p><em>Unsurprisingly, these "messages" are stored as objects because that's how computers store memory and relate to things, with objects, duh! From here on on you'll be seeing the terms </em><em>request object</em><em> &amp; </em><em>response object</em><em> which refer to the messages being sent back and forth over HTTP.</em></p>
+</blockquote>
+<p>We won't necessarily be creating request and response objects from scratch, we have frameworks and other tools to help with that, but we will be working with some of their parts and it is good to have a mental picture of what these message objects look like.</p>
 <p>A <strong>request</strong> message/object is made up of the following main parts:</p>
 <table>
 <thead>
@@ -2089,14 +2131,45 @@
 </tbody>
 </table>
 <p>You can find more detailed <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests">information about HTTP here</a>.</p>
+<h4 id="request-methods">Request Methods</h4>
+<p>Just quickly for now (we'll go into more detail later): when sending a request object we are doing it for a specific purpose either to get some data (the resource or resources), to add some data, to change some data, or to delete some data. In order to tell the server what we intend to do we have to define the <strong>request method</strong> on the request object with one of the following: GET, PUT, DELETE, and POST.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Intended Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>get a resource or multiple resources (data)</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>change a resource (data)</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>delete a resource</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>add a resource</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>When you start using Postman you can reference this table to learn your request methods.</p>
+</blockquote>
 <h3 id="tools-to-interact-with-rest-apis">Tools to Interact with REST APIs</h3>
-<p>Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, known as a <strong>GET</strong> request, which is used (unsurprisingly) to <em>get</em> a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called <a href="https://www.postman.com/">Postman</a> that we can use to more fully interact with REST APIs.</p>
-<h3 id="postman">Postman</h3>
-<p>In the following video, we'll look <a href="https://reqres.in/">at another API</a>, provided by <a href="https://github.com/benhowdle89">Ben Howdle</a>, and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the interface provided by the website and then we'll use Postman to interact with the API.</p>
+<p>Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, a <strong>GET</strong> request, which is used (<em>surprise</em>) to <em>get</em> a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called <a href="https://www.postman.com/">Postman</a> that we can use to more easily interact with REST APIs and fully use all of the request methods: GET, PUT, DELETE, and POST.</p>
+<h4 id="postman">Postman</h4>
+<p>In the following video, we'll look at mock API called Req/Res, provided by <a href="https://github.com/benhowdle89">Ben Howdle</a>, and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the <a href="https://reqres.in/">interface provided by the website</a> and then we'll use Postman to interact with the API.</p>
 <!-- !Video Content: 321: Using Postman -->
 <iframe src="https://player.vimeo.com/video/344941801?byline=0&portrait=0" width="655" height="368" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<h3 id="curl">Curl</h3>
+<h4 id="curl">Curl</h4>
 <p>We've learned the basics of what an API is today and touched on how to make a call but another way to make an API request is using something called <code>curl</code>. <code>curl</code> is a way to make calls using your terminal and getting information back sometimes faster and more efficiently. Its good to understand alternative ways to make requests and <code>curl</code> can be another strong choice to make requests. Simply follow these steps and you can practice using <code>curl</code>. To install <code>curl</code> you can follow instructions on their website (see <a href="#Additional-Resources">Additional Resources</a> below).</p>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> Check to see if <code>curl</code> is already installed <code>curl --version</code><blockquote>
@@ -2110,7 +2183,10 @@
 <li class="task-list-item"><input type="checkbox"/> Check Version using command <code>curl --version</code></li>
 <li class="task-list-item"><input type="checkbox"/> Now run command <code>curl https://jsonplaceholder.typicode.com/posts</code></li>
 </ul>
-<p>This URL is a dummy website to make practice API calls with. If you paste the URL in the browser you can see the data written in JSON. Once you run this command in the terminal you have successfully created an API request using <code>curl</code>. Feel free to visit this website and run a few more tests trying a different routes or a different type of request. We can also test this type of call by running our API route with some dummy data we can input in our files. Happy coding!</p>
+<blockquote>
+<p>NOTE: This URL is a dummy website to make practice API calls with. If you paste the URL in the browser you can see the data written in JSON. Once you run this command in the terminal you have successfully created an API request using <code>curl</code>.</p>
+</blockquote>
+<p>Feel free to visit this website and run a few more tests trying a different routes or a different type of request. We can also test this type of call by running our API route with some dummy data we can input in our files. Happy coding!</p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> <a href="https://restfulapi.net/">Tutorial - Guiding Principles of REST</a></li>
