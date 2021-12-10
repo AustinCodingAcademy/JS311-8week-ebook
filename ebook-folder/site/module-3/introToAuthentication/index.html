@@ -280,8 +280,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-1/REST-HTTP-APIs/" class="md-nav__link">
+      <a href="../../module-1/introToAPIs/" class="md-nav__link">
         Intro to APIs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/whatIsREST/" class="md-nav__link">
+        What's REST
       </a>
     </li>
   
@@ -661,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/advancedSELECTstatments/" class="md-nav__link">
+      <a href="../../module-2/advancedSELECTstatements/" class="md-nav__link">
         Advanced SELECT
       </a>
     </li>
@@ -763,8 +775,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module-2/sqlAndExpressjs/" class="md-nav__link">
-        Adding SQL to Express
+      <a href="../../module-2/mysql-Express-dotenv/" class="md-nav__link">
+        Adding MySQL to Express
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/dbOnAWS/" class="md-nav__link">
+        Alternative DB Solutions
       </a>
     </li>
   
@@ -1077,6 +1101,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serverAuthenticationOverview/" class="md-nav__link">
+        Authentication Continued
+      </a>
     </li>
   
 
@@ -1856,18 +1892,18 @@
                 <h1 id="intro-to-authentication">Intro to Authentication</h1>
 <p><em>Nothing will ever be attempted if all possible objections must first be overcome. —Samuel Johnson</em></p>
 <h2 id="overview">Overview</h2>
-<p>We've practiced building APIs and analyzing the data behind them. Now it's time to add a level of security to those APIs so that we can restrict access to authorized users.</p>
+<p>We've practiced building APIs and connecting the to databases but now it's time to add a level of security to those APIs so that we can restrict access to our data.</p>
 <p>Authentication is an important part of creating APIs. As I'm sure we can all guess, authentication is used to lock down specific endpoints so that they cannot be freely accessed. To learn how to implement authentication on our server(API) we'll need to understand the process or <strong>workflow</strong> as well as a few new terms. Let's get started.</p>
 <h2 id="authentication-vs-authorization">Authentication vs Authorization</h2>
-<p>Let's first clear up the definition of these two words. <strong>Authentication</strong> is the process of verify weather a person-user has access to a resource or not. For instance, you have signed up for API keys with at least two APIs. These keys authenticate your requests for the resources at those APIs; its being sent in the <code>params</code> of each of your requests. It's like buying a ticket to a concert and flashing it at the gate(<em>sign-in</em>), then you get a wristband(<em>authenticated</em>) and you're allowed to go in and enjoy the music!</p>
+<p>Let's first clear up the definition of these two words. <strong>Authentication</strong> is the process of verifying whether a person-user has access to a server; are they a user?. It's like buying a ticket to a concert and flashing it at the gate(<em>sign-in</em>), then you get a wristband(<em>authenticated</em>) and you're allowed to go in and enjoy the music!</p>
 <blockquote>
 <p>...but what's a <em>backstage pass</em>?</p>
 </blockquote>
 <p>When we build apps with data that needs to be allowed to certain person-users and restricted to others we need to implement <strong>Authorization</strong>. This is the process of assigning <strong>roles</strong> to each person-user.</p>
-<p>Maybe you're building a classroom management app for you and your students. All of the data for this app will be stored in the same database and served by the same server but you don't your students to have access to other students' grades and turned-in assignments but still have access to their own assignments and grades. However, for you, the teacher you want to be able to see all of the student's grades. To solve this problem you would assign each user of the app a role when they sign-up. Teachers would get a <code>teacher</code> role, students would get a <code>student</code> role and maybe parents would get a <code>parent</code> role.</p>
-<p>In your Express server you add an if statement to each route that asked if they were a <code>teacher</code> to access the resources behind the <code>getAllGrades()</code> so that <code>student</code> and <code>parent</code> users would be blocked from this particular resource.</p>
+<p>Maybe you're building a classroom management app for you and your students. All of the data for this app will be stored in the same database and served by the same server but you don't want your students to have access to other students' grades and turned-in assignments but still have access to their own assignments and grades. However, for you, the teacher you want to be able to see all of the student's grades. To solve this problem you would assign each user of the app a role when they sign-up so each has specific levels of <strong>authorization</strong>. Teachers would get a <code>teacher</code> role, students would get a <code>student</code> role and maybe parents would get a <code>parent</code> role.</p>
+<p>In your Express server you'd add an <code>if</code> statement to each route that asks if they are a <code>teacher</code> to access the resources behind the <code>getAllGrades()</code> so that <code>student</code> and <code>parent</code> users would be blocked from this particular resource.</p>
 <blockquote>
-<p>...authorization is a backstage pass. Beyond being admitted to the concert(authentication) you're also allowed to go backstage and maybe meet the artists!</p>
+<p>...<strong>authorization</strong> is a backstage pass. Beyond being admitted to the concert(<strong>authentication</strong>) you're also allowed to go backstage and maybe meet the artists!</p>
 </blockquote>
 <h2 id="authentication-workflow">Authentication Workflow</h2>
 <p>Now let's talk through the process from a high perspective. You'll be seeing code snippets as we go but just know there may be some modifications to this code in live code bases. But please read the pseudo-code so you picture, for yourself, this process.</p>
@@ -2203,13 +2239,13 @@
         </a>
       
       
-        <a href="../hashingAndTokens/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../serverAuthenticationOverview/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hashing & Tokens
+              Authentication Continued
             </div>
           </div>
           <div class="md-footer__button md-icon">
