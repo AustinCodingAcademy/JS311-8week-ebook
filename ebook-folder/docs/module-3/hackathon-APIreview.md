@@ -27,9 +27,9 @@ We should set up and integrate MySQL so that we can query and mutate data from a
 * [ ] [Database Intro](./../module-2/databaseIntro.md)
 * [ ] [MySQL Workbench](./../module-2/mySql-WorkbenchSetup.md)
 * [ ] [DB Setup on GCP](./../module-2/setupDatabaseOnGCP.md)
-* [ ] [Advanced SELECT](./../module-2/advancedSELECTstatments.md)
+* [ ] [Advanced SELECT](./../module-2/advancedSELECTstatements.md)
 * [ ] [SQL CRUD](./../module-2/sqlCRUD.md)
-* [ ] [Express + MySQL](./../module-2/sqlAndExpressjs.md)
+* [ ] [Express + MySQL](./../module-2/mysql-Express-dotenv.md)
 
 ## Additional Resources
 
