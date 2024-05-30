@@ -6,7 +6,7 @@
 
 We've spent the last few days learning how to use Express.js to build a server. But as you've probably picked up by now, holding our data in a static folder isn't ideal for large and dynamic apps. We need data to persist and allow multiple users to interact with the same set of data. To do this we need a third element added to our full-stack app: a database
 
-Today we're going to learn what, how, and where to setup [databases](https://en.wikipedia.org/wiki/Database).
+Today we're going to learn what, how, and where to setup [databases](https://en.wikipedia.org/wiki/Database){:target="_blank"}.
 
 <!-- ! Video Contents:  (width="655" height="368", ratio 1.77) -->
 ## What is A Database
@@ -15,11 +15,11 @@ A database is an organized set of data stored and accessed electronically. It he
 
 We can integrate with our database in multiple ways. One of those ways is through our server built with Express. This is how our users will interact with our dataset. We can also use our terminals/command lines and various other visual tools to query this data from outside our application/server. This becomes very useful in debugging, for example.
 
-There are many types of databases available to us but in this course we will focus on one of the most popular, [MySQL](https://www.mysql.com/).
+There are many types of databases available to us but in this course we will focus on one of the most popular, [MySQL](https://www.mysql.com/){:target="_blank"}.
 
 ### MySQL
 
-MySQL has many [interesting capabilities](https://www.pluralsight.com/blog/software-development/relational-non-relational-databases) including the ability to combine [NoSQL](https://en.wikipedia.org/wiki/NoSQL) and [SQL](https://en.wikipedia.org/wiki/SQL) (sometimes known as non-relational and relational, respectively) in a single database. We will be focusing on the SQL side of things. This means that all of our data will be structured in "tables" and those tables will have "relationships", hence relational. We will come to understand this more in the coming weeks. For now let's talk about the two types of operations we can perform on our databases, **read** and **write**.
+MySQL has many [interesting capabilities](https://www.pluralsight.com/blog/software-development/relational-non-relational-databases){:target="_blank"} including the ability to combine [NoSQL](https://en.wikipedia.org/wiki/NoSQL){:target="_blank"} and [SQL](https://en.wikipedia.org/wiki/SQL){:target="_blank"} (sometimes known as non-relational and relational, respectively) in a single database. We will be focusing on the SQL side of things. This means that all of our data will be structured in "tables" and those tables will have "relationships", hence relational. We will come to understand this more in the coming weeks. For now let's talk about the two types of operations we can perform on our databases, **read** and **write**.
 
 #### Read vs Write
 
@@ -90,12 +90,12 @@ This query selects the sum of all the logins by users whose first name starts wi
 1. Now we are going to use the `WHERE` keyword which helps us narrow our search to specific result sets.
 1. We specify that we want to return only rows/**entities** where the first name starts with the letter `d`. That's what the `LIKE` keyword paired with `d%` does. The percentage sign, `%`, is a **wildcard**. The wildcard allows for anything to come after the `d` like *David, Dana, Devin, Deidre*, all of these would match and be returned.
 
-Now we have two working examples of `SELECT` statements. Check out the full capabilities of `SELECT` statements [here](https://dev.mysql.com/doc/refman/5.6/en/select.html).
+Now we have two working examples of `SELECT` statements. Check out the full capabilities of `SELECT` statements [here](https://dev.mysql.com/doc/refman/5.6/en/select.html){:target="_blank"}.
 
 ## Additional Resources
 
-- [ ] [YT, 365Science - 10 Min Intro to MySQL](https://www.youtube.com/watch?v=2bW3HuaAUcY)
+- [ ] [YT, 365Science - 10 Min Intro to MySQL](https://www.youtube.com/watch?v=2bW3HuaAUcY){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [MySQL Docs - SELECT](https://dev.mysql.com/doc/refman/5.6/en/select.html)
+- [ ] [MySQL Docs - SELECT](https://dev.mysql.com/doc/refman/5.6/en/select.html){:target="_blank"}

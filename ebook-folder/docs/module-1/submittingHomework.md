@@ -9,7 +9,7 @@ For sanity and organization sake, you'll need a designated folder to keep all yo
 - [ ] Change into the new folder/directory you made in the last class: `cd devFolder`
 
 > NOTE FOR WINDOWS MACHINES USING ONEDRIVE:
-> If you use OneDrive to save your photos, music, and other files, you may run into problems using Git and GitHub to create and manage your repos. If you have any issues, please refer to [How to Configure OneDrive to Sync Only Certain Folders in Windows 10](https://www.howtogeek.com/222817/how-to-configure-onedrive-to-sync-only-certain-folders-in-windows-10/) to unsync your `devFolder`.
+> If you use OneDrive to save your photos, music, and other files, you may run into problems using Git and GitHub to create and manage your repos. If you have any issues, please refer to [How to Configure OneDrive to Sync Only Certain Folders in Windows 10](https://www.howtogeek.com/222817/how-to-configure-onedrive-to-sync-only-certain-folders-in-windows-10/){:target="_blank"} to unsync your `devFolder`.
 
 *You will only need to create one folder for all of your coding projects to go into for the entirety of the program. When you graduate and get a job you will want to create a new folder to organize that work in.*
 

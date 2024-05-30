@@ -25,7 +25,7 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    - [ ]  [311_wk2_day1_express repo](https://github.com/AustinCodingAcademy/311_wk2_day1_express.git)
+    - [ ]  [311_wk2_day1_express repo](https://github.com/AustinCodingAcademy/311_wk2_day1_express.git){:target="_blank"}
     - [ ]  Complete the Express server
     - [ ]  Test with Postman
 - [ ] Push Yourself Further
@@ -54,7 +54,7 @@ Today we are going to set up a basic Express server and add a few routes. We wil
 ![first-express-server-code-screenshot](./../images/first-express-server-code-screenshot.png)
 ![first-express-server-postman-screenshot](./../images/first-express-server-postman-screenshot.png)
 
-- [ ] Fork and clone the following repository: [Express Intro Practice](https://github.com/AustinCodingAcademy/311_wk2_day1_express)
+- [ ] Fork and clone the following repository: [Express Intro Practice](https://github.com/AustinCodingAcademy/311_wk2_day1_express){:target="_blank"}
 `cd` into the new directory and `npm i`
 - [ ] Follow the `README` to:
     - [ ]  get started
@@ -62,26 +62,23 @@ Today we are going to set up a basic Express server and add a few routes. We wil
     - [ ]  test them with Postman
 - [ ] Remember to use the homework for this class to build your first routes.
 
-- [ ] [YT, Traversy Media - JS Crash Course](https://youtu.be/L72fhGm1tfE)
+- [ ] [YT, Traversy Media - JS Crash Course](https://youtu.be/L72fhGm1tfE){:target="_blank"}
 
     > This video is an hour and fourteen minutes long but it covers all the topics we learned today. It uses Express and Postman. You might try listening at 1.5x speed but you should definitely follow along.
 
 ### Push Yourself Further
 
-Follow along with this [tutorial on installing and setting up express](https://www.robinwieruch.de/node-js-express-tutorial/). This article includes concepts like "middleware" which we practiced with body-parser but haven't talked about in depth yet.
+Follow along with this [tutorial on installing and setting up express](https://www.robinwieruch.de/node-js-express-tutorial/){:target="_blank"}. This article includes concepts like "middleware" which we practiced with body-parser but haven't talked about in depth yet.
 
 ## Student Feedback
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd85nNCk_MdnaXCsX7fWl3vYgcqvozzlK2cKq26d2g67Zh8Kg/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## Exit Recap, Attendance, and Reminders, 5 mins
 
 <!-- - [ ] Create Class ** Blog To Show You Know Assignment -->
 - [ ] Prepare for next class by completing all of your pre-class lessons
 - [ ] Complete the feedback survey
-
-<!-- <iframe id="openedx-zollege" src="https://openedx.zollege.com/feedback" style="width: 100%; height: 500px; border: 0">Browser not compatible.</iframe>
-<script src="https://openedx.zollege.com/assets/index.js" type="application/javascript"></script> -->
 
 <!-- TODO Create 3 question exit questions -->
 

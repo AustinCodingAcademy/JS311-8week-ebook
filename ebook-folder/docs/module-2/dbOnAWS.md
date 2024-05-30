@@ -4,9 +4,9 @@ There are many solutions to hosting a database instance including Google Cloud, 
 
 ## AWS RDS Free-Tier
 
-This tutorial was written by [Matt Huntsberry](https://www.linkedin.com/in/mmhuntsberry). Follow along and get your account and database setup. Then, after you've read and followed along check out the videos below by [Cesar Cisneros](https://www.linkedin.com/in/cisneros-cesar) to get an understanding of how to connect your Express app to the database.
+This tutorial was written by [Matt Huntsberry](https://www.linkedin.com/in/mmhuntsberry){:target="_blank"}. Follow along and get your account and database setup. Then, after you've read and followed along check out the videos below by [Cesar Cisneros](https://www.linkedin.com/in/cisneros-cesar){:target="_blank"} to get an understanding of how to connect your Express app to the database.
 
-- [Tutorial, Connect MySQL workbench to AWS RDS free tier - Matt Huntsberry](https://www.mmhuntsberry.com/blog/2021/2021-02-17-connect-mysql-workbench-to-aws-rds-free-tier/)
+- [Tutorial, Connect MySQL workbench to AWS RDS free tier - Matt Huntsberry](https://www.mmhuntsberry.com/blog/2021/2021-02-17-connect-mysql-workbench-to-aws-rds-free-tier/){:target="_blank"}
 
 *********
 

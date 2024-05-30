@@ -4,7 +4,7 @@
 
 **Static files** are plain files. While there are a few definitions of the term **"static"** in programming, we won't get into that here. We simply need to know that it's a collection of files/folders. The files could be JavaScript, HTML, CSS, etc. What's the point?
 
-Well . . . you might want to show a specific HTML page when the user navigates to the main route `"/"`. In a more complex example, we may create a front-end with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) and when we are ready for production we can compile the app into a collection of files and have the server display those to the user.
+Well . . . you might want to show a specific HTML page when the user navigates to the main route `"/"`. In a more complex example, we may create a front-end with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html){:target="_blank"} and when we are ready for production we can compile the app into a collection of files and have the server display those to the user.
 
 ## How to Serve Static Files
 
@@ -95,8 +95,8 @@ Use the sandbox above to get familiar with routes and controllers
 
 ## Additional Resources
 
-- [ ] [YT, Codedamn - ExpressJS 15: Serving Static Files](https://youtu.be/7UErZ43jzrU)
+- [ ] [YT, Codedamn - ExpressJS 15: Serving Static Files](https://youtu.be/7UErZ43jzrU){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [Express Docs - Static](https://expressjs.com/en/starter/static-files.html)
+- [ ] [Express Docs - Static](https://expressjs.com/en/starter/static-files.html){:target="_blank"}

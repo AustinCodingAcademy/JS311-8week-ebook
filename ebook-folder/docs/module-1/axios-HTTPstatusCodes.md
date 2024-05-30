@@ -4,7 +4,7 @@
 
 ## Overview
 
-In the last lesson we refreshed our knowledge of Node and NPM. Now we are going to add another npm package to our repertoire: [axios](https://www.npmjs.com/package/axios). We are also going to get familiar with the common HTTP protocols and status codes.
+In the last lesson we refreshed our knowledge of Node and NPM. Now we are going to add another npm package to our repertoire: [axios](https://www.npmjs.com/package/axios){:target="_blank"}. We are also going to get familiar with the common HTTP protocols and status codes.
 
 ## Axios
 
@@ -20,7 +20,7 @@ Axios can be installed via NPM (`npm i axios`) and called just like fetch: `axio
 
 No matter which HTTP client you use, you will always have to deal with the same web standards/protocols for APIs:
 
-*Before you continue, [read about HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#HTTP_Requests). We need to understand the methods, headers and body.*
+*Before you continue, [read about HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#HTTP_Requests){:target="_blank"}. We need to understand the methods, headers and body.*
 
 ## HTTP Requests
 
@@ -56,13 +56,13 @@ A PUT request is an update. This method tells the application/server that someth
 ```javascript
   axios.put('/user?ID=12345', {
       firstName: 'Fred',
-      lastName: 'Flintstone'
+      lastName: 'Touchstone'
     })
 ```
 
 ### DELETE
 
-A DELETE request may or may not have a body but its purpose is to remove something from an application, hence the keyword "delete".1
+A DELETE request may or may not have a body but its purpose is to remove something from an application, hence the keyword "delete".
 
 ```javascript
   axios.delete('/user?ID=12345')
@@ -74,7 +74,7 @@ A DELETE request may or may not have a body but its purpose is to remove somethi
 
 When you build an app for graduation and to get a job with these 4 methods you will have built a CRUD app: Create, Read, Update, Delete.
 
-* [YT, Telusko - HTTP Requests](https://youtu.be/guYMSP7JVTA)
+* [YT, Telusko - HTTP Requests](https://youtu.be/guYMSP7JVTA){:target="_blank"}
 
 ## HTTP Status Codes
 
@@ -103,9 +103,9 @@ Typically the higher the number, the worse of an issue it is
 
 ## Practice It
 
-Use AustinCodingAcademy.com as your request with Axios example:
+Use [AustinCodingAcademy.com](https://austincodingacademy.com){:target="_blank"} as your request with Axios example:
 
-<iframe width="900" height="600" src="https://austincodingacademy.com/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<iframe width="900" height="300" src="https://austincodingacademy.com/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
 ### Instructions
 
@@ -140,14 +140,14 @@ Use AustinCodingAcademy.com as your request with Axios example:
 
 ## Additional Resources
 
-- [ ] [YT, Duomly - Fetch vs Axios](https://www.youtube.com/watch?v=x3yiq4bDoV4)
-- [ ] [YT, Traversy Media - Axios Crash Course](https://www.youtube.com/watch?v=6LyagkoRWYA)
-- [ ] [Article, LogRocket - How to Make HTTP Requests with Axios.js](https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/)
+- [ ] [YT, Duomly - Fetch vs Axios](https://www.youtube.com/watch?v=x3yiq4bDoV4){:target="_blank"}
+- [ ] [YT, Traversy Media - Axios Crash Course](https://www.youtube.com/watch?v=6LyagkoRWYA){:target="_blank"}
+- [ ] [Article, LogRocket - How to Make HTTP Requests with Axios.js](https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/){:target="_blank"}
 - [ ] Look ahead to the [Questions for Student Led Discussion](./../additionalResources/questionsForDiscussion/qfd-class-2.md)
-- To be a successful developer you need to have the curiosity and passion to problem solve. Start practicing each night with the puzzles given to you in the [Interview Challenges](./../additionalResources/interviewChallenges.md) and start looking for others at places like [HackerRank](https://www.hackerrank.com/), [GeeksForGeeks](https://www.geeksforgeeks.org/), [CodeWars](https://www.codewars.com/), and [LeetCode](https://leetcode.com/).
+- To be a successful developer you need to have the curiosity and passion to problem solve. Start practicing each night with the puzzles given to you in the [Interview Challenges](./../additionalResources/interviewChallenges.md) and start looking for others at places like [HackerRank](https://www.hackerrank.com/){:target="_blank"}, [GeeksForGeeks](https://www.geeksforgeeks.org/){:target="_blank"}, [CodeWars](https://www.codewars.com/), and [LeetCode](https://leetcode.com/){:target="_blank"}.
 
 ## Know Your Docs
 
 Be sure to reference the Axios documentation on [NPM](https://www.npmjs.com/package/axios).
 
-- [ ] [GitHub Repo - Axios.js](https://github.com/axios/axios)
+- [ ] [GitHub Repo - Axios.js](https://github.com/axios/axios){:target="_blank"}

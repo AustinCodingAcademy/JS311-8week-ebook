@@ -53,16 +53,16 @@ Here are a few things to try:
 - [ ] Discover other types of information you can access, besides people.
 - [ ] Do you notice any common pattern for how you use the API?
 
-*You can [fork this CodePen](https://codepen.io/austincoding/pen/RzNaOw) or create your own repo to play with.*
+*You can [fork this CodePen](https://codepen.io/austincoding/pen/RzNaOw){:target="_blank"} or create your own repo to play with.*
 
 ## Additional Resources
 
-- [ ] [Req/Res API](https://reqres.in/)
-- [ ] [YT, Programming With Mosh - What is a REST API](https://www.youtube.com/watch?v=SLwpqD8n3d0)
-- [ ] [Tutorial - Guiding Principles of REST](https://restfulapi.net/)
+- [ ] [Req/Res API](https://reqres.in/){:target="_blank"}
+- [ ] [YT, Programming With Mosh - What is a REST API](https://www.youtube.com/watch?v=SLwpqD8n3d0){:target="_blank"}
+- [ ] [Tutorial - Guiding Principles of REST](https://restfulapi.net/){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [MDN Docs - Intro to Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [ ] [MDN Docs - Third-Party APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [ ] [MDN Docs - REST](https://developer.mozilla.org/en-US/docs/Glossary/REST)
+- [ ] [MDN Docs - Intro to Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction){:target="_blank"}
+- [ ] [MDN Docs - Third-Party APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs){:target="_blank"}
+- [ ] [MDN Docs - REST](https://developer.mozilla.org/en-US/docs/Glossary/REST){:target="_blank"}

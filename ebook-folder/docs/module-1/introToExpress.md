@@ -12,7 +12,7 @@ Express is a (very popular) NPM package that turns our Node.js applications into
 
 Why do we need a web server (or backend), anyway? There are several reasons. One key reason is for the protection of sensitive content. On our front-ends (HTML, CSS, JavaScript, React), everything we code into the app will be visible from the browser in one way or another. That means that if you store an API key or some other sensitive token in a variable, eventually someone will be able to inspect the website (through the console) and obtain that information. This inspection is not possible with a web server built with Express. Another reason we use a server is that it is how we integrate with a database. We will become more familiar with databases in the following chapters but it's good to know that in the software industry (as a best practice) we don't connect to a database directly from the frontend, a React app for example. Most database systems don't even allow this interaction. So a web server helps us account for this as well.
 
-Express is an amazing tool that helps us quickly accomplish these tasks. Fortunately for us, there is a wealth of information available on Express and we will see some of that soon. For now, feel free to check out the [Express Homepage](https://expressjs.com/).
+Express is an amazing tool that helps us quickly accomplish these tasks. Fortunately for us, there is a wealth of information available on Express and we will see some of that soon. For now, feel free to check out the [Express Homepage](https://expressjs.com/){:target="_blank"}.
 
 A breakdown of concepts:
 
@@ -47,7 +47,7 @@ app.listen(8080, () => {
 
 After that we are free to start creating **routes**. The `app` object has properties on it already that include: `.get`, `.put`, `.post` and `.delete` (among others). These properties correspond to the HTTP request methods you learned about in 101, 211, and now in 311.
 
-  > [Remember when we used `fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), the default request method was `get` so when we wanted to post form data we had to write the attribute `method="POST"`
+  > [Remember when we used `fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch){:target="_blank"}, the default request method was `get` so when we wanted to post form data we had to write the attribute `method="POST"`
   > NOTE: in this use of the word *method* we mean something different than when we say an object's *method*. The method of `fetch` refers to the type of HTTP Request that will be sent.
   > In our Express app we'll define *methods* on the `app` object that will act as routes to handle these types of/*method*ical requests. Whew...moving on...
 
@@ -149,7 +149,7 @@ This second parameter is a callback function; meaning that this is what is suppo
 
 `req` represents the request object. This is the message that is sent from the frontend to our backend server. This object includes two main properties: `headers` and `body`. If you used Postman to submit a request with a body of `{ user: 'John' }` then we could access that by referring to `req.body`. There are other properties of the incoming request that we can access as well, such as `req.params`, `req.headers` and `req.cookies`.
 
-  > NOTE: you must use a [Cookie parser](https://www.npmjs.com/package/cookie-parser) to do that last one.
+  > NOTE: you must use a [Cookie parser](https://www.npmjs.com/package/cookie-parser){:target="_blank"} to do that last one.
 
 `res` represents the response object. This is what we will send back to the end user (client) on the frontend from the backend. We can send responses in a variety of formats but the two most popular are plain text and JSON.
 
@@ -200,18 +200,18 @@ Before playing in the sandbox below, be sure to [read this blog](https://blog.co
 <iframe width="920" height="640" src="https://www.codeanalogies.com/express-playground" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 - [ ] In the Express Playground above, hover over different sections of the code to get more info.
-- [ ] [Read the article](https://blog.codeanalogies.com/2017/11/03/understanding-the-basics-of-express-js/) to get a better understand of how this playground operates and what Express is meant to do.
+- [ ] [Read the article](https://blog.codeanalogies.com/2017/11/03/understanding-the-basics-of-express-js/){:target="_blank"} to get a better understand of how this playground operates and what Express is meant to do.
 
 ## Additional Resources
 
-- [ ] [YT, SelfTuts - Pt. 1 What is Express in Node.js](https://youtu.be/pyKOM1whPfM)
-- [ ] [Article, Code Analogies - The Basics of Express.js](https://blog.codeanalogies.com/2017/11/03/understanding-the-basics-of-express-js/)
-- [ ] Look ahead to the [Questions for Student Led Discussion](./../additionalResources/questionsForDiscussion/qfd-class-3.md)
+- [ ] [YT, SelfTuts - Pt. 1 What is Express in Node.js](https://youtu.be/pyKOM1whPfM){:target="_blank"}
+- [ ] [Article, Code Analogies - The Basics of Express.js](https://blog.codeanalogies.com/2017/11/03/understanding-the-basics-of-express-js/){:target="_blank"}
+- [ ] Look ahead to the [Questions for Student Led Discussion](./../additionalResources/questionsForDiscussion/qfd-class-3.md){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [Geeks4Geeks Docs - Express & Cookie-Parser](https://www.geeksforgeeks.org/express-js-req-cookies-property/)
-- [ ] [Express Docs - Basics Routing](https://expressjs.com/en/starter/basic-routing.html)
+- [ ] [Geeks4Geeks Docs - Express & Cookie-Parser](https://www.geeksforgeeks.org/express-js-req-cookies-property/){:target="_blank"}
+- [ ] [Express Docs - Basics Routing](https://expressjs.com/en/starter/basic-routing.html){:target="_blank"}
 
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->

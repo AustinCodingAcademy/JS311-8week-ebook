@@ -36,7 +36,7 @@ The `INSERT` command inserts an item (or a group of items) into the specified ta
 
 Question: There's an "id" field on this table that we don't see in the `INSERT` command. Why doesn't the "id" field need to be written in the `INSERT` statement?
 
-  > Check out/Google the [AUTO_INCREMENT keyword](https://www.w3schools.com/sql/sql_autoincrement.asp) for the answer to this question.
+  > Check out/Google the [AUTO_INCREMENT keyword](https://www.w3schools.com/sql/sql_autoincrement.asp){:target="_blank"} for the answer to this question.
 
 ### UPDATE
 
@@ -90,7 +90,7 @@ The above query deletes **all** users from the database whose first name starts 
 
 ## Practice It - SQL CRUD
 
-- [ ] Follow the link to [open this fiddle](https://www.db-fiddle.com/f/8U1SS2zVjsz9VmjciqJ2Hx/0)
+- [ ] Follow the link to [open this fiddle](https://www.db-fiddle.com/f/8U1SS2zVjsz9VmjciqJ2Hx/0){:target="_blank"}
 - [ ] Work through the `INSERT`, `UPDATE` & `DELETE` statements provided
 - [ ] Run each statement one at a time, leaving the others commented out
 - [ ] Observe the results
@@ -99,18 +99,18 @@ The above query deletes **all** users from the database whose first name starts 
 
 ## Additional Resources
 
-- [ ] [YT, the Bad Tutorials - SQL Tutorial 12: Inserting Data into Tables](https://youtu.be/Tet3Z7Yb2gg)
-- [ ] [YT, the Bad Tutorials - SQL Tutorial 11: UPDATE](https://youtu.be/lyqeLvtlQiA)
-- [ ] [YT, the Bad Tutorials - SQL Tutorial 22: DELETE](https://youtu.be/iHfDrczm0cU)
+- [ ] [YT, the Bad Tutorials - SQL Tutorial 12: Inserting Data into Tables](https://youtu.be/Tet3Z7Yb2gg){:target="_blank"}
+- [ ] [YT, the Bad Tutorials - SQL Tutorial 11: UPDATE](https://youtu.be/lyqeLvtlQiA){:target="_blank"}
+- [ ] [YT, the Bad Tutorials - SQL Tutorial 22: DELETE](https://youtu.be/iHfDrczm0cU){:target="_blank"}
 <!-- - [ ] [YT, tuber - title]() -->
 
 ## Know Your Docs
 
-- [ ] [MySQL Docs - INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
-- [ ] [MySQL Docs - UPDATE](https://dev.mysql.com/doc/refman/8.0/en/update.html)
-- [ ] [MySQL Docs - DELETE](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
-- [ ] [W3S Docs - AUTO INCREMENT](https://www.w3schools.com/sql/sql_autoincrement.asp)
-- [ ] [W3S Docs - SQL](https://www.w3schools.com/sql/)
+- [ ] [MySQL Docs - INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html){:target="_blank"}
+- [ ] [MySQL Docs - UPDATE](https://dev.mysql.com/doc/refman/8.0/en/update.html){:target="_blank"}
+- [ ] [MySQL Docs - DELETE](https://dev.mysql.com/doc/refman/8.0/en/delete.html){:target="_blank"}
+- [ ] [W3S Docs - AUTO INCREMENT](https://www.w3schools.com/sql/sql_autoincrement.asp){:target="_blank"}
+- [ ] [W3S Docs - SQL](https://www.w3schools.com/sql/){:target="_blank"}
 
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->

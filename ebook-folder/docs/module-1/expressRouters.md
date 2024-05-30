@@ -175,8 +175,8 @@ Hopefully we can see how using routers allows us to write cleaner code in our `i
 
 ## Additional Resources
 
-- [ ] [YT, Hungry Turtle Code - How to Use Express Router](https://youtu.be/paNikhYqdz0)
+- [ ] [YT, Hungry Turtle Code - How to Use Express Router](https://youtu.be/paNikhYqdz0){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [Express Docs - Routing](https://expressjs.com/en/guide/routing.html)
+- [ ] [Express Docs - Routing](https://expressjs.com/en/guide/routing.html){:target="_blank"}

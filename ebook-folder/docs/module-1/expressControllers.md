@@ -98,12 +98,12 @@ Look how much simpler that route is! Every time `"/users"` is hit, the attached 
 
 ## Additional Resources
 
-- [ ] [YT, Academind - Adding Controllers](https://youtu.be/ucuNgSOFDZ0)
+- [ ] [YT, Academind - Adding Controllers](https://youtu.be/ucuNgSOFDZ0){:target="_blank"}
 - [ ] Look ahead to the [Questions for Student Led Discussion](./../additionalResources/questionsForDiscussion/qfd-class-4.md)
 
 ## Know Your Docs
 
-- [ ] [MDN Docs - Express Routes](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+- [ ] [MDN Docs - Express Routes](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes){:target="_blank"}
 
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->

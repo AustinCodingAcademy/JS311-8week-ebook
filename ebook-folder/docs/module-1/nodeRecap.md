@@ -82,5 +82,5 @@ We are going to practice creating a new project with NPM. When complete, we will
 
 ## Know Your Docs
 
-- [ ] [Node Docs - Nodejs.org](https://nodejs.org/en/docs/)
-- [ ] [NPM Docs - Moment.js](https://www.npmjs.com/package/moment)
+- [ ] [Node Docs - Nodejs.org](https://nodejs.org/en/docs/){:target="_blank"}
+- [ ] [NPM Docs - Moment.js](https://www.npmjs.com/package/moment){:target="_blank"}

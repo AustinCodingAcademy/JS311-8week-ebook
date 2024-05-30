@@ -2,13 +2,13 @@
 
 If you’ve completed 101 you already know how important it is for you to complete all of the pre-lesson homeworks before coming into class. Why? Our instructors don’t lecture in class. Instead, our instructors guide you through multiple challenges including logic problems, presentations, interview questions, and application programming challenges. To use the class time effectively you and all of your classmates must complete the assigned pre-homework.
 
-If you and your classmates do this you’ll be able to get into class and really ask good questions, apply what you’re learning at home and advance your skills more quickly. This program is built to accommodate full-time employment through part-time classes BUT you will not learn everything you need to learn in these 5 hours/week. YOU MUST READ, WATCH, PRACTICE, and RESEARCH on your own. Each of the sections in your pre-lesson homeworks have been honed in through years of training student-developers to focus on what they really need to learn in a very short amount of time. Trust the process, do the work, sacrifice time now for your future, and [GSD](https://www.urbandictionary.com/define.php?term=GSD)!
+If you and your classmates do this you’ll be able to get into class and really ask good questions, apply what you’re learning at home and advance your skills more quickly. This program is built to accommodate full-time employment through part-time classes BUT you will not learn everything you need to learn in these 5 hours/week. YOU MUST READ, WATCH, PRACTICE, and RESEARCH on your own. Each of the sections in your pre-lesson homeworks have been honed in through years of training student-developers to focus on what they really need to learn in a very short amount of time. Trust the process, do the work, sacrifice time now for your future, and [GSD](https://www.urbandictionary.com/define.php?term=GSD){:target="_blank"}!
 
 ## Flipped Classroom: What
 
 The short? You read and study outside of class and apply that knowledge in class with the support of your classmates and instructor. No pride. No ego. No shame.
 
-[A more academic definition can be found here](https://www.advance-he.ac.uk/knowledge-hub/flipped-learning). But the following videos do well to explain it well. Either way, this approach works and works well. The only challenge now is to shape your mindset around it.
+[A more academic definition can be found here](https://www.advance-he.ac.uk/knowledge-hub/flipped-learning){:target="_blank"}. But the following videos do well to explain it well. Either way, this approach works and works well. The only challenge now is to shape your mindset around it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BCIxikOq73Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

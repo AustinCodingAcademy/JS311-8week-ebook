@@ -79,7 +79,7 @@ A **unique key** enforces uniqueness on specific columns of your data. There can
 | 003 | beverly@email.com | 123 Magic Street | 555-555-5555 |
 
 
-The first table contains users `id`s and `first_name`s and the second contains their `phone` numbers and `email` & `street_addresses`. We would  put the user `id` on the "usersContacts" table as a foreign key which helps relate that data to the first table ("users"). It also prevents us from adding to "usersContacts" without first adding to "users" since we would want to avoid an **orphaned record** in "usersContacts" that has no "user". Foreign keys are also used frequently to `JOIN` tables. A more [visual example might help](https://logicalread.com/mysql-foreign-keys-mc13/#.XQESlNNKh24) here.
+The first table contains users `id`s and `first_name`s and the second contains their `phone` numbers and `email` & `street_addresses`. We would  put the user `id` on the "usersContacts" table as a foreign key which helps relate that data to the first table ("users"). It also prevents us from adding to "usersContacts" without first adding to "users" since we would want to avoid an **orphaned record** in "usersContacts" that has no "user". Foreign keys are also used frequently to `JOIN` tables. A more [visual example might help](https://logicalread.com/mysql-foreign-keys-mc13/#.XQESlNNKh24){:target="_blank"} here.
 
   > Note: Foreign keys are the most difficult to understand so don't worry if you can't visualize it in your mind just yet. The practice and homework will help enforce this principle
 
@@ -109,7 +109,7 @@ Check out the [Addition Resources](#addition-resources)!
 
 ### Practice It - JOIN
 
-- [ ] Follow the link to [open this DBfiddle](https://www.db-fiddle.com/f/4FrW3HufzsNq74KAbSpnpn/1)
+- [ ] Follow the link to [open this DBfiddle](https://www.db-fiddle.com/f/4FrW3HufzsNq74KAbSpnpn/1){:target="_blank"}
 - [ ] Alter the SQL fiddle:
     * [ ] In the schema SQL, change the "firstName" column to be "seller" instead (*There are two instances to find and change*).
     * [ ] Change your Query SQL to ask for the correct field name "seller"
@@ -166,10 +166,10 @@ We will practice with this more in the upcoming project. Be sure to read ahead, 
 
 ## Additional Resources
 
-- [ ] [YT, theNewBoston - MySQL 22: How to JOIN Tables](https://youtu.be/6BfofgkrI3Y)
+- [ ] [YT, theNewBoston - MySQL 22: How to JOIN Tables](https://youtu.be/6BfofgkrI3Y){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [MySQL Tutorial - Primary Key](http://www.mysqltutorial.org/mysql-primary-key/)
-- [ ] [MySQL Tutorial - Unique Key](http://www.mysqltutorial.org/mysql-unique/)
-- [ ] [Arcticle, LogicalRead - Foreign Key](https://logicalread.com/mysql-foreign-keys-mc13/#.XQESlNNKh24)
+- [ ] [MySQL Tutorial - Primary Key](http://www.mysqltutorial.org/mysql-primary-key/){:target="_blank"}
+- [ ] [MySQL Tutorial - Unique Key](http://www.mysqltutorial.org/mysql-unique/){:target="_blank"}
+- [ ] [Arcticle, LogicalRead - Foreign Key](https://logicalread.com/mysql-foreign-keys-mc13/#.XQESlNNKh24){:target="_blank"}

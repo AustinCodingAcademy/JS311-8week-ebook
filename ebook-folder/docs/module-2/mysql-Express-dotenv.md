@@ -10,9 +10,9 @@ There are two aspects we need to talk about when using MySQL in Express: connect
 
 ## Connections
 
-In a previous class, when we [connected to to our Database with MySQL Workbench](mySql-WorkbenchSetup.md#connect-mysql-workbench), we were creating what's called a **single connection**. In a single connection, MySQL statements are executed in sequence, one after another. That means if we write two statements like `UPDATE` etc, `SELECT` etc, the program will run the first "`UPDATE`" and then the second, "`SELECT`". This is great when using MySQL Workbench but in the APIs we will be creating, people will be making requests too often & too quickly for a single connection to keep up with. Two hundred people might call `SELECT * FROM users` at nearly identical times but could experience drastically different wait times based on whether or not they were the first person or the 2,000th person. That is because the 2,000th person needs to wait for the `SELECT` statement to run 1,999 times before it executes for them. We solve this by using **connection pools**.
+In a previous class, when we [connected to to our Database with MySQL Workbench](mySql-WorkbenchSetup.md#connect-mysql-workbench){:target="_blank"}, we were creating what's called a **single connection**. In a single connection, MySQL statements are executed in sequence, one after another. That means if we write two statements like `UPDATE` etc, `SELECT` etc, the program will run the first "`UPDATE`" and then the second, "`SELECT`". This is great when using MySQL Workbench but in the APIs we will be creating, people will be making requests too often & too quickly for a single connection to keep up with. Two hundred people might call `SELECT * FROM users` at nearly identical times but could experience drastically different wait times based on whether or not they were the first person or the 2,000th person. That is because the 2,000th person needs to wait for the `SELECT` statement to run 1,999 times before it executes for them. We solve this by using **connection pools**.
 
-**Connection pools** are groups of single connections. We can specify any arbitrary number that represents how many concurrent connections our database instance can accept at any given time and our application will use those connections until it reaches the maximum number of allowed connections. For example, we may create a connection pool and give it a `connectionLimit` of `100`. Now in the previous example, if 2,000 people hit our API at the same exact time, nobody will have to wait for more than 20 SQL queries to be run because we can spread our 2,000 operations over 100 different connections. Here's an example of creating a connection pool with the [Node package: mysql](https://www.npmjs.com/package/mysql) in Express:
+**Connection pools** are groups of single connections. We can specify any arbitrary number that represents how many concurrent connections our database instance can accept at any given time and our application will use those connections until it reaches the maximum number of allowed connections. For example, we may create a connection pool and give it a `connectionLimit` of `100`. Now in the previous example, if 2,000 people hit our API at the same exact time, nobody will have to wait for more than 20 SQL queries to be run because we can spread our 2,000 operations over 100 different connections. Here's an example of creating a connection pool with the [Node package: mysql](https://www.npmjs.com/package/mysql){:target="_blank"} in Express:
 
 ```javascript
   // create a variable to reference the `createPool` method on the `mysql` package and give it the following attributes
@@ -26,7 +26,7 @@ In a previous class, when we [connected to to our Database with MySQL Workbench]
   })
 ```
 
-  > NOTE: the values match the same values you gave to MySQL workbench to [make a connection in a previous class](./mySql-WorkbenchSetup#connect-mysql-workbench).
+  > NOTE: the values match the same values you gave to MySQL workbench to [make a connection in a previous class](./mySql-WorkbenchSetup#connect-mysql-workbench){:target="_blank"}.
 
 We will also create a **singleton** (object that can only be instantiated once) to return this connection pool to us so that we don't accidentally create multiple connection pools. In the code below you'll notice an `if(!this.pool)` statement, this is what's creating the **singleton object**.
 
@@ -148,7 +148,7 @@ The final piece to the puzzle with `.env` is to never commit the file to github.
 
 Now the `.env` file will always be ignored and you can comfortably use sensitive variables in it.
 
-The file can be used to ignore all sorts of files you don't want/need in your repo and should be used by Mac users to disregard `DS_Store` files! But both Windows and Mac users can create custom and secure `.gitignore` files using this [`.gitignore` file generator at Toptal](https://www.toptal.com/developers/gitignore) or use the links listed in [Additional Resources](#additional-resources) below.
+The file can be used to ignore all sorts of files you don't want/need in your repo and should be used by Mac users to disregard `DS_Store` files! But both Windows and Mac users can create custom and secure `.gitignore` files using this [`.gitignore` file generator at Toptal](https://www.toptal.com/developers/gitignore){:target="_blank"} or use the links listed in [Additional Resources](#additional-resources) below.
 
 *****
 
@@ -195,7 +195,7 @@ What's happening on the first three lines? A few things, let's break them down:
 
 1. We're creating a string and saving it to a variable called `sql`. We could name it anything we want, maybe `sqlString`...whatever.
     * Inside that string we use question marks (`??`) & (`?`) to act as "variables". These "variables" allow us to create dynamic queries, that is to say, "We don't know what all of our users will request and therefore we can't create controllers for each of their request so instead we'll program a few controllers to **dynamically** handle all of those requests."
-    * When we build this string we're following the directions in the [NPM MySQL Docs](https://www.npmjs.com/package/mysql) which says field names and table names get double question marks (`??`) and values get a single question mark (`?`).
+    * When we build this string we're following the directions in the [NPM MySQL Docs](https://www.npmjs.com/package/mysql){:target="_blank"} which says field names and table names get double question marks (`??`) and values get a single question mark (`?`).
 2. Then we create an array called `replacements` filled with the values of our query.
 
     > In this example they're statically placed but later you can create them dynamically based on the incoming request.
@@ -215,7 +215,7 @@ You may be asking:
 
 === "Question 2: **"But couldn't we use Template Literals to dynamically create a string for this instead?"**"
 
-    **Answer 2:** That would seem like the logical solution BUT using Template Literals would expose your server to a **very really security threat** called [SQL Injection](https://www.w3schools.com/sql/sql_injection.asp) where a person could pass a truthy statement in at the end of the query and have all of your data returned to them!
+    **Answer 2:** That would seem like the logical solution BUT using Template Literals would expose your server to a **very really security threat** called [SQL Injection](https://www.w3schools.com/sql/sql_injection.asp){:target="_blank"} where a person could pass a truthy statement in at the end of the query and have all of your data returned to them!
 
 === "Question 3: **"So how does `mysql.format()` prevent that?"**"
 
@@ -229,27 +229,27 @@ You may be asking:
 
 We're basically giving the `.format` method a SQL statement with some variables and an array of values to replace them with.
 
-It's important for you to understand the [Node library package named mysql](https://www.npmjs.com/package/mysql). It has methods you can use to our advantage. One of them is the one you just saw: `mysql.format()`. Be sure to bookmark the [NPM Package mysql Docs](https://www.npmjs.com/package/mysql) to keep them handy and check out the [Additional Resources](#additional-resources).
+It's important for you to understand the [Node library package named mysql](https://www.npmjs.com/package/mysql){:target="_blank"}. It has methods you can use to our advantage. One of them is the one you just saw: `mysql.format()`. Be sure to bookmark the [NPM Package mysql Docs](https://www.npmjs.com/package/mysql){:target="_blank"} to keep them handy and check out the [Additional Resources](#additional-resources){:target="_blank"}.
 
 ## Practice It
 
 Follow along with this video to create your own Express Server with the Node MySQL package:
 
-[Video, Emily Moses@ACA - Setting up an Express Server w/MySQL Package](https://drive.google.com/file/d/1GFDcn1FTLvkiRAkByNGZYsdPUv7xqC3g/view)
+[Video, Emily Moses@ACA - Setting up an Express Server w/MySQL Package](https://drive.google.com/file/d/1GFDcn1FTLvkiRAkByNGZYsdPUv7xqC3g/view){:target="_blank"}
 
 Be sure to have this completed by the time you come into class.
 
 ## Additional Resources
 
-- [ ] [Tutorial, CodeForGeek - NodeJS & MySQL](https://codeforgeek.com/nodejs-mysql-tutorial/)
-- [ ] [YT, Traversy Media - Using SQL in Express.js](https://youtu.be/EN6Dx22cPRI)
-- [ ] [YT, Aman Karbanda - Node.js & SQL Connection Pool](https://youtu.be/_IyN5HNV7QE)
-- [ ] [Generator, TOPTAL .gitignore File - For Mac Users](https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv)
-- [ ] [Generator, TOPTAL .gitignore File - For Windows Users](https://www.toptal.com/developers/gitignore/api/dotenv,windows,visualstudiocode,node)
+- [ ] [Tutorial, CodeForGeek - NodeJS & MySQL](https://codeforgeek.com/nodejs-mysql-tutorial/){:target="_blank"}
+- [ ] [YT, Traversy Media - Using SQL in Express.js](https://youtu.be/EN6Dx22cPRI){:target="_blank"}
+- [ ] [YT, Aman Karbanda - Node.js & SQL Connection Pool](https://youtu.be/_IyN5HNV7QE){:target="_blank"}
+- [ ] [Generator, TOPTAL .gitignore File - For Mac Users](https://www.toptal.com/developers/gitignore/api/node,macos,vs,dotenv){:target="_blank"}
+- [ ] [Generator, TOPTAL .gitignore File - For Windows Users](https://www.toptal.com/developers/gitignore/api/dotenv,windows,visualstudiocode,node){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [NPM MySQL Docs - Home](https://www.npmjs.com/package/mysql)
+- [ ] [NPM MySQL Docs - Home](https://www.npmjs.com/package/mysql){:target="_blank"}
 
 <!-- ! END OF VIDEO 101.1.3.1 - TITLE-->
 <!-- ? Video Numbering and Title system: CourseNumber.ModuleNumber.LessonNumber.VideoNumber -->

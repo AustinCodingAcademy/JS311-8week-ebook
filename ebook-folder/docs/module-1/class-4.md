@@ -50,21 +50,21 @@ Today we're going to:
 
 Today we are going to work with three new ways to organize our express server. We will create routers, controllers and use `express.static` to render the files in the public folder. The result will be an all-in-one website you can interact with.
 
-![express-static-files-example-screenshot](./../images/express-static-files-example-screenshot.png)
+![express-static-files-example-screenshot](./../images/express-static-files-example-screenshot.png){:target="_blank"}
 
-- [ ] Fork and clone the following repository: [Express Continued Practice](https://github.com/AustinCodingAcademy/311_wk2_day2_express-continued)
+- [ ] Fork and clone the following repository: [Express Continued Practice](https://github.com/AustinCodingAcademy/311_wk2_day2_express-continued){:target="_blank"}
 - [ ] Follow the `README` to build routes, controllers and serve static files
-- [ ] [YT, BuzzTeam - Express.JS: You First Controller](https://youtu.be/R30BJ-XBthI)
+- [ ] [YT, BuzzTeam - Express.JS: You First Controller](https://youtu.be/R30BJ-XBthI){:target="_blank"}
 
 <!-- ! Video Content:  (width="655" height="368", ratio 1.77) -->
 
 ### Push Yourself Further
 
-- [ ] Complete the following Mozilla tutorial on [routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+- [ ] Complete the following Mozilla tutorial on [routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes){:target="_blank"}
 
 ## Student Feedback
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd85nNCk_MdnaXCsX7fWl3vYgcqvozzlK2cKq26d2g67Zh8Kg/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## Blogs to Show You Know
 

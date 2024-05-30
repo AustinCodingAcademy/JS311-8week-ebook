@@ -15,6 +15,6 @@ The following video is a requirement for all Intermediate students. Watch it and
 
 ## Install Node
 
-Before you come into to class make sure you have installed [Node.js](https://nodejs.org/en/). Click on the one on the left: "Recommended for Most Users"
+Before you come into to class make sure you have installed [Node.js](https://nodejs.org/en/){:target="_blank"}. Click on the one on the left: "Recommended for Most Users"
 
 After you've installed it you should be able to go to the Terminal/Bash/CommandPrompt and type in `node -v` and get an output of `v10.16.0` or something close to that.

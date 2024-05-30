@@ -25,7 +25,7 @@ Today we're going to:
 - [ ] Interview Challenge
 - [ ] Student Presentations
 - [ ] Creation Time
-    * [ ] Fork and Clone the [Axios Practice Repo](https://github.com/AustinCodingAcademy/311_wk1_day2_axios)
+    * [ ] Fork and Clone the [Axios Practice Repo](https://github.com/AustinCodingAcademy/311_wk1_day2_axios){:target="_blank"}
 - [ ] Push Yourself Further
 - [ ] Blog to Show You Know
 - [ ] Exit Recap, Attendance, and Reminders
@@ -52,20 +52,20 @@ Today we are going to be making API calls with Axios. The goal of this exercise 
 
 ![day2-axios-practice-repo-screenshot](./../images/day2-axios-practice-repo-screenshot.png)
 
-- [ ] Fork and clone the following repository: [Axios Practice](https://github.com/AustinCodingAcademy/311_wk1_day2_axios).
+- [ ] Fork and clone the following repository: [Axios Practice](https://github.com/AustinCodingAcademy/311_wk1_day2_axios){:target="_blank"}.
 - [ ] Follow the `README` to complete the functions and make all the tests pass.
 
 ### Follow Up Video
 
-- [ ] [YT, Mahtab Alam - Making HTTP Calls in Node with Axios.js](https://youtu.be/vNYZQ2Bqg_0)
+- [ ] [YT, Mahtab Alam - Making HTTP Calls in Node with Axios.js](https://youtu.be/vNYZQ2Bqg_0){:target="_blank"}
 
 ### Push Yourself Further
 
-- [ ] [Medium Tutorial, Sebastian Eschweiler - Getting Started with Axios.js](https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237)
+- [ ] [Medium Tutorial, Sebastian Eschweiler - Getting Started with Axios.js](https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237){:target="_blank"}
 
 ## Student Feedback
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuL10i2xFGMWRwkjtgAL8F1Y5ipMPPjtTCDzkO1ZBcxUYZA/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd85nNCk_MdnaXCsX7fWl3vYgcqvozzlK2cKq26d2g67Zh8Kg/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## Blogs to Show You Know
 

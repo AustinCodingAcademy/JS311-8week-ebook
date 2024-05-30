@@ -6,13 +6,13 @@ We've just learned to use that tool called Postman. What that tool allows us to 
 
 In the same way, when we're building a database we don't want to worry about our server app code being buggy when we're proving that our database is setup and accepted requests as expected; we just want to prove the database is working then we can connect our server to it.
 
-The Database equivalent of Postman is [MySQL Workbench](https://www.mysql.com/products/workbench/). It's a stand-alone tool that allows us to setup, connect, query and manage a MySQL database with a graphical user interface (GUI). We are going to download this tool and connect to your database in GCP (Google Cloud Platform) now.
+The Database equivalent of Postman is [MySQL Workbench](https://www.mysql.com/products/workbench/){:target="_blank"}. It's a stand-alone tool that allows us to setup, connect, query and manage a MySQL database with a graphical user interface (GUI). We are going to download this tool and connect to your database in GCP (Google Cloud Platform) now.
 
 ## Practice It
 
 ### Download MySQL Workbench
 
-- [ ] Navigate to [MySQL Workbench download](https://www.mysql.com/products/workbench/)
+- [ ] Navigate to [MySQL Workbench download](https://www.mysql.com/products/workbench/){:target="_blank"}
 - [ ] Click "Download Now"
 - [ ] At the bottom of the page select your system specs (Mac, Windows)
 - [ ] Click the "download" button again and then click "No thanks, just start my download" on the next page
@@ -47,4 +47,4 @@ Your goal is to be able to connect to this pre-existing database:
 
 ## Know Your Docs
 
-- [ ] [MySQL Docs - Home Page](https://dev.mysql.com/doc/)
+- [ ] [MySQL Docs - Home Page](https://dev.mysql.com/doc/){:target="_blank"}

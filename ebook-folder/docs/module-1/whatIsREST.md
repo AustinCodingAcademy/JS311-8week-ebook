@@ -1,6 +1,6 @@
 # What is REST
 
-**REST** stands for **RE**presentational **S**tate **T**ransfer. It is an architectural style, or *a set of guiding principles*, for building distributed systems. [This site](https://restfulapi.net/) provides an overview of these principles and the history of REST. Systems that adhere to these principles are commonly said to be **RESTful**.
+**REST** stands for **RE**presentational **S**tate **T**ransfer. It is an architectural style, or *a set of guiding principles*, for building distributed systems. [This site](https://restfulapi.net/){:target="_blank"} provides an overview of these principles and the history of REST. Systems that adhere to these principles are commonly said to be **RESTful**.
 
 We're not going to focus too much on the theory behind REST. Instead, we'll focus on the practical application of REST to APIs, using common industry patterns. Still, there are a few terms and concepts that we must review.
 
@@ -16,7 +16,7 @@ Occasionally, resources can also be more abstract concepts or processes. For exa
 
 ## The URI Part
 
-Resources are accessed using **U**niform **R**esource **I**dentifiers, or **URI**s. URIs are very similar to the familiar URL(**UR Locator**) that we use on the web. *There are [subtle theoretical differences between URIs and URLs that we will not concern ourselves with, but you can read more about](https://danielmiessler.com/study/url-uri/)... if you're interested.*
+Resources are accessed using **U**niform **R**esource **I**dentifiers, or **URI**s. URIs are very similar to the familiar URL(**UR Locator**) that we use on the web. *There are [subtle theoretical differences between URIs and URLs that we will not concern ourselves with, but you can read more about](https://danielmiessler.com/study/url-uri/){:target="_blank"} ... if you're interested.*
 
 Let's revisit the URI that we used to access information about Luke Skywalker:
 
@@ -30,7 +30,7 @@ Let's revisit the URI that we used to access information about Luke Skywalker:
 
     ![SWAPI-JSON-lukeSkywalker](./../images/SWAPI-JSON-lukeSkywalker.png)
 
-    > NOTE: Paste in the URI into your browsers address bar. You can make your responses easier to read using the [JSON Formatter Extension for Chrome](https://chrome.google.com/webstore/detail/json-formatter/mhimpmpmffogbmmkmajibklelopddmjf/related).
+    > NOTE: Paste in the URI into your browsers address bar. You can make your responses easier to read using the [JSON Formatter Extension for Chrome](https://chrome.google.com/webstore/detail/json-formatter/mhimpmpmffogbmmkmajibklelopddmjf/related){:target="_blank"}.
 
 | Part| Explanation |
 | --- | --- |
@@ -75,7 +75,7 @@ You're going to hear the terms **client** and **server** a lot, so let's make su
 
 The client-server model is a way of distributing work among multiple parts of a software system, with the parts often (but not necessarily) running on separate computers and communicating over a network.
 
-For example, when we click the [https://swapi.dev/api/people/1](https://swapi.dev/api/people/1?format=json) link, our web browser is the **client**. And the computer at swapi.dev, that sends back the data about Luke Skywalker, is the **server**.
+For example, when we click the [https://swapi.dev/api/people/1](https://swapi.dev/api/people/1?format=json){:target="_blank"} link, our web browser is the **client**. And the computer at swapi.dev, that sends back the data about Luke Skywalker, is the **server**.
 
 In general, software making a request is a **client**. Software that listens for **requests** and sends back a **response** is a **server**. **Request** and **response** are important concepts that we'll be working with as we build APIs.
 
@@ -106,7 +106,7 @@ A **response** message/object has these parts:
 | Headers	| A collection of colon-separated key-value pairs that can be used to provide additional context about the response, e.g., Content-Type: application/json indicates that the content of the body is in JSON format.|
 | Body | A payload that can be sent with the response.|
 
-You can find more detailed [information about HTTP here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests).
+You can find more detailed [information about HTTP here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests){:target="_blank"}.
 
 #### Request Methods
 
@@ -123,22 +123,22 @@ Just quickly for now (we'll go into more detail later): when sending a request o
 
 ### Tools to Interact with REST APIs
 
-Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, a **GET** request, which is used (*surprise*) to *get* a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called [Postman](https://www.postman.com/) that we can use to more easily interact with REST APIs and fully use all of the request methods: GET, PUT, DELETE, and POST.
+Up to this point, we've interacted with the Star Wars API by using a browser. This is convenient but limiting. The browser's address bar and links can only make one type of request, a **GET** request, which is used (*surprise*) to *get* a resource. But what if we want to create, update, or delete a resource? We either have to write code or use another tool. Fortunately, there is a powerful and free tool called [Postman](https://www.postman.com/){:target="_blank"} that we can use to more easily interact with REST APIs and fully use all of the request methods: GET, PUT, DELETE, and POST.
 
 #### Postman
 
-In the following video, we'll look at mock API called Req/Res, provided by [Ben Howdle](https://github.com/benhowdle89), and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the [interface provided by the website](https://reqres.in/) and then we'll use Postman to interact with the API.
+In the following video, we'll look at mock API called Req/Res, provided by [Ben Howdle](https://github.com/benhowdle89){:target="_blank"}, and dig in to the full range of request types and how they're used in REST APIs. First we'll explore the API using the [interface provided by the website](https://reqres.in/){:target="_blank"} and then we'll use Postman to interact with the API.
 
 <!-- !Video Content: 321: Using Postman -->
 <iframe src="https://player.vimeo.com/video/344941801?byline=0&portrait=0" width="655" height="368" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 #### Curl
 
-We've learned the basics of what an API is today and touched on how to make a call but another way to make an API request is using something called `curl`. `curl` is a way to make calls using your terminal and getting information back sometimes faster and more efficiently. Its good to understand alternative ways to make requests and `curl` can be another strong choice to make requests. Simply follow these steps and you can practice using `curl`. To install `curl` you can follow instructions on their website (see [Additional Resources](#Additional-Resources) below).
+We've learned the basics of what an API is today and touched on how to make a call but another way to make an API request is using something called `curl`. `curl` is a way to make calls using your terminal and getting information back sometimes faster and more efficiently. Its good to understand alternative ways to make requests and `curl` can be another strong choice to make requests. Simply follow these steps and you can practice using `curl`. To install `curl` you can follow instructions on their website (*see [Additional Resources](#Additional-Resources) below*).
 
 - [ ] Check to see if `curl` is already installed `curl --version`
   > NOTE: curl is default command most computers already have installed.
-- [ ] If `curl` is not already installed [download `curl`](https://curl.se/docs/install.html)
+- [ ] If `curl` is not already installed [download `curl`](https://curl.se/docs/install.html){:target="_blank"}
   > NOTE: If you have Homebrew installed you can also run the command `brew install curl`.
 - [ ] Check Version using command `curl --version`
 - [ ] Now run command `curl https://jsonplaceholder.typicode.com/posts`
@@ -149,12 +149,12 @@ Feel free to visit this website and run a few more tests trying a different rout
 
 ## Additional Resources
 
-- [ ] [Tutorial - Guiding Principles of REST](https://restfulapi.net/)
-- [ ] [Article, Daniel Miessler - What’s the Difference Between a URI and a URL?](https://danielmiessler.com/study/url-uri/)
-- [ ] [Req/Res API](https://reqres.in/)
+- [ ] [Tutorial - Guiding Principles of REST](https://restfulapi.net/){:target="_blank"}
+- [ ] [Article, Daniel Miessler - What’s the Difference Between a URI and a URL?](https://danielmiessler.com/study/url-uri/){:target="_blank"}
+- [ ] [Req/Res API](https://reqres.in/){:target="_blank"}
 
 ## Know Your Docs
 
-- [ ] [MDN Docs - HTTP(S) Request Object](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests)
-- [ ] [Postman Docs - Intro](https://learning.postman.com/docs/getting-started/introduction/)
-- [ ] [Curl Docs - Overview](https://curl.se/docs/)
+- [ ] [MDN Docs - HTTP(S) Request Object](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#Requests){:target="_blank"}
+- [ ] [Postman Docs - Intro](https://learning.postman.com/docs/getting-started/introduction/){:target="_blank"}
+- [ ] [Curl Docs - Overview](https://curl.se/docs/){:target="_blank"}
