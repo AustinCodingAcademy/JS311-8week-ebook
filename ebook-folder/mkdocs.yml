@@ -28,7 +28,8 @@ site_name: JS311 - Node Servers + SQL Databases
 
 nav:
     - Home: 'index.md'
-    - 'Module One: Express Servers':
+    - Self-Help: 'HowTo-selfHelp.md'    
+    - 'Pt. I: Express Servers':
       - 'Pre-Class 1 Lessons': 
         - Prepare Your Machine: module-1/prepareYourMachine.md
         - Code Sandboxes: module-1/codeSandboxes.md
@@ -54,7 +55,7 @@ nav:
         - Controllers: module-1/expressControllers.md
         - Static Files: module-1/expressStaticFiles.md
         - Class 4 Serving Static Files: module-1/class-4.md
-    - 'Module Two: MySQL Database': 
+    - 'Pt. II: MySQL Database': 
       - 'Pre-Class 5 Lessons':
         - Database Intro: module-2/databaseIntro.md
         - MySQL Workbench: module-2/mySql-WorkbenchSetup.md
@@ -71,7 +72,7 @@ nav:
         - Adding MySQL to Express: module-2/mysql-Express-dotenv.md
         - Alternative DB Solutions: module-2/dbOnAWS.md
         - Class 8 MySQL + Express: module-2/class-8.md
-    - 'Module Three: Authentication': 
+    - 'Pt. III: Authentication': 
       - 'Pre-Class 9 Lesson':
         - Hackathon Prep: module-3/hackathonPrep.md
         - Class 9 Hackathon pt. 1: module-3/class-9.md
@@ -88,7 +89,7 @@ nav:
         - Hashing & Tokens: module-3/hashingAndTokens.md
         - Auth0: module-3/auth0-intro.md
         - Class 12 Express Authentication: module-3/class-12.md
-    - 'Module Four: Deployment':
+    - 'Pt. IV: Deployment':
         - 'Pre-Class 13 Lesson': 
           - Hosting Intro: module-4/introToHosting.md
           - Class 13 App Engine: module-4/class-13.md
@@ -105,7 +106,7 @@ nav:
         # cp workspace/resources/templateFile.md docs/module-
         # cp workspace/resources/classOutlineTemplate.md docs/module-
     - Report A Bug: additionalResources/reportABug.md
-    - 'Additional Resources':
+    - 'Resources':
       - Interview Training: additionalResources/interviewChallenges.md
       - Student Presentations: additionalResources/studentPresentations.md
       - Develop Series Collection: additionalResources/developSeries.md
@@ -146,6 +147,10 @@ theme:
     accent: deep purple
     # Defines the logo in the top-left, file must be in the /doc directory
   logo: CE_WhiteBlue_Icon.png
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - header.autohide
   
   # ? Not rendering as expected??
   extra:
